@@ -1,0 +1,10 @@
+{"name":"c1_sweep","parent":"base","status":"rejected","note":"config sweep of baseline kernel; stopped partway, sampled shapes matched default config timing"}
+{"name":"c2_tma_persistent","parent":"base","status":"rejected","evidence":"runs/bench_base_opt.csv","note":"TMA desc + persistent grid(78): 0.68-0.95x on all shapes"}
+{"name":"c3_scalar_bs_fma","parent":"base","status":"promoted","evidence":["runs/bench_ext_base_opt2.csv","test_correct.py PASS 585 cases"],"note":"model shapes geomean 1.138x (max 2.19x), TP-split untuned 1.031x, no >2% regressions, worst rel err 7.5e-3; vs DeepGEMM: M<=512 0.794, M>=4096 1.127 (runs/bench_c3_vs_deepgemm.csv)"}
+{"name":"c5_unroll2","parent":"c3","status":"rejected","note":"manual K unroll x2: 0.76-1.00x vs c3; PTX still wait_group 0 only, Triton serializes wgmma"}
+{"name":"c6_swapab_splitk_triton","parent":"c3","status":"superseded","note":"probe small-M c6/dg 0.75-0.88; sweep stopped partial (runs/opt4_cfg_*.json); ideas ported to gluon c9"}
+{"name":"c7_skewed_promotion","parent":"c6","status":"rejected","note":"loop-carried prev dot: 0.6-1.0x, regs 251, PTX still wait_group 0"}
+{"name":"c8_gluon_async_wgmma","parent":"c3","status":"superseded","note":"gluon TMA ring + async wgmma wait_group 1; early probe numbers invalid (shared GPU with sweep)"}
+{"name":"c9_gluon_swapab_tailsplitk","parent":"c8","status":"candidate","note":"clean probe 9 shapes: small-M c9/dg 0.78-0.90 (vs c3 0.34-0.96), large-M ~5% behind c3; per-stream split-K buffers"}
+{"name":"c10_scale_prefetch","parent":"c9","status":"rejected","note":"same cfg: 0.89-1.03x vs c9; deeper stages monotonically slower (s8 up to 2x slower) -> stage depth not limited by scale latency"}
+{"name":"e1_multi_tile_ring","parent":"c9","status":"rejected","evidence":"probe_e1.py","note":"TPC 2/4/8 slower ~1.6-1.8x per doubling; time tracks CTA count -> per-tile fixed cost NOT the bottleneck; c9 relies on multi-CTA/SM concurrency to hide latency"}
