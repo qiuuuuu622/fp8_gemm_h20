@@ -1,3 +1,7 @@
 __pycache__/
 *.pyc
 profile/
+# JIT caches, pids, scratch outputs from startup probes
+startup/cache_*/
+startup/pid_*
+startup_*.out

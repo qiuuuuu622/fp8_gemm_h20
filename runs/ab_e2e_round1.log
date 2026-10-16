@@ -1,0 +1,10 @@
+L=  1024 O=   1 c= 1 | TTFT dg=     51.1 ours=     48.6 ms (ours/dg speedup 1.052)
+L=  4096 O=   1 c= 1 | TTFT dg=    150.2 ours=    138.3 ms (ours/dg speedup 1.086)
+L=  8192 O=   1 c= 1 | TTFT dg=    295.3 ours=    268.8 ms (ours/dg speedup 1.098)
+L= 16384 O=   1 c= 1 | TTFT dg=    666.7 ours=    612.7 ms (ours/dg speedup 1.088)
+L= 32768 O=   1 c= 1 | TTFT dg=   1658.9 ours=   1546.0 ms (ours/dg speedup 1.073)
+L=  8192 O=   1 c= 4 | TTFT dg=   1143.7 ours=   1031.0 ms (ours/dg speedup 1.109) | req/s dg=3.42 ours=3.78
+L=  2048 O= 128 c= 1 | TTFT dg=     82.1 ours=     76.2 ms (ours/dg speedup 1.077) | TPOT dg=3.63 ours=3.15 ms
+L=  8192 O= 128 c= 1 | TTFT dg=    296.4 ours=    268.2 ms (ours/dg speedup 1.105) | TPOT dg=3.80 ours=3.32 ms
+L=  1024 O= 256 c=16 | TTFT dg=    349.8 ours=    318.8 ms (ours/dg speedup 1.097) | TPOT dg=8.37 ours=7.77 ms | req/s dg=6.38 ours=6.90
+wrote runs/ab_e2e_round1.json

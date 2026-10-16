@@ -1,0 +1,21 @@
+ours_N2048_K4096_M100
+   time_us=20.9 grid=128.0 block=128.0 regs=66.0 smem_KB=36.9 warps_act%=10.3 sm_thru%=38.7 dram_thru%=? l2_hit%=69.8 gmma_act%=? sm_active%=? l2_MB=? dram_MB=? inst=2.08e+06
+   stalls(per issue): barrier=2.65 long_scoreboard=1.78 selected=1.00 wait=0.78 not_selected=0.15 no_instruction=0.11 dispatch_stall=0.09
+dg_N2048_K4096_M100
+   time_us=15.6 grid=78.0 block=256.0 regs=248.0 smem_KB=224.9 warps_act%=7.6 sm_thru%=52.1 dram_thru%=? l2_hit%=47.6 gmma_act%=? sm_active%=? l2_MB=? dram_MB=? inst=752688.0
+   stalls(per issue): barrier=4.72 long_scoreboard=1.42 selected=1.00 wait=0.80 no_instruction=0.60 imc_miss=0.32 short_scoreboard=0.11
+c9_N2048_K4096_M100
+   time_us=18.0 grid=224.0 block=128.0 regs=48.0 smem_KB=30.7 warps_act%=17.8 sm_thru%=40.3 dram_thru%=? l2_hit%=79.1 gmma_act%=? sm_active%=? l2_MB=? dram_MB=? inst=3.74e+06
+   stalls(per issue): barrier=1.78 long_scoreboard=1.26 selected=1.00 wait=0.91 not_selected=0.47 math_pipe_throttle=0.16 no_instruction=0.11
+ours_N1024_K2048_M333
+   time_us=13.8 grid=176.0 block=128.0 regs=80.0 smem_KB=49.2 warps_act%=14.1 sm_thru%=40.5 dram_thru%=? l2_hit%=74.4 gmma_act%=? sm_active%=? l2_MB=? dram_MB=? inst=1.95e+06
+   stalls(per issue): barrier=1.92 long_scoreboard=1.16 wait=1.09 selected=1.00 not_selected=0.28 no_instruction=0.14 imc_miss=0.13
+dg_N1024_K2048_M333
+   time_us=11.6 grid=78.0 block=256.0 regs=248.0 smem_KB=216.2 warps_act%=7.3 sm_thru%=53.1 dram_thru%=? l2_hit%=68.4 gmma_act%=? sm_active%=? l2_MB=? dram_MB=? inst=726768.0
+   stalls(per issue): barrier=3.87 long_scoreboard=1.08 selected=1.00 wait=0.65 no_instruction=0.59 imc_miss=0.23 short_scoreboard=0.18
+ours_N12288_K2048_M256
+   time_us=61.6 grid=1536.0 block=128.0 regs=66.0 smem_KB=24.6 warps_act%=40.5 sm_thru%=79.5 dram_thru%=? l2_hit%=79.8 gmma_act%=? sm_active%=? l2_MB=? dram_MB=? inst=1.37e+07
+   stalls(per issue): barrier=5.02 long_scoreboard=4.29 selected=1.00 not_selected=0.95 wait=0.84 mio_throttle=0.48 dispatch_stall=0.33
+dg_N12288_K2048_M256
+   time_us=57.4 grid=78.0 block=384.0 regs=168.0 smem_KB=228.2 warps_act%=13.8 sm_thru%=85.3 dram_thru%=? l2_hit%=53.0 gmma_act%=? sm_active%=? l2_MB=? dram_MB=? inst=2.97e+06
+   stalls(per issue): barrier=14.14 long_scoreboard=2.19 mio_throttle=1.53 selected=1.00 wait=0.71 no_instruction=0.47 misc=0.28

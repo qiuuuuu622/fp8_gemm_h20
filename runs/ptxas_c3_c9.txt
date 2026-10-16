@@ -1,0 +1,8 @@
+== profile/ptx/c3.ptx
+ptxas info    : Used 112 registers, used 1 barriers
+== profile/ptx/c9_0.ptx
+ptxas info    : (C7514) Potential Performance Loss: wgmma.mma_async instructions are serialized due to non wgmma instructions reading accumulator registers of  a wgmma between start and end of the pipeline stage in the function '_w8a8_block_fp8_matmul_hopper_gl2'
+ptxas info    : Used 48 registers, used 1 barriers
+== profile/ptx/c9_1.ptx
+ptxas info    : (C7514) Potential Performance Loss: wgmma.mma_async instructions are serialized due to non wgmma instructions reading accumulator registers of  a wgmma between start and end of the pipeline stage in the function '_w8a8_block_fp8_matmul_hopper_gl2'
+ptxas info    : Used 119 registers, used 1 barriers

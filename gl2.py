@@ -169,19 +169,16 @@ def pick_cfg(M, N, K):
     return t[min(t, key=lambda m: abs(int(m) - M))]
 
 
-_DESC = {}
+_LAYOUTS = {}
 
 
 def _desc(t, block):
-    key = (t.data_ptr(), tuple(t.shape), tuple(block))
-    d = _DESC.get(key)
-    if d is None:
-        lay = gl.NVMMASharedLayout.get_default_for(list(block), gl.float8e4nv)
-        d = TensorDescriptor.from_tensor(t, list(block), lay)
-        if len(_DESC) > 4096:
-            _DESC.clear()
-        _DESC[key] = d
-    return d
+    # No per-tensor cache: a TensorDescriptor holds a reference to its base tensor, so caching by
+    # data_ptr would pin activation buffers in a long-running server. Only the layout is cached.
+    lay = _LAYOUTS.get(tuple(block))
+    if lay is None:
+        lay = _LAYOUTS[tuple(block)] = gl.NVMMASharedLayout.get_default_for(list(block), gl.float8e4nv)
+    return TensorDescriptor.from_tensor(t, list(block), lay)
 
 
 def matmul(A, B, As, Bs, cfg=None, block=(128, 128)):

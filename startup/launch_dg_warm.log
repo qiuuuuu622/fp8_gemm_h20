@@ -1,0 +1,1171 @@
+1792124419.690856621 /sgl-workspace/sglang/python/sglang/launch_server.py:71: UserWarning: 'python -m sglang.launch_server' is still supported, but 'sglang serve' is the recommended entrypoint.
+1792124419.691987404   Example: sglang serve --model-path <model> [options]
+1792124419.693160064   warnings.warn(
+1792124426.218123093 [2026-10-16 04:20:26] Attention backend not specified. Use fa3 backend by default.
+1792124428.380552133 [2026-10-16 04:20:28] Compiled-kernel caches now live under SGLANG_CACHE_DIR (/root/fp8mm/startup/cache_dg). These older directories are no longer used by sglang, but may still be used by other frameworks on this machine, so they were left alone: /root/.triton. Remove them yourself if nothing else needs them.
+1792124428.392157227 [2026-10-16 04:20:28] server_args={'model_path': '/dev/shm/prefill_model', 'tokenizer_path': '/dev/shm/prefill_model', 'tokenizer_mode': 'auto', 'tokenizer_backend': 'huggingface', 'tokenizer_worker_num': 1, 'detokenizer_worker_num': 1, 'skip_tokenizer_init': False, 'load_format': 'auto', 'model_loader_extra_config': '{}', 'trust_remote_code': False, 'context_length': 262144, 'is_embedding': False, 'enable_multimodal': True, 'revision': None, 'model_impl': 'auto', 'model_config_parser': 'auto', 'json_model_override_args': '{}', 'dtype': 'auto', 'quantization': None, 'quantization_param_path': None, 'kv_cache_dtype': 'auto', 'enable_fp32_lm_head': False, 'modelopt_quant': None, 'modelopt_checkpoint_restore_path': None, 'modelopt_checkpoint_save_path': None, 'modelopt_export_path': None, 'quantize_and_serve': False, 'rl_quant_profile': None, 'enable_tf32_matmul': False, 'mem_fraction_static': 0.6, 'max_running_requests': 16, 'max_queued_requests': None, 'max_total_tokens': None, 'chunked_prefill_size': 8192, 'prefill_decode_interval': 0, 'enable_dynamic_chunking': False, 'max_prefill_tokens': 16384, 'prefill_max_requests': None, 'schedule_policy': 'fcfs', 'enable_priority_scheduling': False, 'disable_priority_preemption': False, 'default_priority_value': None, 'abort_on_priority_when_disabled': False, 'schedule_low_priority_values_first': False, 'priority_scheduling_preemption_threshold': 10, 'retraction_policy': 'length', 'schedule_conservativeness': 1.0, 'page_size': 16, 'c128_page_size': 16, 'swa_full_tokens_ratio': 0.8, 'disable_hybrid_swa_memory': False, 'radix_eviction_policy': 'lru', 'radix_eviction_policy_config': None, 'prefill_only_disable_kv_cache': False, 'disable_radix_cache': False, 'enable_page_major_kv_layout': False, 'enable_unified_memory': False, 'disable_chunked_prefix_cache': False, 'disable_overlap_schedule': False, 'num_continuous_decode_steps': 1, 'scheduler_recv_interval': 1, 'enable_mixed_chunk': False, 'nccl_port': None, 'dist_timeout': None, 'dist_init_addr': None, 'gated_launch_port': None, 'nnodes': 1, 'node_rank': 0, 'tp_size': 1, 'dcp_size': 1, 'pp_size': 1, 'pp_max_micro_batch_size': None, 'pp_async_batch_depth': 0, 'dp_size': 1, 'load_balance_method': 'round_robin', 'attn_cp_size': 1, 'moe_dp_size': 1, 'dwdp_size': 1, 'dcp_comm_backend': 'ag_rs', 'dcp_replicate_q_proj': None, 'enable_prefill_cp': False, 'cp_strategy': None, 'enable_dsa_cache_layer_split': False, 'enable_cp_decode_attn_tp': False, 'enable_dp_attention': False, 'enable_dp_attention_local_control_broadcast': False, 'enable_dp_lm_head': False, 'enable_tp_lm_head_all_to_all': False, 'enable_attn_tp_input_scattered': False, 'enable_shared_experts_attn_tp': False, 'enable_dense_mlp_attn_tp': False, 'enable_layernorm_sp': False, 'disable_attn_tp_gather': False, 'enable_p2p_check': False, 'device': 'cuda', 'base_gpu_id': 0, 'gpu_id_step': 1, 'random_seed': 47516523, 'mlx_enable_sampling': False, 'watchdog_timeout': 300, 'soft_watchdog_timeout': None, 'sleep_on_idle': False, 'use_ray': False, 'custom_sigquit_handler': None, 'numa_node': None, 'gc_threshold': None, 'host': '127.0.0.1', 'port': 31010, 'fastapi_root_path': '', 'smg_grpc_mode': False, 'grpc_mode': False, 'grpc_port': None, 'grpc_worker_threads': 4, 'sidecar': None, 'sidecar_args': None, 'skip_server_warmup': False, 'warmups': None, 'enable_http2': False, 'http2_max_concurrent_streams': 200, 'http2_initial_connection_window_size': 1048576, 'ssl_keyfile': None, 'ssl_certfile': None, 'ssl_ca_certs': None, 'ssl_keyfile_password': None, 'enable_ssl_refresh': False, 'api_key': None, 'admin_api_key': None, 'served_model_name': 'probe', 'weight_version': 'default', 'chat_template': None, 'hf_chat_template_name': None, 'completion_template': None, 'file_storage_path': 'sglang_storage', 'enable_cache_report': False, 'return_input_ids': False, 'return_output_ids': False, 'reasoning_parser': None, 'default_chat_template_kwargs': None, 'strip_thinking_cache': False, 'enable_strict_thinking': False, 'tool_call_parser': None, 'tool_server': None, 'sampling_defaults': 'model', 'asr_max_buffer_seconds': 60, 'asr_max_concurrent_sessions': 32, 'preferred_sampling_params': None, 'allow_auto_truncate': False, 'stream_interval': 1, 'batch_notify_size': 16, 'stream_response_default_include_usage': False, 'incremental_streaming_output': False, 'enable_streaming_session': False, 'enable_session_radix_cache': False, 'log_level': 'info', 'log_level_http': None, 'log_requests': False, 'log_requests_level': 2, 'log_requests_format': 'text', 'log_requests_target': None, 'uvicorn_access_log_exclude_prefixes': [], 'crash_dump_folder': None, 'show_time_cost': False, 'enable_metrics': False, 'smg_http_sidecar_port': None, 'enable_mfu_metrics': False, 'enable_metrics_for_all_schedulers': False, 'load_snapshot_publish_interval': 15, 'tokenizer_metrics_custom_labels_header': 'x-custom-labels', 'tokenizer_metrics_allowed_custom_labels': None, 'extra_metric_labels': None, 'bucket_time_to_first_token': None, 'bucket_inter_token_latency': None, 'bucket_e2e_request_latency': None, 'prompt_tokens_buckets': None, 'generation_tokens_buckets': None, 'gc_warning_threshold_secs': 0.0, 'decode_log_interval': 40, 'enable_request_time_stats_logging': False, 'kv_events_config': None, 'load_publish_endpoint': None, 'enable_forward_pass_metrics': False, 'forward_pass_metrics_worker_id': '', 'forward_pass_metrics_ipc_name': None, 'enable_trace': False, 'trace_modules': 'request', 'otlp_traces_endpoint': 'localhost:4317', 'export_metrics_to_file': False, 'export_metrics_to_file_dir': None, 'stat_loggers': None, 'constrained_json_whitespace_pattern': None, 'constrained_json_disable_any_whitespace': False, 'attention_backend': 'fa3', 'decode_attention_backend': None, 'enable_lean_attention': None, 'prefill_attention_backend': None, 'sampling_backend': 'flashinfer', 'grammar_backend': 'xgrammar', 'radix_cache_backend': None, 'mm_attention_backend': None, 'fp8_gemm_runner_backend': 'auto', 'fp4_gemm_runner_backend': 'auto', 'bf16_gemm_backend': 'auto', 'dsa_prefill_backend': None, 'dsv4_prefill_backend': 'auto', 'dsa_decode_backend': None, 'dsa_paged_mqa_logits_backend': 'auto', 'dsa_topk_backend': 'sgl-kernel', 'disable_flashinfer_autotune': False, 'flashinfer_autotune_skip_ops': None, 'mamba_backend': 'triton', 'cuda_graph_config': {'decode': {'backend': 'full', 'max_bs': 256, 'bs': [1, 2, 4, 8, 12, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256], 'tc_compiler': 'eager', 'full_prefill_max_req': None, 'full_prefill_prefix_chunk_tokens': None}, 'prefill': {'backend': 'breakable', 'max_bs': 8192, 'bs': [4, 8, 12, 16, 20, 24, 28, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256, 288, 320, 352, 384, 416, 448, 480, 512, 576, 640, 704, 768, 832, 896, 960, 1024, 1280, 1536, 1792, 2048, 2304, 2560, 2816, 3072, 3328, 3584, 3840, 4096, 4608, 5120, 5632, 6144, 6656, 7168, 7680, 8192], 'tc_compiler': 'eager', 'full_prefill_max_req': None, 'full_prefill_prefix_chunk_tokens': None}}, 'cuda_graph_backend_decode': None, 'cuda_graph_backend_prefill': None, 'cuda_graph_max_bs_decode': None, 'cuda_graph_max_bs_prefill': None, 'cuda_graph_bs_decode': None, 'cuda_graph_bs_prefill': None, 'cuda_graph_tc_compiler': None, 'disable_prefill_cuda_graph': False, 'disable_decode_cuda_graph': False, 'disable_cuda_graph': False, 'disable_cuda_graph_padding': False, 'enable_profile_cuda_graph': False, 'enable_cudagraph_gc': False, 'debug_cuda_graph': False, 'enable_layerwise_nvtx_marker': False, 'enable_nccl_nvls': False, 'enable_symm_mem': False, 'triton_attention_reduce_in_fp32': False, 'triton_attention_num_kv_splits': 8, 'triton_attention_split_tile_size': None, 'flashinfer_mla_disable_ragged': False, 'enable_fused_qk_norm_rope': False, 'enable_precise_embedding_interpolation': False, 'enable_fused_moe_sum_all_reduce': False, 'enable_deepseek_v4_fp4_indexer': False, 'disable_custom_all_reduce': False, 'enable_mscclpp': False, 'enable_torch_symm_mem': False, 'enable_scattered_sconv': False, 'pre_warm_nccl': False, 'enable_quant_communications': False, 'enable_flashinfer_allreduce_fusion': False, 'enforce_disable_flashinfer_allreduce_fusion': False, 'flashinfer_allreduce_fusion_backend': None, 'enable_aiter_allreduce_fusion': False, 'enable_torch_compile': False, 'enable_torch_compile_debug_mode': False, 'torch_compile_max_bs': 32, 'speculative_algorithm': None, 'uno_lora_path': None, 'speculative_draft_model_path': None, 'speculative_draft_model_revision': None, 'speculative_draft_load_format': None, 'speculative_num_steps': None, 'speculative_eagle_topk': None, 'speculative_num_draft_tokens': None, 'speculative_dflash_block_size': None, 'speculative_dspark_block_size': None, 'speculative_dspark_sps_table_path': None, 'speculative_dspark_confidence_sts_path': None, 'speculative_dspark_align_verify_tokens_to_graph_tier': False, 'speculative_accept_threshold_single': 1.0, 'speculative_accept_threshold_acc': 1.0, 'speculative_use_rejection_sampling': False, 'speculative_token_map': None, 'speculative_attention_mode': 'prefill', 'speculative_draft_attention_backend': None, 'speculative_dsa_topk_backend': 'sgl-kernel', 'speculative_draft_kv_cache_dtype': None, 'speculative_draft_window_size': None, 'speculative_moe_runner_backend': 'auto', 'speculative_moe_a2a_backend': None, 'speculative_draft_model_quantization': None, '_speculative_draft_quantization_explicitly_set': False, 'speculative_skip_dp_mlp_sync': False, 'enable_multi_layer_eagle': False, 'speculative_adaptive': False, 'speculative_adaptive_config': None, 'decoupled_spec_bind_endpoint': None, 'decoupled_spec_connect_endpoints': None, 'decoupled_spec_rank': None, 'decoupled_spec_role': 'null', 'spec_trace_dir': None, 'speculative_ngram_min_bfs_breadth': 1, 'speculative_ngram_max_bfs_breadth': 10, 'speculative_ngram_match_type': 'BFS', 'speculative_ngram_max_trie_depth': 18, 'speculative_ngram_capacity': 10000000, 'speculative_ngram_external_corpus_path': None, 'speculative_ngram_external_sam_budget': 0, 'speculative_ngram_external_corpus_max_tokens': 10000000, 'ep_size': 1, 'moe_a2a_backend': 'none', 'enable_w4a4_mxfp4_megamoe': False, 'deepep_v2_mode': 'direct', 'moe_runner_backend': 'auto', 'flashinfer_mxfp4_moe_precision': 'default', 'deepep_mode': 'auto', 'fuseep_mode': 2, 'deepep_dispatcher_output_dtype': 'auto', 'ep_num_redundant_experts': 0, 'ep_dispatch_algorithm': None, 'init_expert_location': 'trivial', 'enable_eplb': False, 'eplb_algorithm': 'auto', 'eplb_rebalance_num_iterations': 1000, 'eplb_rebalance_layers_per_chunk': None, 'eplb_min_rebalancing_utilization_threshold': 1.0, 'expert_distribution_recorder_mode': None, 'expert_distribution_recorder_buffer_size': 1000, 'expert_balancedness_report_mode': 'off', 'deepep_config': None, 'moe_dense_tp_size': None, 'elastic_ep_backend': None, 'enable_elastic_expert_backup': False, 'mooncake_ib_device': None, 'enable_waterfill': False, 'ep_join_mode': None, 'ep_join_rank_offset': 0, 'elastic_ep_initial_size': None, 'max_ep_size': None, 'elastic_ep_scale_timeout': 600, 'elastic_ep_rejoin': False, 'disable_flashinfer_cutlass_moe_fp4_allgather': False, 'disable_shared_experts_fusion': False, 'enforce_shared_experts_fusion': False, 'max_mamba_cache_size': None, 'mamba_ssm_dtype': None, 'mamba_max_states_per_path': -1, 'enable_mamba_cache_stochastic_rounding': False, 'mamba_cache_philox_rounds': 0, 'mamba_full_memory_ratio': 0.9, 'mamba_radix_cache_strategy': 'extra_buffer', 'uses_mamba_radix_cache': True, 'mamba_track_interval': 256, 'enable_int8_mamba_checkpoint': False, 'int8_mamba_ckpt_size': None, 'linear_attn_backend': 'triton', 'linear_attn_decode_backend': None, 'linear_attn_prefill_backend': None, 'linear_attn_verify_backend': None, 'enable_linear_replayssm': False, 'linear_replayssm_cache_len': 16, 'enable_linear_replayssm_spec': False, 'enable_hierarchical_cache': False, 'hicache_host_memory_mode': 'cache', 'hicache_ratio': 2.0, 'hicache_size': 0, 'hicache_write_policy': 'write_through', 'hicache_io_backend': 'kernel', 'hicache_mem_layout': 'page_first', 'hicache_storage_backend': None, 'hicache_storage_prefetch_policy': 'timeout', 'hicache_storage_backend_extra_config': None, 'hicache_storage_prefetch_retry_poll_interval': 8, 'hicache_storage_prefetch_retry_max_attempts': 8, 'enable_unified_cache_external_linker': False, 'unified_cache_external_linker_backend': 'mooncake', 'enable_hisparse': False, 'hisparse_config': None, 'enable_broadcast_mm_inputs_process': False, 'enable_prefix_mm_cache': False, 'mm_enable_dp_encoder': False, 'mm_process_config': {'image': {'min_pixels': 3136, 'max_pixels': 2097152}}, 'mm_processor_worker_num': 0, 'mm_io_worker_num': 0, 'allowed_media_domains': [], 'media_url_max_file_size_mb': 64, 'mm_preprocess_cache_size_mb': None, 'trust_mm_content_hashes': False, 'limit_mm_data_per_request': {'video': 0}, 'enable_mm_global_cache': False, 'image_processor_backend': 'auto', 'mm_global_cache_backend': 'mooncake', 'disable_fast_image_processor': False, 'mm_feature_transport': 'cpu', 'keep_mm_feature_on_device': False, 'enable_lora': None, 'enable_lora_overlap_loading': None, 'max_lora_rank': None, 'lora_target_modules': None, 'lora_paths': None, 'max_loaded_loras': None, 'max_loras_per_batch': 8, 'lora_eviction_policy': 'lru', 'lora_backend': 'csgmv', 'max_lora_chunk_size': 16, 'experts_shared_outer_loras': None, 'lora_use_virtual_experts': False, 'lora_strict_loading': False, 'lora_drain_wait_threshold': 0.0, 'enable_two_batch_overlap': False, 'enable_single_batch_overlap': False, 'tbo_token_distribution_threshold': 0.48, 'cpu_offload_gb': 0, 'offload_group_size': -1, 'offload_num_in_group': 1, 'offload_prefetch_step': 1, 'offload_mode': 'cpu', 'enable_lmcache': False, 'lmcache_config_file': None, 'enable_flexkv': False, 'flexkv_config_file': None, 'kt_weight_path': None, 'kt_method': 'AMXINT4', 'kt_cpuinfer': None, 'kt_threadpool_count': 2, 'kt_num_gpu_experts': None, 'kt_max_deferred_experts_per_token': None, 'dllm_algorithm': None, 'dllm_algorithm_config': None, 'dllm_fdfo': True, 'disaggregation_mode': 'null', 'disaggregation_transfer_backend': 'mooncake', 'disaggregation_bootstrap_port': 8998, 'disaggregation_ib_device': None, 'disaggregation_decode_enable_radix_cache': False, 'disaggregation_decode_enable_offload_kvcache': False, 'disaggregation_decode_retraction_backup': None, 'num_reserved_decode_tokens': 512, 'disaggregation_decode_extra_slots': None, 'disaggregation_decode_polling_interval': 1, 'optimistic_prefill_attempts': 0, 'encoder_only': False, 'language_only': False, 'language_model_only': False, 'encoder_transfer_backend': 'zmq_to_scheduler', 'encoder_urls': [], 'encoder_bootstrap_port': 8997, 'encoder_register_urls': [], 'enable_adaptive_dispatch_to_encoder': False, 'enable_pdmux': False, 'pdmux_config_path': None, 'sm_group_num': 8, 'startup_weight_load_mode': 'serial', 'custom_weight_loader': [], 'weight_loader_disable_mmap': False, 'weight_loader_prefetch_checkpoints': False, 'weight_loader_prefetch_num_threads': 4, 'weight_loader_drop_cache_after_load': False, 'remote_instance_weight_loader_seed_instance_ip': None, 'remote_instance_weight_loader_seed_instance_service_port': None, 'remote_instance_weight_loader_send_weights_group_ports': None, 'remote_instance_weight_loader_backend': 'nccl', 'remote_instance_weight_loader_start_seed_via_transfer_engine': False, 'engine_info_bootstrap_port': 6789, 'modelexpress_config': None, 'download_dir': None, 'model_checksum': None, 'delete_ckpt_after_loading': False, 'decrypted_config_file': None, 'decrypted_draft_config_file': None, 'checkpoint_engine_wait_weights_before_ready': False, 'enable_prefill_delayer': False, 'prefill_delayer_max_delay_passes': 30, 'prefill_delayer_token_usage_low_watermark': None, 'prefill_delayer_forward_passes_buckets': None, 'prefill_delayer_wait_seconds_buckets': None, 'prefill_delayer_queue_min_ratio': None, 'prefill_delayer_max_delay_ms': None, 'min_free_slots_delay': None, 'enable_deterministic_inference': False, 'rl_on_policy_target': None, 'kv_canary': 'none', 'kv_canary_real_data': 'none', 'kv_canary_sweep_interval': 0, 'enable_dynamic_batch_tokenizer': False, 'dynamic_batch_tokenizer_batch_size': 32, 'dynamic_batch_tokenizer_batch_timeout': 0.002, 'enable_tokenizer_batch_encode': False, 'disable_tokenizer_batch_decode': False, 'debug_tensor_dump_output_folder': None, 'debug_tensor_dump_layers': None, 'debug_tensor_dump_input_file': None, 'enable_memory_saver': False, 'enable_weights_cpu_backup': False, 'enable_draft_weights_cpu_backup': False, 'enable_custom_logit_processor': False, 'enable_return_hidden_states': False, 'return_hidden_states_mode': None, 'enable_return_routed_experts': False, 'enable_return_indexer_topk': False, 'sampling_mask_max_tokens': 4096, 'disable_outlines_disk_cache': False, 'enable_mis': False, 'weight_cache_mode': 'off', 'weight_cache_socket': None, 'weight_cache_timeout': 1800, 'forward_hooks': None, 'msprobe_dump_config': None, 'ple_offload_embedding': None, 'ple_offload_backend': 'pinned', 'ple_offload_dir': None, 'speculative_domino_candidate_pool_size': 2048, 'flashinfer_a2a_dispatch_type': None, 'dsv4_attn_backend': 'auto', '_radix_eviction_policy_explicitly_set': False, 'enable_response_store': False}
+1792124428.734090298 [2026-10-16 04:20:28] Multiple NUMA nodes found for GPU 0: [0, 1]. Using the first one.
+1792124432.412757452 [2026-10-16 04:20:32] Processor tokenizer for /dev/shm/prefill_model is TokenizersBackend, reloading via get_tokenizer
+1792124442.015626104 [2026-10-16 04:20:42] Multimodal data loading enabled with 16 worker threads (auto).
+1792124442.032118356 [2026-10-16 04:20:42] Using default HuggingFace chat template with detected content format: openai
+1792124442.616598772 [2026-10-16 04:20:42] Auto-detected template features: reasoning_config=ReasoningToggleConfig(toggle_param='enable_thinking', default_enabled=True, special_case=None, effort_kwarg=None), reasoning_parser=qwen3, tool_call_parser=qwen3_coder
+1792124444.777372748 [2026-10-16 04:20:44] Processor tokenizer for /dev/shm/prefill_model is TokenizersBackend, reloading via get_tokenizer
+1792124455.388643356 [2026-10-16 04:20:55] Multimodal data loading enabled with 16 worker threads (auto).
+1792124455.616520427 [2026-10-16 04:20:55] Init torch distributed begin.
+1792124455.637273409 [2026-10-16 04:20:55] Init torch distributed ends. elapsed=0.02 s, mem usage=0.06 GB
+1792124455.983074537 [2026-10-16 04:20:55] Load weight begin. avail mem=94.53 GB
+1792124455.984520988 [2026-10-16 04:20:55] Detected fp8 checkpoint.
+1792124456.031878179 [2026-10-16 04:20:56] Multimodal attention backend not set. Use fa3.
+1792124456.033035967 [2026-10-16 04:20:56] Using fa3 as multimodal attention backend.
+1792124456.122796564 [2026-10-16 04:20:56] using attn output gate!
+1792124467.251915128 Multi-thread loading shards:   0% Completed | 0/8 [00:00<?, ?it/s]Multi-thread loading shards:  12% Completed | 1/8 [00:01<00:09,  1.33s/it]Multi-thread loading shards:  25% Completed | 2/8 [00:02<00:08,  1.46s/it]Multi-thread loading shards:  38% Completed | 3/8 [00:04<00:07,  1.41s/it]Multi-thread loading shards:  50% Completed | 4/8 [00:05<00:05,  1.42s/it]Multi-thread loading shards:  62% Completed | 5/8 [00:06<00:04,  1.39s/it]Multi-thread loading shards:  75% Completed | 6/8 [00:08<00:02,  1.40s/it]Multi-thread loading shards:  88% Completed | 7/8 [00:09<00:01,  1.38s/it]Multi-thread loading shards: 100% Completed | 8/8 [00:10<00:00,  1.32s/it]Multi-thread loading shards: 100% Completed | 8/8 [00:10<00:00,  1.37s/it]
+1792124467.360860281 [2026-10-16 04:21:07] Load weight end. elapsed=11.38 s, type=Qwen3_5MoeForConditionalGeneration, quant=fp8, avail mem=60.33 GB, mem usage=34.19 GB.
+1792124469.425615390 [2026-10-16 04:21:09] Processor tokenizer for /dev/shm/prefill_model is TokenizersBackend, reloading via get_tokenizer
+1792124479.860985254 [2026-10-16 04:21:19] Reserving 0.10 GB of the KV budget for post-sizing multimodal allocations (feature-transport pools + embedding cache).
+1792124479.872541009 [2026-10-16 04:21:19] Mamba Cache is allocated. max_mamba_cache_size: 175, conv_state size: 0.24GB, ssm_state size: 10.31GB 
+1792124479.887431169 [2026-10-16 04:21:19] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 618512, K size: 5.90 GB, V size: 5.90 GB
+1792124479.888547346 [2026-10-16 04:21:19] Memory pool end. avail mem=37.89 GB
+1792124480.031592485 [2026-10-16 04:21:20] FlashInfer GDN kernels loaded successfully
+1792124480.032682710 [2026-10-16 04:21:20] Defaulting SM90 GDN prefill backend to FlashInfer.
+1792124480.033927093 [2026-10-16 04:21:20] Linear attention kernel backend: decode=triton, prefill=flashinfer, verify=triton
+1792124480.035104820 [2026-10-16 04:21:20] Using hybrid linear attention backend for hybrid GDN models.
+1792124480.036134676 [2026-10-16 04:21:20] Using FlashInfer GDN kernels
+1792124480.037268469 [2026-10-16 04:21:20] GDN kernel dispatcher: decode=TritonGDNKernel, extend=FlashInferGDNKernel, verify=TritonGDNKernel packed_decode=True
+1792124480.038366660 [2026-10-16 04:21:20] Capture target prefill CUDA graph begin. backend=breakable, num_tokens=[4, 8, 12, 16, 20, 24, 28, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256, 288, 320, 352, 384, 416, 448, 480, 512, 576, 640, 704, 768, 832, 896, 960, 1024, 1280, 1536, 1792, 2048, 2304, 2560, 2816, 3072, 3328, 3584, 3840, 4096, 4608, 5120, 5632, 6144, 6656, 7168, 7680, 8192], avail mem=37.77 GB
+1792124481.465726375   0%|          | 0/58 [00:00<?, ?it/s]Capturing num tokens (num_tokens=8192 avail_mem=37.74 GB):   0%|          | 0/58 [00:00<?, ?it/s][2026-10-16 04:21:21] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+1792124481.466904780 [2026-10-16 04:21:21] Try DeepGEMM JIT Compiling for <GEMM_NT_F8F8BF16> N=12288, K=2048, num_groups=1 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+1792124481.468287301 [2026-10-16 04:21:21] Required memory for warmup: 0.4296875GB, Available memory: 37.48870849609375GB
+1792124481.469448743 
+1792124481.567259047 DeepGEMM warmup:   0%|          | 0/16384 [00:00<?, ?it/s][A
+1792124481.983412831 DeepGEMM warmup:   8%|▊         | 1317/16384 [00:00<00:01, 13166.31it/s][A
+1792124482.380556727 DeepGEMM warmup:  16%|█▌        | 2634/16384 [00:00<00:02, 4606.90it/s] [A
+1792124482.696868492 DeepGEMM warmup:  21%|██        | 3363/16384 [00:00<00:04, 3113.71it/s][A
+1792124482.960873254 DeepGEMM warmup:  23%|██▎       | 3843/16384 [00:01<00:04, 2520.11it/s][A
+1792124483.181462194 DeepGEMM warmup:  26%|██▌       | 4194/16384 [00:01<00:05, 2137.26it/s][A
+1792124483.370205349 DeepGEMM warmup:  27%|██▋       | 4466/16384 [00:01<00:06, 1892.15it/s][A
+1792124483.535966006 DeepGEMM warmup:  29%|██▊       | 4688/16384 [00:01<00:06, 1713.92it/s][A
+1792124483.693525580 DeepGEMM warmup:  30%|██▉       | 4876/16384 [00:02<00:07, 1576.16it/s][A
+1792124483.836606607 DeepGEMM warmup:  31%|███       | 5040/16384 [00:02<00:07, 1445.27it/s][A
+1792124483.968825268 DeepGEMM warmup:  32%|███▏      | 5186/16384 [00:02<00:08, 1343.30it/s][A
+1792124484.094776717 DeepGEMM warmup:  32%|███▏      | 5318/16384 [00:02<00:08, 1259.83it/s][A
+1792124484.214782565 DeepGEMM warmup:  33%|███▎      | 5441/16384 [00:02<00:09, 1189.93it/s][A
+1792124484.329882973 DeepGEMM warmup:  34%|███▍      | 5556/16384 [00:02<00:09, 1131.53it/s][A
+1792124484.443637684 DeepGEMM warmup:  35%|███▍      | 5665/16384 [00:02<00:09, 1084.50it/s][A
+1792124484.553205856 DeepGEMM warmup:  35%|███▌      | 5770/16384 [00:02<00:10, 1041.30it/s][A
+1792124484.667490403 DeepGEMM warmup:  36%|███▌      | 5871/16384 [00:03<00:10, 1009.20it/s][A
+1792124484.778674539 DeepGEMM warmup:  36%|███▋      | 5970/16384 [00:03<00:10, 969.01it/s] [A
+1792124484.887516829 DeepGEMM warmup:  37%|███▋      | 6065/16384 [00:03<00:11, 936.80it/s][A
+1792124484.996848946 DeepGEMM warmup:  38%|███▊      | 6158/16384 [00:03<00:11, 912.67it/s][A
+1792124485.102874982 DeepGEMM warmup:  38%|███▊      | 6248/16384 [00:03<00:11, 887.74it/s][A
+1792124485.209129734 DeepGEMM warmup:  39%|███▊      | 6336/16384 [00:03<00:11, 870.14it/s][A
+1792124485.315581083 DeepGEMM warmup:  39%|███▉      | 6423/16384 [00:03<00:11, 855.50it/s][A
+1792124485.420675860 DeepGEMM warmup:  40%|███▉      | 6508/16384 [00:03<00:11, 838.82it/s][A
+1792124485.525297843 DeepGEMM warmup:  40%|████      | 6592/16384 [00:03<00:11, 827.08it/s][A
+1792124485.631294206 DeepGEMM warmup:  41%|████      | 6675/16384 [00:04<00:11, 817.22it/s][A
+1792124485.739967188 DeepGEMM warmup:  41%|████      | 6757/16384 [00:04<00:11, 804.05it/s][A
+1792124485.839928892 DeepGEMM warmup:  42%|████▏     | 6838/16384 [00:04<00:12, 794.88it/s][A
+1792124485.945274534 DeepGEMM warmup:  42%|████▏     | 6918/16384 [00:04<00:12, 788.11it/s][A
+1792124486.049347927 DeepGEMM warmup:  43%|████▎     | 6997/16384 [00:04<00:12, 776.28it/s][A
+1792124486.152259048 DeepGEMM warmup:  43%|████▎     | 7075/16384 [00:04<00:12, 768.09it/s][A
+1792124486.260002106 DeepGEMM warmup:  44%|████▎     | 7152/16384 [00:04<00:12, 762.39it/s][A
+1792124486.366491542 DeepGEMM warmup:  44%|████▍     | 7229/16384 [00:04<00:12, 747.93it/s][A
+1792124486.471325291 DeepGEMM warmup:  45%|████▍     | 7304/16384 [00:04<00:12, 734.90it/s][A
+1792124486.575797692 DeepGEMM warmup:  45%|████▌     | 7378/16384 [00:05<00:12, 725.95it/s][A
+1792124486.681393609 DeepGEMM warmup:  45%|████▌     | 7451/16384 [00:05<00:12, 717.68it/s][A
+1792124486.784578045 DeepGEMM warmup:  46%|████▌     | 7523/16384 [00:05<00:12, 707.84it/s][A
+1792124486.888406978 DeepGEMM warmup:  46%|████▋     | 7594/16384 [00:05<00:12, 701.00it/s][A
+1792124486.992551583 DeepGEMM warmup:  47%|████▋     | 7665/16384 [00:05<00:12, 696.14it/s][A
+1792124487.096204293 DeepGEMM warmup:  47%|████▋     | 7735/16384 [00:05<00:12, 688.68it/s][A
+1792124487.199715183 DeepGEMM warmup:  48%|████▊     | 7804/16384 [00:05<00:12, 681.96it/s][A
+1792124487.302123645 DeepGEMM warmup:  48%|████▊     | 7873/16384 [00:05<00:12, 677.22it/s][A
+1792124487.407078608 DeepGEMM warmup:  48%|████▊     | 7941/16384 [00:05<00:12, 673.62it/s][A
+1792124487.510467845 DeepGEMM warmup:  49%|████▉     | 8009/16384 [00:05<00:12, 665.92it/s][A
+1792124487.613685992 DeepGEMM warmup:  49%|████▉     | 8076/16384 [00:06<00:12, 660.57it/s][A
+1792124487.717051153 DeepGEMM warmup:  50%|████▉     | 8143/16384 [00:06<00:12, 656.84it/s][A
+1792124487.824250141 DeepGEMM warmup:  50%|█████     | 8209/16384 [00:06<00:12, 652.02it/s][A
+1792124487.929920986 DeepGEMM warmup:  51%|█████     | 8275/16384 [00:06<00:12, 640.64it/s][A
+1792124488.033853835 DeepGEMM warmup:  51%|█████     | 8340/16384 [00:06<00:12, 633.00it/s][A
+1792124488.136866640 DeepGEMM warmup:  51%|█████▏    | 8404/16384 [00:06<00:12, 627.63it/s][A
+1792124488.241905436 DeepGEMM warmup:  52%|█████▏    | 8467/16384 [00:06<00:12, 622.69it/s][A
+1792124488.345399931 DeepGEMM warmup:  52%|█████▏    | 8530/16384 [00:06<00:12, 615.73it/s][A
+1792124488.448708883 DeepGEMM warmup:  52%|█████▏    | 8592/16384 [00:06<00:12, 610.95it/s][A
+1792124488.550901547 DeepGEMM warmup:  53%|█████▎    | 8654/16384 [00:06<00:12, 607.57it/s][A
+1792124488.655232864 DeepGEMM warmup:  53%|█████▎    | 8715/16384 [00:07<00:12, 604.52it/s][A
+1792124488.758035104 DeepGEMM warmup:  54%|█████▎    | 8776/16384 [00:07<00:12, 598.62it/s][A
+1792124488.860212013 DeepGEMM warmup:  54%|█████▍    | 8836/16384 [00:07<00:12, 594.57it/s][A
+1792124488.962933563 DeepGEMM warmup:  54%|█████▍    | 8896/16384 [00:07<00:12, 591.67it/s][A
+1792124489.065885488 DeepGEMM warmup:  55%|█████▍    | 8956/16384 [00:07<00:12, 589.62it/s][A
+1792124489.169235559 DeepGEMM warmup:  55%|█████▌    | 9015/16384 [00:07<00:12, 584.51it/s][A
+1792124489.272541646 DeepGEMM warmup:  55%|█████▌    | 9074/16384 [00:07<00:12, 580.41it/s][A
+1792124489.374505445 DeepGEMM warmup:  56%|█████▌    | 9133/16384 [00:07<00:12, 577.66it/s][A
+1792124489.478334059 DeepGEMM warmup:  56%|█████▌    | 9191/16384 [00:07<00:12, 575.68it/s][A
+1792124489.584742833 DeepGEMM warmup:  56%|█████▋    | 9249/16384 [00:08<00:12, 570.10it/s][A
+1792124489.689375096 DeepGEMM warmup:  57%|█████▋    | 9307/16384 [00:08<00:12, 562.45it/s][A
+1792124489.792022240 DeepGEMM warmup:  57%|█████▋    | 9364/16384 [00:08<00:12, 557.21it/s][A
+1792124489.894913466 DeepGEMM warmup:  57%|█████▋    | 9420/16384 [00:08<00:12, 553.65it/s][A
+1792124489.999489129 DeepGEMM warmup:  58%|█████▊    | 9476/16384 [00:08<00:12, 551.05it/s][A
+1792124490.102801617 DeepGEMM warmup:  58%|█████▊    | 9532/16384 [00:08<00:12, 545.60it/s][A
+1792124490.206137582 DeepGEMM warmup:  59%|█████▊    | 9587/16384 [00:08<00:12, 541.86it/s][A
+1792124490.307357829 DeepGEMM warmup:  59%|█████▉    | 9642/16384 [00:08<00:12, 539.24it/s][A
+1792124490.409343071 DeepGEMM warmup:  59%|█████▉    | 9696/16384 [00:08<00:12, 537.43it/s][A
+1792124490.512958679 DeepGEMM warmup:  60%|█████▉    | 9750/16384 [00:08<00:12, 534.91it/s][A
+1792124490.616439787 DeepGEMM warmup:  60%|█████▉    | 9804/16384 [00:09<00:12, 530.95it/s][A
+1792124490.718026538 DeepGEMM warmup:  60%|██████    | 9858/16384 [00:09<00:12, 528.14it/s][A
+1792124490.820011907 DeepGEMM warmup:  60%|██████    | 9911/16384 [00:09<00:12, 526.25it/s][A
+1792124490.922646605 DeepGEMM warmup:  61%|██████    | 9964/16384 [00:09<00:12, 524.87it/s][A
+1792124491.026156937 DeepGEMM warmup:  61%|██████    | 10017/16384 [00:09<00:12, 521.95it/s][A
+1792124491.128296110 DeepGEMM warmup:  61%|██████▏   | 10070/16384 [00:09<00:12, 518.48it/s][A
+1792124491.230247101 DeepGEMM warmup:  62%|██████▏   | 10122/16384 [00:09<00:12, 516.09it/s][A
+1792124491.332034592 DeepGEMM warmup:  62%|██████▏   | 10174/16384 [00:09<00:12, 514.43it/s][A
+1792124491.435128220 DeepGEMM warmup:  62%|██████▏   | 10226/16384 [00:09<00:11, 513.24it/s][A
+1792124491.539144338 DeepGEMM warmup:  63%|██████▎   | 10278/16384 [00:09<00:11, 510.28it/s][A
+1792124491.641300437 DeepGEMM warmup:  63%|██████▎   | 10330/16384 [00:10<00:11, 507.21it/s][A
+1792124491.743159900 DeepGEMM warmup:  63%|██████▎   | 10381/16384 [00:10<00:11, 505.08it/s][A
+1792124491.845238742 DeepGEMM warmup:  64%|██████▎   | 10432/16384 [00:10<00:11, 503.56it/s][A
+1792124491.950103879 DeepGEMM warmup:  64%|██████▍   | 10483/16384 [00:10<00:11, 502.46it/s][A
+1792124492.054320638 DeepGEMM warmup:  64%|██████▍   | 10534/16384 [00:10<00:11, 497.47it/s][A
+1792124492.159155913 DeepGEMM warmup:  65%|██████▍   | 10584/16384 [00:10<00:11, 492.17it/s][A
+1792124492.260530590 DeepGEMM warmup:  65%|██████▍   | 10634/16384 [00:10<00:11, 488.48it/s][A
+1792124492.362687984 DeepGEMM warmup:  65%|██████▌   | 10683/16384 [00:10<00:11, 485.97it/s][A
+1792124492.465649761 DeepGEMM warmup:  66%|██████▌   | 10732/16384 [00:10<00:11, 484.19it/s][A
+1792124492.570229092 DeepGEMM warmup:  66%|██████▌   | 10781/16384 [00:10<00:11, 481.34it/s][A
+1792124492.672273821 DeepGEMM warmup:  66%|██████▌   | 10830/16384 [00:11<00:11, 477.97it/s][A
+1792124492.774260094 DeepGEMM warmup:  66%|██████▋   | 10878/16384 [00:11<00:11, 475.68it/s][A
+1792124492.876250109 DeepGEMM warmup:  67%|██████▋   | 10926/16384 [00:11<00:11, 474.07it/s][A
+1792124492.978976258 DeepGEMM warmup:  67%|██████▋   | 10974/16384 [00:11<00:11, 472.89it/s][A
+1792124493.082745891 DeepGEMM warmup:  67%|██████▋   | 11022/16384 [00:11<00:11, 471.50it/s][A
+1792124493.184880247 DeepGEMM warmup:  68%|██████▊   | 11070/16384 [00:11<00:11, 468.44it/s][A
+1792124493.286441425 DeepGEMM warmup:  68%|██████▊   | 11117/16384 [00:11<00:11, 466.36it/s][A
+1792124493.388168952 DeepGEMM warmup:  68%|██████▊   | 11164/16384 [00:11<00:11, 464.90it/s][A
+1792124493.490273308 DeepGEMM warmup:  68%|██████▊   | 11211/16384 [00:11<00:11, 463.85it/s][A
+1792124493.593457174 DeepGEMM warmup:  69%|██████▊   | 11258/16384 [00:12<00:11, 463.15it/s][A
+1792124493.697299301 DeepGEMM warmup:  69%|██████▉   | 11305/16384 [00:12<00:11, 460.50it/s][A
+1792124493.799095238 DeepGEMM warmup:  69%|██████▉   | 11352/16384 [00:12<00:10, 458.15it/s][A
+1792124493.900656799 DeepGEMM warmup:  70%|██████▉   | 11398/16384 [00:12<00:10, 456.55it/s][A
+1792124494.002159305 DeepGEMM warmup:  70%|██████▉   | 11444/16384 [00:12<00:10, 455.42it/s][A
+1792124494.105074435 DeepGEMM warmup:  70%|███████   | 11490/16384 [00:12<00:10, 454.62it/s][A
+1792124494.210380856 DeepGEMM warmup:  70%|███████   | 11536/16384 [00:12<00:10, 452.59it/s][A
+1792124494.313528650 DeepGEMM warmup:  71%|███████   | 11582/16384 [00:12<00:10, 447.64it/s][A
+1792124494.416636742 DeepGEMM warmup:  71%|███████   | 11627/16384 [00:12<00:10, 444.25it/s][A
+1792124494.519998053 DeepGEMM warmup:  71%|███████   | 11672/16384 [00:12<00:10, 441.89it/s][A
+1792124494.622762766 DeepGEMM warmup:  72%|███████▏  | 11717/16384 [00:13<00:10, 440.23it/s][A
+1792124494.724784104 DeepGEMM warmup:  72%|███████▏  | 11762/16384 [00:13<00:10, 439.07it/s][A
+1792124494.827465348 DeepGEMM warmup:  72%|███████▏  | 11806/16384 [00:13<00:10, 436.87it/s][A
+1792124494.930137667 DeepGEMM warmup:  72%|███████▏  | 11850/16384 [00:13<00:10, 434.42it/s][A
+1792124495.032757041 DeepGEMM warmup:  73%|███████▎  | 11894/16384 [00:13<00:10, 432.68it/s][A
+1792124495.135439672 DeepGEMM warmup:  73%|███████▎  | 11938/16384 [00:13<00:10, 431.47it/s][A
+1792124495.238202775 DeepGEMM warmup:  73%|███████▎  | 11982/16384 [00:13<00:10, 430.62it/s][A
+1792124495.342154989 DeepGEMM warmup:  73%|███████▎  | 12026/16384 [00:13<00:10, 430.01it/s][A
+1792124495.444356070 DeepGEMM warmup:  74%|███████▎  | 12070/16384 [00:13<00:10, 427.78it/s][A
+1792124495.546530478 DeepGEMM warmup:  74%|███████▍  | 12113/16384 [00:13<00:10, 425.74it/s][A
+1792124495.648608051 DeepGEMM warmup:  74%|███████▍  | 12156/16384 [00:14<00:09, 424.37it/s][A
+1792124495.750784913 DeepGEMM warmup:  74%|███████▍  | 12199/16384 [00:14<00:09, 423.40it/s][A
+1792124495.852934288 DeepGEMM warmup:  75%|███████▍  | 12242/16384 [00:14<00:09, 422.71it/s][A
+1792124495.956449215 DeepGEMM warmup:  75%|███████▍  | 12285/16384 [00:14<00:09, 422.23it/s][A
+1792124496.060829659 DeepGEMM warmup:  75%|███████▌  | 12328/16384 [00:14<00:09, 420.04it/s][A
+1792124496.162088154 DeepGEMM warmup:  76%|███████▌  | 12371/16384 [00:14<00:09, 418.20it/s][A
+1792124496.263475306 DeepGEMM warmup:  76%|███████▌  | 12413/16384 [00:14<00:09, 416.91it/s][A
+1792124496.364872802 DeepGEMM warmup:  76%|███████▌  | 12455/16384 [00:14<00:09, 416.04it/s][A
+1792124496.466153627 DeepGEMM warmup:  76%|███████▋  | 12497/16384 [00:14<00:09, 415.41it/s][A
+1792124496.570507281 DeepGEMM warmup:  77%|███████▋  | 12539/16384 [00:14<00:09, 414.94it/s][A
+1792124496.675200282 DeepGEMM warmup:  77%|███████▋  | 12581/16384 [00:15<00:09, 411.21it/s][A
+1792124496.778217568 DeepGEMM warmup:  77%|███████▋  | 12623/16384 [00:15<00:09, 407.83it/s][A
+1792124496.880446884 DeepGEMM warmup:  77%|███████▋  | 12664/16384 [00:15<00:09, 405.51it/s][A
+1792124496.983075316 DeepGEMM warmup:  78%|███████▊  | 12705/16384 [00:15<00:09, 403.90it/s][A
+1792124497.085363307 DeepGEMM warmup:  78%|███████▊  | 12746/16384 [00:15<00:09, 402.77it/s][A
+1792124497.188939633 DeepGEMM warmup:  78%|███████▊  | 12787/16384 [00:15<00:08, 402.00it/s][A
+1792124497.293097510 DeepGEMM warmup:  78%|███████▊  | 12828/16384 [00:15<00:08, 400.19it/s][A
+1792124497.394852256 DeepGEMM warmup:  79%|███████▊  | 12869/16384 [00:15<00:08, 398.13it/s][A
+1792124497.496492556 DeepGEMM warmup:  79%|███████▉  | 12909/16384 [00:15<00:08, 396.73it/s][A
+1792124497.598314616 DeepGEMM warmup:  79%|███████▉  | 12949/16384 [00:16<00:08, 395.76it/s][A
+1792124497.699807998 DeepGEMM warmup:  79%|███████▉  | 12989/16384 [00:16<00:08, 395.06it/s][A
+1792124497.805373037 DeepGEMM warmup:  80%|███████▉  | 13029/16384 [00:16<00:08, 394.55it/s][A
+1792124497.905333858 DeepGEMM warmup:  80%|███████▉  | 13069/16384 [00:16<00:08, 393.73it/s][A
+1792124498.008727991 DeepGEMM warmup:  80%|████████  | 13109/16384 [00:16<00:08, 391.73it/s][A
+1792124498.112000018 DeepGEMM warmup:  80%|████████  | 13149/16384 [00:16<00:08, 390.38it/s][A
+1792124498.212525957 DeepGEMM warmup:  80%|████████  | 13189/16384 [00:16<00:08, 389.38it/s][A
+1792124498.313284872 DeepGEMM warmup:  81%|████████  | 13228/16384 [00:16<00:08, 388.77it/s][A
+1792124498.414128442 DeepGEMM warmup:  81%|████████  | 13267/16384 [00:16<00:08, 388.29it/s][A
+1792124498.515994191 DeepGEMM warmup:  81%|████████  | 13306/16384 [00:16<00:07, 387.96it/s][A
+1792124498.618285460 DeepGEMM warmup:  81%|████████▏ | 13345/16384 [00:17<00:07, 386.32it/s][A
+1792124498.720892111 DeepGEMM warmup:  82%|████████▏ | 13384/16384 [00:17<00:07, 384.72it/s][A
+1792124498.822985377 DeepGEMM warmup:  82%|████████▏ | 13423/16384 [00:17<00:07, 383.59it/s][A
+1792124498.925205356 DeepGEMM warmup:  82%|████████▏ | 13462/16384 [00:17<00:07, 382.85it/s][A
+1792124499.027764910 DeepGEMM warmup:  82%|████████▏ | 13501/16384 [00:17<00:07, 382.30it/s][A
+1792124499.130470680 DeepGEMM warmup:  83%|████████▎ | 13540/16384 [00:17<00:07, 381.95it/s][A
+1792124499.234342740 DeepGEMM warmup:  83%|████████▎ | 13579/16384 [00:17<00:07, 381.31it/s][A
+1792124499.335787554 DeepGEMM warmup:  83%|████████▎ | 13618/16384 [00:17<00:07, 379.46it/s][A
+1792124499.437098788 DeepGEMM warmup:  83%|████████▎ | 13656/16384 [00:17<00:07, 378.17it/s][A
+1792124499.538162920 DeepGEMM warmup:  84%|████████▎ | 13694/16384 [00:17<00:07, 377.25it/s][A
+1792124499.639594637 DeepGEMM warmup:  84%|████████▍ | 13732/16384 [00:18<00:07, 376.62it/s][A
+1792124499.741084026 DeepGEMM warmup:  84%|████████▍ | 13770/16384 [00:18<00:06, 376.14it/s][A
+1792124499.843740636 DeepGEMM warmup:  84%|████████▍ | 13808/16384 [00:18<00:06, 375.87it/s][A
+1792124499.948278122 DeepGEMM warmup:  85%|████████▍ | 13846/16384 [00:18<00:06, 373.91it/s][A
+1792124500.052619640 DeepGEMM warmup:  85%|████████▍ | 13884/16384 [00:18<00:06, 370.85it/s][A
+1792124500.154264816 DeepGEMM warmup:  85%|████████▍ | 13922/16384 [00:18<00:06, 368.73it/s][A
+1792124500.256684173 DeepGEMM warmup:  85%|████████▌ | 13959/16384 [00:18<00:06, 367.29it/s][A
+1792124500.357713187 DeepGEMM warmup:  85%|████████▌ | 13996/16384 [00:18<00:06, 366.15it/s][A
+1792124500.459542976 DeepGEMM warmup:  86%|████████▌ | 14033/16384 [00:18<00:06, 365.57it/s][A
+1792124500.562087944 DeepGEMM warmup:  86%|████████▌ | 14070/16384 [00:18<00:06, 364.90it/s][A
+1792124500.665163104 DeepGEMM warmup:  86%|████████▌ | 14107/16384 [00:19<00:06, 363.64it/s][A
+1792124500.768648285 DeepGEMM warmup:  86%|████████▋ | 14144/16384 [00:19<00:06, 362.05it/s][A
+1792124500.871995359 DeepGEMM warmup:  87%|████████▋ | 14181/16384 [00:19<00:06, 360.93it/s][A
+1792124500.975052412 DeepGEMM warmup:  87%|████████▋ | 14218/16384 [00:19<00:06, 360.13it/s][A
+1792124501.075574692 DeepGEMM warmup:  87%|████████▋ | 14255/16384 [00:19<00:05, 359.66it/s][A
+1792124501.175942643 DeepGEMM warmup:  87%|████████▋ | 14291/16384 [00:19<00:05, 359.28it/s][A
+1792124501.277312477 DeepGEMM warmup:  87%|████████▋ | 14327/16384 [00:19<00:05, 359.00it/s][A
+1792124501.379288303 DeepGEMM warmup:  88%|████████▊ | 14363/16384 [00:19<00:05, 357.79it/s][A
+1792124501.481337040 DeepGEMM warmup:  88%|████████▊ | 14399/16384 [00:19<00:05, 356.42it/s][A
+1792124501.583226390 DeepGEMM warmup:  88%|████████▊ | 14435/16384 [00:20<00:05, 355.45it/s][A
+1792124501.685187511 DeepGEMM warmup:  88%|████████▊ | 14471/16384 [00:20<00:05, 354.77it/s][A
+1792124501.787266042 DeepGEMM warmup:  89%|████████▊ | 14507/16384 [00:20<00:05, 354.28it/s][A
+1792124501.889102536 DeepGEMM warmup:  89%|████████▉ | 14543/16384 [00:20<00:05, 353.94it/s][A
+1792124501.991644474 DeepGEMM warmup:  89%|████████▉ | 14579/16384 [00:20<00:05, 353.68it/s][A
+1792124502.095306056 DeepGEMM warmup:  89%|████████▉ | 14615/16384 [00:20<00:05, 352.66it/s][A
+1792124502.198653998 DeepGEMM warmup:  89%|████████▉ | 14651/16384 [00:20<00:04, 351.25it/s][A
+1792124502.302199244 DeepGEMM warmup:  90%|████████▉ | 14687/16384 [00:20<00:04, 350.28it/s][A
+1792124502.403002116 DeepGEMM warmup:  90%|████████▉ | 14723/16384 [00:20<00:04, 349.59it/s][A
+1792124502.503485881 DeepGEMM warmup:  90%|█████████ | 14758/16384 [00:20<00:04, 349.13it/s][A
+1792124502.603671218 DeepGEMM warmup:  90%|█████████ | 14793/16384 [00:21<00:04, 348.81it/s][A
+1792124502.705366541 DeepGEMM warmup:  91%|█████████ | 14828/16384 [00:21<00:04, 348.59it/s][A
+1792124502.808905847 DeepGEMM warmup:  91%|█████████ | 14863/16384 [00:21<00:04, 347.39it/s][A
+1792124502.912489101 DeepGEMM warmup:  91%|█████████ | 14898/16384 [00:21<00:04, 344.58it/s][A
+1792124503.015927053 DeepGEMM warmup:  91%|█████████ | 14933/16384 [00:21<00:04, 342.64it/s][A
+1792124503.119272520 DeepGEMM warmup:  91%|█████████▏| 14968/16384 [00:21<00:04, 341.31it/s][A
+1792124503.222817792 DeepGEMM warmup:  92%|█████████▏| 15003/16384 [00:21<00:04, 340.37it/s][A
+1792124503.323340817 DeepGEMM warmup:  92%|█████████▏| 15038/16384 [00:21<00:03, 339.70it/s][A
+1792124503.423986824 DeepGEMM warmup:  92%|█████████▏| 15072/16384 [00:21<00:03, 339.23it/s][A
+1792124503.525991663 DeepGEMM warmup:  92%|█████████▏| 15106/16384 [00:21<00:03, 338.91it/s][A
+1792124503.627862999 DeepGEMM warmup:  92%|█████████▏| 15140/16384 [00:22<00:03, 337.32it/s][A
+1792124503.730097376 DeepGEMM warmup:  93%|█████████▎| 15174/16384 [00:22<00:03, 336.18it/s][A
+1792124503.831888931 DeepGEMM warmup:  93%|█████████▎| 15208/16384 [00:22<00:03, 335.36it/s][A
+1792124503.933600374 DeepGEMM warmup:  93%|█████████▎| 15242/16384 [00:22<00:03, 334.80it/s][A
+1792124504.035579678 DeepGEMM warmup:  93%|█████████▎| 15276/16384 [00:22<00:03, 334.41it/s][A
+1792124504.137488933 DeepGEMM warmup:  93%|█████████▎| 15310/16384 [00:22<00:03, 334.13it/s][A
+1792124504.240207556 DeepGEMM warmup:  94%|█████████▎| 15344/16384 [00:22<00:03, 333.93it/s][A
+1792124504.343401372 DeepGEMM warmup:  94%|█████████▍| 15378/16384 [00:22<00:03, 333.20it/s][A
+1792124504.447070252 DeepGEMM warmup:  94%|█████████▍| 15412/16384 [00:22<00:02, 331.90it/s][A
+1792124504.550354047 DeepGEMM warmup:  94%|█████████▍| 15446/16384 [00:22<00:02, 331.01it/s][A
+1792124504.653367367 DeepGEMM warmup:  94%|█████████▍| 15480/16384 [00:23<00:02, 330.39it/s][A
+1792124504.754948904 DeepGEMM warmup:  95%|█████████▍| 15514/16384 [00:23<00:02, 329.96it/s][A
+1792124504.854160792 DeepGEMM warmup:  95%|█████████▍| 15547/16384 [00:23<00:02, 329.67it/s][A
+1792124504.954485024 DeepGEMM warmup:  95%|█████████▌| 15580/16384 [00:23<00:02, 329.44it/s][A
+1792124505.056105215 DeepGEMM warmup:  95%|█████████▌| 15613/16384 [00:23<00:02, 329.30it/s][A
+1792124505.157612015 DeepGEMM warmup:  95%|█████████▌| 15646/16384 [00:23<00:02, 328.09it/s][A
+1792124505.259750511 DeepGEMM warmup:  96%|█████████▌| 15679/16384 [00:23<00:02, 327.03it/s][A
+1792124505.361093864 DeepGEMM warmup:  96%|█████████▌| 15712/16384 [00:23<00:02, 326.26it/s][A
+1792124505.462584668 DeepGEMM warmup:  96%|█████████▌| 15745/16384 [00:23<00:01, 325.76it/s][A
+1792124505.564507556 DeepGEMM warmup:  96%|█████████▋| 15778/16384 [00:23<00:01, 325.40it/s][A
+1792124505.666083951 DeepGEMM warmup:  97%|█████████▋| 15811/16384 [00:24<00:01, 325.15it/s][A
+1792124505.768338746 DeepGEMM warmup:  97%|█████████▋| 15844/16384 [00:24<00:01, 324.97it/s][A
+1792124505.872357198 DeepGEMM warmup:  97%|█████████▋| 15877/16384 [00:24<00:01, 324.67it/s][A
+1792124505.976717607 DeepGEMM warmup:  97%|█████████▋| 15910/16384 [00:24<00:01, 322.07it/s][A
+1792124506.081245140 DeepGEMM warmup:  97%|█████████▋| 15943/16384 [00:24<00:01, 320.27it/s][A
+1792124506.182153664 DeepGEMM warmup:  98%|█████████▊| 15976/16384 [00:24<00:01, 319.02it/s][A
+1792124506.283756860 DeepGEMM warmup:  98%|█████████▊| 16008/16384 [00:24<00:01, 318.17it/s][A
+1792124506.384984733 DeepGEMM warmup:  98%|█████████▊| 16040/16384 [00:24<00:01, 317.55it/s][A
+1792124506.486256518 DeepGEMM warmup:  98%|█████████▊| 16072/16384 [00:24<00:00, 317.10it/s][A
+1792124506.587512375 DeepGEMM warmup:  98%|█████████▊| 16104/16384 [00:25<00:00, 316.82it/s][A
+1792124506.690062263 DeepGEMM warmup:  98%|█████████▊| 16136/16384 [00:25<00:00, 316.39it/s][A
+1792124506.792743890 DeepGEMM warmup:  99%|█████████▊| 16168/16384 [00:25<00:00, 315.02it/s][A
+1792124506.895382139 DeepGEMM warmup:  99%|█████████▉| 16200/16384 [00:25<00:00, 314.09it/s][A
+1792124506.998042770 DeepGEMM warmup:  99%|█████████▉| 16232/16384 [00:25<00:00, 313.44it/s][A
+1792124507.100563429 DeepGEMM warmup:  99%|█████████▉| 16264/16384 [00:25<00:00, 312.96it/s][A
+1792124507.202886294 DeepGEMM warmup:  99%|█████████▉| 16296/16384 [00:25<00:00, 312.66it/s][A
+1792124507.305611165 DeepGEMM warmup: 100%|█████████▉| 16328/16384 [00:25<00:00, 312.45it/s][A
+1792124507.387114829 DeepGEMM warmup: 100%|█████████▉| 16360/16384 [00:25<00:00, 312.27it/s][ADeepGEMM warmup: 100%|██████████| 16384/16384 [00:25<00:00, 632.21it/s]
+1792124517.955926808 [2026-10-16 04:21:57] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+1792124517.957166040 [2026-10-16 04:21:57] Try DeepGEMM JIT Compiling for <GEMM_NT_F8F8BF16> N=2048, K=4096, num_groups=1 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+1792124517.958238422 [2026-10-16 04:21:57] Required memory for warmup: 0.1328125GB, Available memory: 37.23675537109375GB
+1792124517.959418525 
+1792124518.058195253 DeepGEMM warmup:   0%|          | 0/16384 [00:00<?, ?it/s][A
+1792124518.488262473 DeepGEMM warmup:  13%|█▎        | 2067/16384 [00:00<00:00, 20668.39it/s][A
+1792124518.872601322 DeepGEMM warmup:  25%|██▌       | 4134/16384 [00:00<00:01, 7031.17it/s] [A
+1792124519.164310456 DeepGEMM warmup:  32%|███▏      | 5268/16384 [00:00<00:02, 4892.64it/s][A
+1792124519.429944862 DeepGEMM warmup:  37%|███▋      | 6019/16384 [00:01<00:02, 4056.06it/s][A
+1792124519.643976617 DeepGEMM warmup:  40%|████      | 6576/16384 [00:01<00:02, 3426.77it/s][A
+1792124519.844333848 DeepGEMM warmup:  43%|████▎     | 7008/16384 [00:01<00:03, 3047.95it/s][A
+1792124520.012695630 DeepGEMM warmup:  45%|████▍     | 7362/16384 [00:01<00:03, 2708.17it/s][A
+1792124520.160222025 DeepGEMM warmup:  47%|████▋     | 7658/16384 [00:02<00:03, 2478.82it/s][A
+1792124520.312968074 DeepGEMM warmup:  48%|████▊     | 7916/16384 [00:02<00:03, 2309.55it/s][A
+1792124520.451269934 DeepGEMM warmup:  50%|████▉     | 8148/16384 [00:02<00:03, 2109.15it/s][A
+1792124520.577787504 DeepGEMM warmup:  51%|█████     | 8356/16384 [00:02<00:04, 1958.21it/s][A
+1792124520.696319671 DeepGEMM warmup:  52%|█████▏    | 8546/16384 [00:02<00:04, 1846.56it/s][A
+1792124520.810039037 DeepGEMM warmup:  53%|█████▎    | 8724/16384 [00:02<00:04, 1760.81it/s][A
+1792124520.919225423 DeepGEMM warmup:  54%|█████▍    | 8894/16384 [00:02<00:04, 1694.80it/s][A
+1792124521.026033728 DeepGEMM warmup:  55%|█████▌    | 9058/16384 [00:02<00:04, 1644.44it/s][A
+1792124521.145588925 DeepGEMM warmup:  56%|█████▋    | 9218/16384 [00:03<00:04, 1606.08it/s][A
+1792124521.258666208 DeepGEMM warmup:  57%|█████▋    | 9375/16384 [00:03<00:04, 1519.46it/s][A
+1792124521.368415247 DeepGEMM warmup:  58%|█████▊    | 9524/16384 [00:03<00:04, 1460.19it/s][A
+1792124521.475534883 DeepGEMM warmup:  59%|█████▉    | 9668/16384 [00:03<00:04, 1418.96it/s][A
+1792124521.580290451 DeepGEMM warmup:  60%|█████▉    | 9809/16384 [00:03<00:04, 1389.06it/s][A
+1792124521.683040500 DeepGEMM warmup:  61%|██████    | 9947/16384 [00:03<00:04, 1368.90it/s][A
+1792124521.784891039 DeepGEMM warmup:  62%|██████▏   | 10083/16384 [00:03<00:04, 1356.14it/s][A
+1792124521.885994106 DeepGEMM warmup:  62%|██████▏   | 10218/16384 [00:03<00:04, 1347.57it/s][A
+1792124521.986220847 DeepGEMM warmup:  63%|██████▎   | 10353/16384 [00:03<00:04, 1343.48it/s][A
+1792124522.099705558 DeepGEMM warmup:  64%|██████▍   | 10487/16384 [00:04<00:04, 1341.57it/s][A
+1792124522.210944777 DeepGEMM warmup:  65%|██████▍   | 10621/16384 [00:04<00:04, 1290.58it/s][A
+1792124522.318736006 DeepGEMM warmup:  66%|██████▌   | 10751/16384 [00:04<00:04, 1252.95it/s][A
+1792124522.423795993 DeepGEMM warmup:  66%|██████▋   | 10877/16384 [00:04<00:04, 1227.78it/s][A
+1792124522.528609693 DeepGEMM warmup:  67%|██████▋   | 11000/16384 [00:04<00:04, 1210.66it/s][A
+1792124522.630774267 DeepGEMM warmup:  68%|██████▊   | 11122/16384 [00:04<00:04, 1198.61it/s][A
+1792124522.733340207 DeepGEMM warmup:  69%|██████▊   | 11242/16384 [00:04<00:04, 1190.15it/s][A
+1792124522.835088029 DeepGEMM warmup:  69%|██████▉   | 11362/16384 [00:04<00:04, 1184.24it/s][A
+1792124522.942872458 DeepGEMM warmup:  70%|███████   | 11481/16384 [00:04<00:04, 1179.97it/s][A
+1792124523.052694534 DeepGEMM warmup:  71%|███████   | 11599/16384 [00:04<00:04, 1153.17it/s][A
+1792124523.159780769 DeepGEMM warmup:  72%|███████▏  | 11715/16384 [00:05<00:04, 1122.86it/s][A
+1792124523.265008326 DeepGEMM warmup:  72%|███████▏  | 11828/16384 [00:05<00:04, 1102.64it/s][A
+1792124523.368052885 DeepGEMM warmup:  73%|███████▎  | 11939/16384 [00:05<00:04, 1088.83it/s][A
+1792124523.470230648 DeepGEMM warmup:  74%|███████▎  | 12048/16384 [00:05<00:04, 1079.20it/s][A
+1792124523.572359525 DeepGEMM warmup:  74%|███████▍  | 12156/16384 [00:05<00:03, 1072.68it/s][A
+1792124523.673497831 DeepGEMM warmup:  75%|███████▍  | 12264/16384 [00:05<00:03, 1068.37it/s][A
+1792124523.774708655 DeepGEMM warmup:  76%|███████▌  | 12371/16384 [00:05<00:03, 1065.70it/s][A
+1792124523.875445300 DeepGEMM warmup:  76%|███████▌  | 12478/16384 [00:05<00:03, 1063.33it/s][A
+1792124523.975721980 DeepGEMM warmup:  77%|███████▋  | 12585/16384 [00:05<00:03, 1062.72it/s][A
+1792124524.075976427 DeepGEMM warmup:  77%|███████▋  | 12692/16384 [00:06<00:03, 1063.92it/s][A
+1792124524.186668415 DeepGEMM warmup:  78%|███████▊  | 12799/16384 [00:06<00:03, 1064.79it/s][A
+1792124524.294955417 DeepGEMM warmup:  79%|███████▉  | 12906/16384 [00:06<00:03, 1032.92it/s][A
+1792124524.400463747 DeepGEMM warmup:  79%|███████▉  | 13010/16384 [00:06<00:03, 1011.02it/s][A
+1792124524.503812234 DeepGEMM warmup:  80%|████████  | 13112/16384 [00:06<00:03, 997.54it/s] [A
+1792124524.605975621 DeepGEMM warmup:  81%|████████  | 13212/16384 [00:06<00:03, 989.08it/s][A
+1792124524.712077882 DeepGEMM warmup:  81%|████████  | 13311/16384 [00:06<00:03, 982.95it/s][A
+1792124524.812546067 DeepGEMM warmup:  82%|████████▏ | 13410/16384 [00:06<00:03, 967.70it/s][A
+1792124524.914620840 DeepGEMM warmup:  82%|████████▏ | 13509/16384 [00:06<00:02, 973.16it/s][A
+1792124525.015759875 DeepGEMM warmup:  83%|████████▎ | 13607/16384 [00:06<00:02, 969.02it/s][A
+1792124525.116820350 DeepGEMM warmup:  84%|████████▎ | 13704/16384 [00:07<00:02, 966.27it/s][A
+1792124525.217735051 DeepGEMM warmup:  84%|████████▍ | 13801/16384 [00:07<00:02, 964.44it/s][A
+1792124525.318403728 DeepGEMM warmup:  85%|████████▍ | 13898/16384 [00:07<00:02, 963.47it/s][A
+1792124525.420149254 DeepGEMM warmup:  85%|████████▌ | 13995/16384 [00:07<00:02, 963.28it/s][A
+1792124525.529993953 DeepGEMM warmup:  86%|████████▌ | 14092/16384 [00:07<00:02, 960.29it/s][A
+1792124525.636461258 DeepGEMM warmup:  87%|████████▋ | 14189/16384 [00:07<00:02, 935.60it/s][A
+1792124525.741378055 DeepGEMM warmup:  87%|████████▋ | 14283/16384 [00:07<00:02, 919.92it/s][A
+1792124525.844246335 DeepGEMM warmup:  88%|████████▊ | 14376/16384 [00:07<00:02, 910.03it/s][A
+1792124525.946561906 DeepGEMM warmup:  88%|████████▊ | 14468/16384 [00:07<00:02, 904.75it/s][A
+1792124526.048463177 DeepGEMM warmup:  89%|████████▉ | 14559/16384 [00:07<00:02, 901.07it/s][A
+1792124526.149638431 DeepGEMM warmup:  89%|████████▉ | 14650/16384 [00:08<00:01, 897.76it/s][A
+1792124526.251231684 DeepGEMM warmup:  90%|████████▉ | 14740/16384 [00:08<00:01, 895.60it/s][A
+1792124526.353359242 DeepGEMM warmup:  91%|█████████ | 14830/16384 [00:08<00:01, 893.39it/s][A
+1792124526.454275810 DeepGEMM warmup:  91%|█████████ | 14920/16384 [00:08<00:01, 889.86it/s][A
+1792124526.554944328 DeepGEMM warmup:  92%|█████████▏| 15009/16384 [00:08<00:01, 887.38it/s][A
+1792124526.655932183 DeepGEMM warmup:  92%|█████████▏| 15098/16384 [00:08<00:01, 886.08it/s][A
+1792124526.756789281 DeepGEMM warmup:  93%|█████████▎| 15187/16384 [00:08<00:01, 884.76it/s][A
+1792124526.858164709 DeepGEMM warmup:  93%|█████████▎| 15276/16384 [00:08<00:01, 883.88it/s][A
+1792124526.968463852 DeepGEMM warmup:  94%|█████████▍| 15365/16384 [00:08<00:01, 882.52it/s][A
+1792124527.073242456 DeepGEMM warmup:  94%|█████████▍| 15454/16384 [00:09<00:01, 861.60it/s][A
+1792124527.177133021 DeepGEMM warmup:  95%|█████████▍| 15541/16384 [00:09<00:00, 848.54it/s][A
+1792124527.280342846 DeepGEMM warmup:  95%|█████████▌| 15626/16384 [00:09<00:00, 839.27it/s][A
+1792124527.385033333 DeepGEMM warmup:  96%|█████████▌| 15710/16384 [00:09<00:00, 831.81it/s][A
+1792124527.485390012 DeepGEMM warmup:  96%|█████████▋| 15794/16384 [00:09<00:00, 827.04it/s][A
+1792124527.586898065 DeepGEMM warmup:  97%|█████████▋| 15877/16384 [00:09<00:00, 823.44it/s][A
+1792124527.688520737 DeepGEMM warmup:  97%|█████████▋| 15960/16384 [00:09<00:00, 821.30it/s][A
+1792124527.789258763 DeepGEMM warmup:  98%|█████████▊| 16043/16384 [00:09<00:00, 819.81it/s][A
+1792124527.889601461 DeepGEMM warmup:  98%|█████████▊| 16125/16384 [00:09<00:00, 818.43it/s][A
+1792124527.989978551 DeepGEMM warmup:  99%|█████████▉| 16207/16384 [00:09<00:00, 818.74it/s][A
+1792124528.091049928 DeepGEMM warmup:  99%|█████████▉| 16290/16384 [00:10<00:00, 820.10it/s][A
+1792124528.104402473 DeepGEMM warmup: 100%|█████████▉| 16373/16384 [00:10<00:00, 820.99it/s][ADeepGEMM warmup: 100%|██████████| 16384/16384 [00:10<00:00, 1614.81it/s]
+1792124529.066303383 [2026-10-16 04:22:09] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+1792124529.067600491 [2026-10-16 04:22:09] Try DeepGEMM JIT Compiling for <GEMM_NT_F8F8BF16> N=1024, K=2048, num_groups=1 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+1792124529.068721643 [2026-10-16 04:22:09] Required memory for warmup: 0.064453125GB, Available memory: 37.48870849609375GB
+1792124529.069727701 
+1792124529.168610161 DeepGEMM warmup:   0%|          | 0/16384 [00:00<?, ?it/s][A
+1792124529.303417996 DeepGEMM warmup:  13%|█▎        | 2189/16384 [00:00<00:00, 21878.39it/s][A
+1792124529.468568914 DeepGEMM warmup:  27%|██▋       | 4377/16384 [00:00<00:00, 18170.84it/s][A
+1792124529.693634073 DeepGEMM warmup:  38%|███▊      | 6234/16384 [00:00<00:00, 14461.84it/s][A
+1792124529.904915647 DeepGEMM warmup:  47%|████▋     | 7757/16384 [00:00<00:00, 10531.19it/s][A
+1792124530.097146930 DeepGEMM warmup:  55%|█████▍    | 8946/16384 [00:00<00:00, 8546.32it/s] [A
+1792124530.269232465 DeepGEMM warmup:  60%|██████    | 9910/16384 [00:01<00:00, 7318.08it/s][A
+1792124530.442445843 DeepGEMM warmup:  65%|██████▌   | 10716/16384 [00:01<00:00, 6513.02it/s][A
+1792124530.592469113 DeepGEMM warmup:  70%|██████▉   | 11412/16384 [00:01<00:00, 5748.79it/s][A
+1792124530.726898936 DeepGEMM warmup:  73%|███████▎  | 12014/16384 [00:01<00:00, 5273.03it/s][A
+1792124530.862480234 DeepGEMM warmup:  77%|███████▋  | 12554/16384 [00:01<00:00, 4946.20it/s][A
+1792124530.999163703 DeepGEMM warmup:  80%|███████▉  | 13051/16384 [00:01<00:00, 4595.18it/s][A
+1792124531.124129689 DeepGEMM warmup:  82%|████████▏ | 13508/16384 [00:01<00:00, 4247.42it/s][A
+1792124531.241576738 DeepGEMM warmup:  85%|████████▌ | 13928/16384 [00:02<00:00, 4007.25it/s][A
+1792124531.354009923 DeepGEMM warmup:  87%|████████▋ | 14323/16384 [00:02<00:00, 3834.30it/s][A
+1792124531.463050519 DeepGEMM warmup:  90%|████████▉ | 14700/16384 [00:02<00:00, 3707.84it/s][A
+1792124531.571341520 DeepGEMM warmup:  92%|█████████▏| 15065/16384 [00:02<00:00, 3613.17it/s][A
+1792124531.692112096 DeepGEMM warmup:  94%|█████████▍| 15421/16384 [00:02<00:00, 3518.67it/s][A
+1792124531.806350768 DeepGEMM warmup:  96%|█████████▌| 15769/16384 [00:02<00:00, 3324.63it/s][A
+1792124531.905353094 DeepGEMM warmup:  98%|█████████▊| 16099/16384 [00:02<00:00, 3195.84it/s][ADeepGEMM warmup: 100%|██████████| 16384/16384 [00:02<00:00, 5775.24it/s]
+1792124532.093866486 [2026-10-16 04:22:12] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+1792124532.094925910 [2026-10-16 04:22:12] Try DeepGEMM JIT Compiling for <GEMM_NT_F8F8BF16> N=2048, K=512, num_groups=1 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+1792124532.095861725 [2026-10-16 04:22:12] Required memory for warmup: 0.0712890625GB, Available memory: 37.48675537109375GB
+1792124532.097083115 
+1792124532.195426267 DeepGEMM warmup:   0%|          | 0/16384 [00:00<?, ?it/s][A
+1792124532.308274511 DeepGEMM warmup:  17%|█▋        | 2772/16384 [00:00<00:00, 27716.85it/s][A
+1792124532.518549036 DeepGEMM warmup:  34%|███▍      | 5544/16384 [00:00<00:00, 25733.69it/s][A
+1792124532.738776802 DeepGEMM warmup:  50%|████▉     | 8127/16384 [00:00<00:00, 17428.12it/s][A
+1792124532.943044638 DeepGEMM warmup:  62%|██████▏   | 10094/16384 [00:00<00:00, 13302.32it/s][A
+1792124533.132911307 DeepGEMM warmup:  71%|███████   | 11636/16384 [00:00<00:00, 11060.62it/s][A
+1792124533.306503368 DeepGEMM warmup:  79%|███████▊  | 12894/16384 [00:01<00:00, 9550.18it/s] [A
+1792124533.467760669 DeepGEMM warmup:  85%|████████▌ | 13950/16384 [00:01<00:00, 8481.41it/s][A
+1792124533.615332508 DeepGEMM warmup:  91%|█████████ | 14860/16384 [00:01<00:00, 7661.89it/s][A
+1792124533.754544716 DeepGEMM warmup:  96%|█████████▌| 15660/16384 [00:01<00:00, 7044.25it/s][A
+1792124533.755625004 DeepGEMM warmup: 100%|█████████▉| 16380/16384 [00:01<00:00, 6534.08it/s][ADeepGEMM warmup: 100%|██████████| 16384/16384 [00:01<00:00, 9868.36it/s]
+1792124534.031764242 [2026-10-16 04:22:14] Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128, 128].json. Fallback to triton version 3.5.1 and use MoE kernel config from /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_5_1/E=256,N=512,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128, 128].json. Performance might be sub-optimal!
+1792124534.033150143 [2026-10-16 04:22:14] Config file not found at /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_7_1/E=256,N=512,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128, 128]_down.json. Fallback to triton version 3.5.1 and use MoE kernel config from /sgl-workspace/sglang/python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_5_1/E=256,N=512,device_name=NVIDIA_H20,dtype=fp8_w8a8,block_shape=[128, 128]_down.json. Performance might be sub-optimal!
+1792124534.034263029 [2026-10-16 04:22:14] Down MoE TMA is enabled (USE_TMA=true in the down-projection config).
+1792124534.067927221 [2026-10-16 04:22:14] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+1792124534.069027248 [2026-10-16 04:22:14] Try DeepGEMM JIT Compiling for <GEMM_NT_F8F8BF16> N=9216, K=2048, num_groups=1 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+1792124534.072787151 [2026-10-16 04:22:14] Required memory for warmup: 0.330078125GB, Available memory: 37.36175537109375GB
+1792124534.073898845 
+1792124534.173910858 DeepGEMM warmup:   0%|          | 0/16384 [00:00<?, ?it/s][A
+1792124534.621082567 DeepGEMM warmup:   9%|▉         | 1520/16384 [00:00<00:00, 15198.78it/s][A
+1792124535.015228994 DeepGEMM warmup:  19%|█▊        | 3040/16384 [00:00<00:02, 4995.73it/s] [A
+1792124535.329236770 DeepGEMM warmup:  24%|██▎       | 3866/16384 [00:00<00:03, 3483.86it/s][A
+1792124535.589096909 DeepGEMM warmup:  27%|██▋       | 4411/16384 [00:01<00:04, 2832.67it/s][A
+1792124535.808707200 DeepGEMM warmup:  29%|██▉       | 4809/16384 [00:01<00:04, 2435.38it/s][A
+1792124536.000439248 DeepGEMM warmup:  31%|███       | 5119/16384 [00:01<00:05, 2159.60it/s][A
+1792124536.171817174 DeepGEMM warmup:  33%|███▎      | 5372/16384 [00:01<00:05, 1948.22it/s][A
+1792124536.326260914 DeepGEMM warmup:  34%|███▍      | 5586/16384 [00:02<00:06, 1778.86it/s][A
+1792124536.467481290 DeepGEMM warmup:  35%|███▌      | 5772/16384 [00:02<00:06, 1640.82it/s][A
+1792124536.600693858 DeepGEMM warmup:  36%|███▌      | 5937/16384 [00:02<00:06, 1528.76it/s][A
+1792124536.726838672 DeepGEMM warmup:  37%|███▋      | 6087/16384 [00:02<00:07, 1431.78it/s][A
+1792124536.847539114 DeepGEMM warmup:  38%|███▊      | 6226/16384 [00:02<00:07, 1349.60it/s][A
+1792124536.965620417 DeepGEMM warmup:  39%|███▉      | 6356/16384 [00:02<00:07, 1281.07it/s][A
+1792124537.079951913 DeepGEMM warmup:  40%|███▉      | 6480/16384 [00:02<00:08, 1220.49it/s][A
+1792124537.192694197 DeepGEMM warmup:  40%|████      | 6598/16384 [00:03<00:08, 1170.22it/s][A
+1792124537.304037115 DeepGEMM warmup:  41%|████      | 6712/16384 [00:03<00:08, 1127.03it/s][A
+1792124537.412131843 DeepGEMM warmup:  42%|████▏     | 6822/16384 [00:03<00:08, 1088.52it/s][A
+1792124537.518732987 DeepGEMM warmup:  42%|████▏     | 6929/16384 [00:03<00:08, 1060.80it/s][A
+1792124537.622828072 DeepGEMM warmup:  43%|████▎     | 7034/16384 [00:03<00:08, 1040.29it/s][A
+1792124537.729125919 DeepGEMM warmup:  44%|████▎     | 7137/16384 [00:03<00:09, 1025.52it/s][A
+1792124537.834369531 DeepGEMM warmup:  44%|████▍     | 7239/16384 [00:03<00:09, 1006.98it/s][A
+1792124537.939264901 DeepGEMM warmup:  45%|████▍     | 7339/16384 [00:03<00:09, 989.92it/s] [A
+1792124538.046780621 DeepGEMM warmup:  45%|████▌     | 7438/16384 [00:03<00:09, 976.52it/s][A
+1792124538.151952682 DeepGEMM warmup:  46%|████▌     | 7536/16384 [00:03<00:09, 957.35it/s][A
+1792124538.257547070 DeepGEMM warmup:  47%|████▋     | 7632/16384 [00:04<00:09, 944.28it/s][A
+1792124538.363124023 DeepGEMM warmup:  47%|████▋     | 7727/16384 [00:04<00:09, 930.28it/s][A
+1792124538.468008445 DeepGEMM warmup:  48%|████▊     | 7820/16384 [00:04<00:09, 915.14it/s][A
+1792124538.574263175 DeepGEMM warmup:  48%|████▊     | 7912/16384 [00:04<00:09, 904.46it/s][A
+1792124538.679151600 DeepGEMM warmup:  49%|████▉     | 8003/16384 [00:04<00:09, 889.98it/s][A
+1792124538.782894187 DeepGEMM warmup:  49%|████▉     | 8092/16384 [00:04<00:09, 877.57it/s][A
+1792124538.888603450 DeepGEMM warmup:  50%|████▉     | 8180/16384 [00:04<00:09, 868.92it/s][A
+1792124538.993512700 DeepGEMM warmup:  50%|█████     | 8267/16384 [00:04<00:09, 855.39it/s][A
+1792124539.097266633 DeepGEMM warmup:  51%|█████     | 8353/16384 [00:04<00:09, 844.56it/s][A
+1792124539.202699019 DeepGEMM warmup:  52%|█████▏    | 8438/16384 [00:05<00:09, 836.84it/s][A
+1792124539.307623171 DeepGEMM warmup:  52%|█████▏    | 8522/16384 [00:05<00:09, 824.44it/s][A
+1792124539.411121598 DeepGEMM warmup:  53%|█████▎    | 8605/16384 [00:05<00:09, 814.76it/s][A
+1792124539.516204366 DeepGEMM warmup:  53%|█████▎    | 8687/16384 [00:05<00:09, 807.86it/s][A
+1792124539.620778555 DeepGEMM warmup:  54%|█████▎    | 8768/16384 [00:05<00:09, 796.86it/s][A
+1792124539.723861595 DeepGEMM warmup:  54%|█████▍    | 8848/16384 [00:05<00:09, 787.71it/s][A
+1792124539.828596069 DeepGEMM warmup:  54%|█████▍    | 8927/16384 [00:05<00:09, 781.28it/s][A
+1792124539.933677943 DeepGEMM warmup:  55%|█████▍    | 9006/16384 [00:05<00:09, 772.71it/s][A
+1792124540.037258238 DeepGEMM warmup:  55%|█████▌    | 9084/16384 [00:05<00:09, 763.62it/s][A
+1792124540.140500898 DeepGEMM warmup:  56%|█████▌    | 9161/16384 [00:05<00:09, 757.35it/s][A
+1792124540.246234590 DeepGEMM warmup:  56%|█████▋    | 9237/16384 [00:06<00:09, 751.25it/s][A
+1792124540.350307125 DeepGEMM warmup:  57%|█████▋    | 9313/16384 [00:06<00:09, 741.73it/s][A
+1792124540.453006604 DeepGEMM warmup:  57%|█████▋    | 9388/16384 [00:06<00:09, 735.03it/s][A
+1792124540.558687910 DeepGEMM warmup:  58%|█████▊    | 9462/16384 [00:06<00:09, 730.37it/s][A
+1792124540.663129509 DeepGEMM warmup:  58%|█████▊    | 9536/16384 [00:06<00:09, 721.85it/s][A
+1792124540.766253462 DeepGEMM warmup:  59%|█████▊    | 9609/16384 [00:06<00:09, 714.95it/s][A
+1792124540.870329438 DeepGEMM warmup:  59%|█████▉    | 9681/16384 [00:06<00:09, 710.09it/s][A
+1792124540.974757215 DeepGEMM warmup:  60%|█████▉    | 9753/16384 [00:06<00:09, 704.71it/s][A
+1792124541.077772971 DeepGEMM warmup:  60%|█████▉    | 9824/16384 [00:06<00:09, 697.03it/s][A
+1792124541.181027003 DeepGEMM warmup:  60%|██████    | 9894/16384 [00:07<00:09, 691.72it/s][A
+1792124541.284549391 DeepGEMM warmup:  61%|██████    | 9964/16384 [00:07<00:09, 687.81it/s][A
+1792124541.389220468 DeepGEMM warmup:  61%|██████    | 10033/16384 [00:07<00:09, 681.17it/s][A
+1792124541.492120194 DeepGEMM warmup:  62%|██████▏   | 10102/16384 [00:07<00:09, 674.71it/s][A
+1792124541.595217027 DeepGEMM warmup:  62%|██████▏   | 10170/16384 [00:07<00:09, 670.32it/s][A
+1792124541.696914087 DeepGEMM warmup:  62%|██████▏   | 10238/16384 [00:07<00:09, 667.28it/s][A
+1792124541.798092742 DeepGEMM warmup:  63%|██████▎   | 10305/16384 [00:07<00:09, 665.11it/s][A
+1792124541.899884617 DeepGEMM warmup:  63%|██████▎   | 10372/16384 [00:07<00:09, 663.51it/s][A
+1792124542.001649362 DeepGEMM warmup:  64%|██████▎   | 10439/16384 [00:07<00:08, 662.44it/s][A
+1792124542.105694567 DeepGEMM warmup:  64%|██████▍   | 10506/16384 [00:07<00:08, 661.12it/s][A
+1792124542.208209103 DeepGEMM warmup:  65%|██████▍   | 10573/16384 [00:08<00:08, 655.91it/s][A
+1792124542.310738809 DeepGEMM warmup:  65%|██████▍   | 10639/16384 [00:08<00:08, 652.30it/s][A
+1792124542.412441279 DeepGEMM warmup:  65%|██████▌   | 10705/16384 [00:08<00:08, 649.73it/s][A
+1792124542.516300602 DeepGEMM warmup:  66%|██████▌   | 10770/16384 [00:08<00:08, 646.77it/s][A
+1792124542.620120604 DeepGEMM warmup:  66%|██████▌   | 10835/16384 [00:08<00:08, 640.64it/s][A
+1792124542.721914204 DeepGEMM warmup:  67%|██████▋   | 10900/16384 [00:08<00:08, 636.33it/s][A
+1792124542.825084303 DeepGEMM warmup:  67%|██████▋   | 10964/16384 [00:08<00:08, 633.48it/s][A
+1792124542.929867622 DeepGEMM warmup:  67%|██████▋   | 11028/16384 [00:08<00:08, 630.00it/s][A
+1792124543.033086660 DeepGEMM warmup:  68%|██████▊   | 11092/16384 [00:08<00:08, 624.13it/s][A
+1792124543.136222119 DeepGEMM warmup:  68%|██████▊   | 11155/16384 [00:08<00:08, 620.02it/s][A
+1792124543.238304359 DeepGEMM warmup:  68%|██████▊   | 11218/16384 [00:09<00:08, 617.06it/s][A
+1792124543.342572934 DeepGEMM warmup:  69%|██████▉   | 11280/16384 [00:09<00:08, 614.16it/s][A
+1792124543.444939584 DeepGEMM warmup:  69%|██████▉   | 11342/16384 [00:09<00:08, 608.51it/s][A
+1792124543.547250677 DeepGEMM warmup:  70%|██████▉   | 11403/16384 [00:09<00:08, 604.56it/s][A
+1792124543.649801589 DeepGEMM warmup:  70%|██████▉   | 11464/16384 [00:09<00:08, 601.84it/s][A
+1792124543.753305704 DeepGEMM warmup:  70%|███████   | 11525/16384 [00:09<00:08, 599.65it/s][A
+1792124543.856308957 DeepGEMM warmup:  71%|███████   | 11585/16384 [00:09<00:08, 594.07it/s][A
+1792124543.959659915 DeepGEMM warmup:  71%|███████   | 11645/16384 [00:09<00:08, 590.08it/s][A
+1792124544.061426258 DeepGEMM warmup:  71%|███████▏  | 11705/16384 [00:09<00:07, 587.34it/s][A
+1792124544.165001261 DeepGEMM warmup:  72%|███████▏  | 11764/16384 [00:09<00:07, 585.41it/s][A
+1792124544.268835424 DeepGEMM warmup:  72%|███████▏  | 11823/16384 [00:10<00:07, 580.99it/s][A
+1792124544.371163189 DeepGEMM warmup:  73%|███████▎  | 11882/16384 [00:10<00:07, 576.88it/s][A
+1792124544.473340670 DeepGEMM warmup:  73%|███████▎  | 11940/16384 [00:10<00:07, 573.93it/s][A
+1792124544.576297180 DeepGEMM warmup:  73%|███████▎  | 11998/16384 [00:10<00:07, 571.94it/s][A
+1792124544.679036446 DeepGEMM warmup:  74%|███████▎  | 12056/16384 [00:10<00:07, 569.08it/s][A
+1792124544.782226254 DeepGEMM warmup:  74%|███████▍  | 12113/16384 [00:10<00:07, 564.64it/s][A
+1792124544.884892674 DeepGEMM warmup:  74%|███████▍  | 12170/16384 [00:10<00:07, 561.46it/s][A
+1792124544.985903997 DeepGEMM warmup:  75%|███████▍  | 12227/16384 [00:10<00:07, 559.28it/s][A
+1792124545.088985395 DeepGEMM warmup:  75%|███████▍  | 12283/16384 [00:10<00:07, 557.73it/s][A
+1792124545.192202589 DeepGEMM warmup:  75%|███████▌  | 12339/16384 [00:11<00:07, 553.48it/s][A
+1792124545.293864971 DeepGEMM warmup:  76%|███████▌  | 12395/16384 [00:11<00:07, 549.97it/s][A
+1792124545.395597107 DeepGEMM warmup:  76%|███████▌  | 12450/16384 [00:11<00:07, 547.47it/s][A
+1792124545.497456013 DeepGEMM warmup:  76%|███████▋  | 12505/16384 [00:11<00:07, 545.73it/s][A
+1792124545.601360205 DeepGEMM warmup:  77%|███████▋  | 12560/16384 [00:11<00:07, 543.73it/s][A
+1792124545.703260077 DeepGEMM warmup:  77%|███████▋  | 12615/16384 [00:11<00:06, 539.47it/s][A
+1792124545.805141160 DeepGEMM warmup:  77%|███████▋  | 12669/16384 [00:11<00:06, 536.58it/s][A
+1792124545.907128714 DeepGEMM warmup:  78%|███████▊  | 12723/16384 [00:11<00:06, 534.59it/s][A
+1792124546.010212964 DeepGEMM warmup:  78%|███████▊  | 12777/16384 [00:11<00:06, 532.93it/s][A
+1792124546.114517600 DeepGEMM warmup:  78%|███████▊  | 12831/16384 [00:11<00:06, 530.16it/s][A
+1792124546.217091204 DeepGEMM warmup:  79%|███████▊  | 12885/16384 [00:12<00:06, 526.52it/s][A
+1792124546.319228238 DeepGEMM warmup:  79%|███████▉  | 12938/16384 [00:12<00:06, 523.92it/s][A
+1792124546.421557934 DeepGEMM warmup:  79%|███████▉  | 12991/16384 [00:12<00:06, 522.14it/s][A
+1792124546.525448185 DeepGEMM warmup:  80%|███████▉  | 13044/16384 [00:12<00:06, 520.92it/s][A
+1792124546.627982714 DeepGEMM warmup:  80%|███████▉  | 13097/16384 [00:12<00:06, 517.63it/s][A
+1792124546.730499933 DeepGEMM warmup:  80%|████████  | 13149/16384 [00:12<00:06, 514.43it/s][A
+1792124546.832991984 DeepGEMM warmup:  81%|████████  | 13201/16384 [00:12<00:06, 512.18it/s][A
+1792124546.935661302 DeepGEMM warmup:  81%|████████  | 13253/16384 [00:12<00:06, 510.66it/s][A
+1792124547.038139741 DeepGEMM warmup:  81%|████████  | 13305/16384 [00:12<00:06, 509.46it/s][A
+1792124547.140702473 DeepGEMM warmup:  82%|████████▏ | 13356/16384 [00:12<00:05, 506.05it/s][A
+1792124547.243501434 DeepGEMM warmup:  82%|████████▏ | 13407/16384 [00:13<00:05, 503.20it/s][A
+1792124547.346261425 DeepGEMM warmup:  82%|████████▏ | 13458/16384 [00:13<00:05, 501.20it/s][A
+1792124547.446982234 DeepGEMM warmup:  82%|████████▏ | 13509/16384 [00:13<00:05, 499.81it/s][A
+1792124547.547689416 DeepGEMM warmup:  83%|████████▎ | 13559/16384 [00:13<00:05, 498.80it/s][A
+1792124547.648081556 DeepGEMM warmup:  83%|████████▎ | 13609/16384 [00:13<00:05, 498.18it/s][A
+1792124547.749222410 DeepGEMM warmup:  83%|████████▎ | 13659/16384 [00:13<00:05, 497.61it/s][A
+1792124547.850173842 DeepGEMM warmup:  84%|████████▎ | 13709/16384 [00:13<00:05, 497.24it/s][A
+1792124547.950788461 DeepGEMM warmup:  84%|████████▍ | 13759/16384 [00:13<00:05, 496.95it/s][A
+1792124548.052774473 DeepGEMM warmup:  84%|████████▍ | 13809/16384 [00:13<00:05, 496.80it/s][A
+1792124548.155237586 DeepGEMM warmup:  85%|████████▍ | 13859/16384 [00:13<00:05, 494.89it/s][A
+1792124548.258209646 DeepGEMM warmup:  85%|████████▍ | 13909/16384 [00:14<00:05, 492.31it/s][A
+1792124548.361152269 DeepGEMM warmup:  85%|████████▌ | 13959/16384 [00:14<00:04, 490.46it/s][A
+1792124548.461836375 DeepGEMM warmup:  86%|████████▌ | 14009/16384 [00:14<00:04, 489.28it/s][A
+1792124548.563468803 DeepGEMM warmup:  86%|████████▌ | 14058/16384 [00:14<00:04, 488.40it/s][A
+1792124548.666523570 DeepGEMM warmup:  86%|████████▌ | 14107/16384 [00:14<00:04, 486.35it/s][A
+1792124548.768985596 DeepGEMM warmup:  86%|████████▋ | 14156/16384 [00:14<00:04, 483.45it/s][A
+1792124548.871533948 DeepGEMM warmup:  87%|████████▋ | 14205/16384 [00:14<00:04, 481.46it/s][A
+1792124548.974321491 DeepGEMM warmup:  87%|████████▋ | 14254/16384 [00:14<00:04, 480.11it/s][A
+1792124549.075939912 DeepGEMM warmup:  87%|████████▋ | 14303/16384 [00:14<00:04, 479.19it/s][A
+1792124549.178268998 DeepGEMM warmup:  88%|████████▊ | 14351/16384 [00:15<00:04, 477.63it/s][A
+1792124549.281285692 DeepGEMM warmup:  88%|████████▊ | 14399/16384 [00:15<00:04, 474.56it/s][A
+1792124549.383803467 DeepGEMM warmup:  88%|████████▊ | 14447/16384 [00:15<00:04, 472.45it/s][A
+1792124549.486763631 DeepGEMM warmup:  88%|████████▊ | 14495/16384 [00:15<00:04, 471.02it/s][A
+1792124549.586888071 DeepGEMM warmup:  89%|████████▉ | 14543/16384 [00:15<00:03, 469.95it/s][A
+1792124549.689357070 DeepGEMM warmup:  89%|████████▉ | 14590/16384 [00:15<00:03, 469.20it/s][A
+1792124549.791749936 DeepGEMM warmup:  89%|████████▉ | 14637/16384 [00:15<00:03, 466.25it/s][A
+1792124549.894262562 DeepGEMM warmup:  90%|████████▉ | 14684/16384 [00:15<00:03, 463.87it/s][A
+1792124549.996871813 DeepGEMM warmup:  90%|████████▉ | 14731/16384 [00:15<00:03, 462.30it/s][A
+1792124550.099680921 DeepGEMM warmup:  90%|█████████ | 14778/16384 [00:15<00:03, 461.10it/s][A
+1792124550.202740069 DeepGEMM warmup:  90%|█████████ | 14825/16384 [00:16<00:03, 460.23it/s][A
+1792124550.305107492 DeepGEMM warmup:  91%|█████████ | 14872/16384 [00:16<00:03, 458.49it/s][A
+1792124550.407545439 DeepGEMM warmup:  91%|█████████ | 14918/16384 [00:16<00:03, 455.88it/s][A
+1792124550.509727423 DeepGEMM warmup:  91%|█████████▏| 14964/16384 [00:16<00:03, 453.92it/s][A
+1792124550.612018715 DeepGEMM warmup:  92%|█████████▏| 15010/16384 [00:16<00:03, 452.66it/s][A
+1792124550.714543124 DeepGEMM warmup:  92%|█████████▏| 15056/16384 [00:16<00:02, 451.72it/s][A
+1792124550.818474604 DeepGEMM warmup:  92%|█████████▏| 15102/16384 [00:16<00:02, 451.06it/s][A
+1792124550.920305774 DeepGEMM warmup:  92%|█████████▏| 15148/16384 [00:16<00:02, 448.36it/s][A
+1792124551.022339419 DeepGEMM warmup:  93%|█████████▎| 15193/16384 [00:16<00:02, 446.35it/s][A
+1792124551.124429280 DeepGEMM warmup:  93%|█████████▎| 15238/16384 [00:16<00:02, 444.91it/s][A
+1792124551.226277299 DeepGEMM warmup:  93%|█████████▎| 15283/16384 [00:17<00:02, 443.78it/s][A
+1792124551.328547272 DeepGEMM warmup:  94%|█████████▎| 15328/16384 [00:17<00:02, 443.01it/s][A
+1792124551.432368073 DeepGEMM warmup:  94%|█████████▍| 15373/16384 [00:17<00:02, 441.94it/s][A
+1792124551.534044509 DeepGEMM warmup:  94%|█████████▍| 15418/16384 [00:17<00:02, 439.43it/s][A
+1792124551.635562952 DeepGEMM warmup:  94%|█████████▍| 15462/16384 [00:17<00:02, 437.62it/s][A
+1792124551.737395484 DeepGEMM warmup:  95%|█████████▍| 15506/16384 [00:17<00:02, 436.21it/s][A
+1792124551.839354062 DeepGEMM warmup:  95%|█████████▍| 15550/16384 [00:17<00:01, 435.05it/s][A
+1792124551.941692598 DeepGEMM warmup:  95%|█████████▌| 15594/16384 [00:17<00:01, 434.19it/s][A
+1792124552.045437256 DeepGEMM warmup:  95%|█████████▌| 15638/16384 [00:17<00:01, 432.61it/s][A
+1792124552.148959726 DeepGEMM warmup:  96%|█████████▌| 15682/16384 [00:17<00:01, 430.21it/s][A
+1792124552.250302337 DeepGEMM warmup:  96%|█████████▌| 15726/16384 [00:18<00:01, 428.49it/s][A
+1792124552.351684070 DeepGEMM warmup:  96%|█████████▌| 15769/16384 [00:18<00:01, 427.41it/s][A
+1792124552.452795912 DeepGEMM warmup:  97%|█████████▋| 15812/16384 [00:18<00:01, 426.55it/s][A
+1792124552.555075890 DeepGEMM warmup:  97%|█████████▋| 15855/16384 [00:18<00:01, 425.98it/s][A
+1792124552.658068489 DeepGEMM warmup:  97%|█████████▋| 15898/16384 [00:18<00:01, 424.36it/s][A
+1792124552.761101846 DeepGEMM warmup:  97%|█████████▋| 15941/16384 [00:18<00:01, 422.28it/s][A
+1792124552.864249434 DeepGEMM warmup:  98%|█████████▊| 15984/16384 [00:18<00:00, 420.78it/s][A
+1792124552.964996055 DeepGEMM warmup:  98%|█████████▊| 16027/16384 [00:18<00:00, 419.72it/s][A
+1792124553.065550947 DeepGEMM warmup:  98%|█████████▊| 16069/16384 [00:18<00:00, 418.96it/s][A
+1792124553.167133184 DeepGEMM warmup:  98%|█████████▊| 16111/16384 [00:18<00:00, 418.45it/s][A
+1792124553.269567262 DeepGEMM warmup:  99%|█████████▊| 16153/16384 [00:19<00:00, 416.84it/s][A
+1792124553.371893401 DeepGEMM warmup:  99%|█████████▉| 16195/16384 [00:19<00:00, 414.72it/s][A
+1792124553.474571674 DeepGEMM warmup:  99%|█████████▉| 16237/16384 [00:19<00:00, 413.32it/s][A
+1792124553.577007624 DeepGEMM warmup:  99%|█████████▉| 16279/16384 [00:19<00:00, 412.20it/s][A
+1792124553.679661535 DeepGEMM warmup: 100%|█████████▉| 16321/16384 [00:19<00:00, 411.49it/s][A
+1792124553.730794194 DeepGEMM warmup: 100%|█████████▉| 16363/16384 [00:19<00:00, 411.00it/s][ADeepGEMM warmup: 100%|██████████| 16384/16384 [00:19<00:00, 833.49it/s]
+1792124581.027229133 Capturing num tokens (num_tokens=8192 avail_mem=37.74 GB):   2%|▏         | 1/58 [01:15<1:11:18, 75.06s/it]Capturing num tokens (num_tokens=7680 avail_mem=35.04 GB):   2%|▏         | 1/58 [01:15<1:11:18, 75.06s/it]Capturing num tokens (num_tokens=7680 avail_mem=35.04 GB):   3%|▎         | 2/58 [01:15<29:12, 31.29s/it]  Capturing num tokens (num_tokens=7168 avail_mem=35.03 GB):   3%|▎         | 2/58 [01:15<29:12, 31.29s/it]Capturing num tokens (num_tokens=7168 avail_mem=35.03 GB):   5%|▌         | 3/58 [01:16<15:51, 17.29s/it]Capturing num tokens (num_tokens=6656 avail_mem=35.02 GB):   5%|▌         | 3/58 [01:16<15:51, 17.29s/it]Capturing num tokens (num_tokens=6656 avail_mem=35.02 GB):   7%|▋         | 4/58 [01:16<09:37, 10.70s/it]Capturing num tokens (num_tokens=6144 avail_mem=35.01 GB):   7%|▋         | 4/58 [01:16<09:37, 10.70s/it]Capturing num tokens (num_tokens=6144 avail_mem=35.01 GB):   9%|▊         | 5/58 [01:17<06:13,  7.05s/it]Capturing num tokens (num_tokens=5632 avail_mem=34.99 GB):   9%|▊         | 5/58 [01:17<06:13,  7.05s/it]Capturing num tokens (num_tokens=5632 avail_mem=34.99 GB):  10%|█         | 6/58 [01:18<04:10,  4.83s/it]Capturing num tokens (num_tokens=5120 avail_mem=34.98 GB):  10%|█         | 6/58 [01:18<04:10,  4.83s/it]Capturing num tokens (num_tokens=5120 avail_mem=34.98 GB):  12%|█▏        | 7/58 [01:18<02:53,  3.41s/it]Capturing num tokens (num_tokens=4608 avail_mem=34.97 GB):  12%|█▏        | 7/58 [01:18<02:53,  3.41s/it]Capturing num tokens (num_tokens=4608 avail_mem=34.97 GB):  14%|█▍        | 8/58 [01:18<02:03,  2.46s/it]Capturing num tokens (num_tokens=4096 avail_mem=34.96 GB):  14%|█▍        | 8/58 [01:18<02:03,  2.46s/it]Capturing num tokens (num_tokens=4096 avail_mem=34.96 GB):  16%|█▌        | 9/58 [01:19<01:29,  1.83s/it]Capturing num tokens (num_tokens=3840 avail_mem=34.95 GB):  16%|█▌        | 9/58 [01:19<01:29,  1.83s/it]Capturing num tokens (num_tokens=3840 avail_mem=34.95 GB):  17%|█▋        | 10/58 [01:19<01:07,  1.41s/it]Capturing num tokens (num_tokens=3584 avail_mem=34.94 GB):  17%|█▋        | 10/58 [01:19<01:07,  1.41s/it]Capturing num tokens (num_tokens=3584 avail_mem=34.94 GB):  19%|█▉        | 11/58 [01:20<00:52,  1.11s/it]Capturing num tokens (num_tokens=3328 avail_mem=34.93 GB):  19%|█▉        | 11/58 [01:20<00:52,  1.11s/it]Capturing num tokens (num_tokens=3328 avail_mem=34.93 GB):  21%|██        | 12/58 [01:20<00:41,  1.10it/s]Capturing num tokens (num_tokens=3072 avail_mem=34.92 GB):  21%|██        | 12/58 [01:20<00:41,  1.10it/s]Capturing num tokens (num_tokens=3072 avail_mem=34.92 GB):  22%|██▏       | 13/58 [01:21<00:34,  1.32it/s]Capturing num tokens (num_tokens=2816 avail_mem=34.91 GB):  22%|██▏       | 13/58 [01:21<00:34,  1.32it/s]Capturing num tokens (num_tokens=2816 avail_mem=34.91 GB):  24%|██▍       | 14/58 [01:21<00:28,  1.53it/s]Capturing num tokens (num_tokens=2560 avail_mem=34.89 GB):  24%|██▍       | 14/58 [01:21<00:28,  1.53it/s]Capturing num tokens (num_tokens=2560 avail_mem=34.89 GB):  26%|██▌       | 15/58 [01:22<00:25,  1.69it/s]Capturing num tokens (num_tokens=2304 avail_mem=34.89 GB):  26%|██▌       | 15/58 [01:22<00:25,  1.69it/s]Capturing num tokens (num_tokens=2304 avail_mem=34.89 GB):  28%|██▊       | 16/58 [01:22<00:22,  1.86it/s]Capturing num tokens (num_tokens=2048 avail_mem=34.87 GB):  28%|██▊       | 16/58 [01:22<00:22,  1.86it/s]Capturing num tokens (num_tokens=2048 avail_mem=34.87 GB):  29%|██▉       | 17/58 [01:22<00:20,  1.98it/s]Capturing num tokens (num_tokens=1792 avail_mem=34.86 GB):  29%|██▉       | 17/58 [01:22<00:20,  1.98it/s]Capturing num tokens (num_tokens=1792 avail_mem=34.86 GB):  31%|███       | 18/58 [01:23<00:19,  2.08it/s]Capturing num tokens (num_tokens=1536 avail_mem=34.85 GB):  31%|███       | 18/58 [01:23<00:19,  2.08it/s]Capturing num tokens (num_tokens=1536 avail_mem=34.85 GB):  33%|███▎      | 19/58 [01:23<00:17,  2.18it/s]Capturing num tokens (num_tokens=1280 avail_mem=34.84 GB):  33%|███▎      | 19/58 [01:23<00:17,  2.18it/s]Capturing num tokens (num_tokens=1280 avail_mem=34.84 GB):  34%|███▍      | 20/58 [01:24<00:17,  2.22it/s]Capturing num tokens (num_tokens=1024 avail_mem=34.83 GB):  34%|███▍      | 20/58 [01:24<00:17,  2.22it/s]Capturing num tokens (num_tokens=1024 avail_mem=34.83 GB):  36%|███▌      | 21/58 [01:24<00:16,  2.29it/s]Capturing num tokens (num_tokens=960 avail_mem=34.82 GB):  36%|███▌      | 21/58 [01:24<00:16,  2.29it/s] Capturing num tokens (num_tokens=960 avail_mem=34.82 GB):  38%|███▊      | 22/58 [01:24<00:16,  2.25it/s]Capturing num tokens (num_tokens=896 avail_mem=34.81 GB):  38%|███▊      | 22/58 [01:24<00:16,  2.25it/s]Capturing num tokens (num_tokens=896 avail_mem=34.81 GB):  40%|███▉      | 23/58 [01:25<00:15,  2.28it/s]Capturing num tokens (num_tokens=832 avail_mem=34.80 GB):  40%|███▉      | 23/58 [01:25<00:15,  2.28it/s]Capturing num tokens (num_tokens=832 avail_mem=34.80 GB):  41%|████▏     | 24/58 [01:25<00:14,  2.30it/s]Capturing num tokens (num_tokens=768 avail_mem=34.79 GB):  41%|████▏     | 24/58 [01:25<00:14,  2.30it/s]Capturing num tokens (num_tokens=768 avail_mem=34.79 GB):  43%|████▎     | 25/58 [01:26<00:14,  2.34it/s]Capturing num tokens (num_tokens=704 avail_mem=34.77 GB):  43%|████▎     | 25/58 [01:26<00:14,  2.34it/s]Capturing num tokens (num_tokens=704 avail_mem=34.77 GB):  45%|████▍     | 26/58 [01:26<00:13,  2.31it/s]Capturing num tokens (num_tokens=640 avail_mem=34.76 GB):  45%|████▍     | 26/58 [01:26<00:13,  2.31it/s]Capturing num tokens (num_tokens=640 avail_mem=34.76 GB):  47%|████▋     | 27/58 [01:27<00:13,  2.34it/s]Capturing num tokens (num_tokens=576 avail_mem=34.75 GB):  47%|████▋     | 27/58 [01:27<00:13,  2.34it/s]Capturing num tokens (num_tokens=576 avail_mem=34.75 GB):  48%|████▊     | 28/58 [01:27<00:12,  2.35it/s]Capturing num tokens (num_tokens=512 avail_mem=34.74 GB):  48%|████▊     | 28/58 [01:27<00:12,  2.35it/s]Capturing num tokens (num_tokens=512 avail_mem=34.74 GB):  50%|█████     | 29/58 [01:27<00:12,  2.36it/s]Capturing num tokens (num_tokens=480 avail_mem=34.73 GB):  50%|█████     | 29/58 [01:27<00:12,  2.36it/s]Capturing num tokens (num_tokens=480 avail_mem=34.73 GB):  52%|█████▏    | 30/58 [01:28<00:11,  2.37it/s]Capturing num tokens (num_tokens=448 avail_mem=34.72 GB):  52%|█████▏    | 30/58 [01:28<00:11,  2.37it/s]Capturing num tokens (num_tokens=448 avail_mem=34.72 GB):  53%|█████▎    | 31/58 [01:28<00:11,  2.33it/s]Capturing num tokens (num_tokens=416 avail_mem=34.71 GB):  53%|█████▎    | 31/58 [01:28<00:11,  2.33it/s]Capturing num tokens (num_tokens=416 avail_mem=34.71 GB):  55%|█████▌    | 32/58 [01:29<00:11,  2.29it/s]Capturing num tokens (num_tokens=384 avail_mem=34.69 GB):  55%|█████▌    | 32/58 [01:29<00:11,  2.29it/s]Capturing num tokens (num_tokens=384 avail_mem=34.69 GB):  57%|█████▋    | 33/58 [01:29<00:10,  2.33it/s]Capturing num tokens (num_tokens=352 avail_mem=34.68 GB):  57%|█████▋    | 33/58 [01:29<00:10,  2.33it/s]Capturing num tokens (num_tokens=352 avail_mem=34.68 GB):  59%|█████▊    | 34/58 [01:30<00:10,  2.33it/s]Capturing num tokens (num_tokens=320 avail_mem=34.67 GB):  59%|█████▊    | 34/58 [01:30<00:10,  2.33it/s]Capturing num tokens (num_tokens=320 avail_mem=34.67 GB):  60%|██████    | 35/58 [01:30<00:09,  2.35it/s]Capturing num tokens (num_tokens=288 avail_mem=34.66 GB):  60%|██████    | 35/58 [01:30<00:09,  2.35it/s]Capturing num tokens (num_tokens=288 avail_mem=34.66 GB):  62%|██████▏   | 36/58 [01:30<00:09,  2.36it/s]Capturing num tokens (num_tokens=256 avail_mem=34.65 GB):  62%|██████▏   | 36/58 [01:30<00:09,  2.36it/s]Capturing num tokens (num_tokens=256 avail_mem=34.65 GB):  64%|██████▍   | 37/58 [01:31<00:09,  2.32it/s]Capturing num tokens (num_tokens=240 avail_mem=34.64 GB):  64%|██████▍   | 37/58 [01:31<00:09,  2.32it/s]Capturing num tokens (num_tokens=240 avail_mem=34.64 GB):  66%|██████▌   | 38/58 [01:31<00:08,  2.32it/s]Capturing num tokens (num_tokens=224 avail_mem=34.62 GB):  66%|██████▌   | 38/58 [01:31<00:08,  2.32it/s]Capturing num tokens (num_tokens=224 avail_mem=34.62 GB):  67%|██████▋   | 39/58 [01:32<00:08,  2.36it/s]Capturing num tokens (num_tokens=208 avail_mem=34.61 GB):  67%|██████▋   | 39/58 [01:32<00:08,  2.36it/s]Capturing num tokens (num_tokens=208 avail_mem=34.61 GB):  69%|██████▉   | 40/58 [01:32<00:07,  2.38it/s]Capturing num tokens (num_tokens=192 avail_mem=34.60 GB):  69%|██████▉   | 40/58 [01:32<00:07,  2.38it/s]Capturing num tokens (num_tokens=192 avail_mem=34.60 GB):  71%|███████   | 41/58 [01:33<00:07,  2.37it/s]Capturing num tokens (num_tokens=176 avail_mem=34.59 GB):  71%|███████   | 41/58 [01:33<00:07,  2.37it/s]Capturing num tokens (num_tokens=176 avail_mem=34.59 GB):  72%|███████▏  | 42/58 [01:33<00:06,  2.39it/s]Capturing num tokens (num_tokens=160 avail_mem=34.58 GB):  72%|███████▏  | 42/58 [01:33<00:06,  2.39it/s]Capturing num tokens (num_tokens=160 avail_mem=34.58 GB):  74%|███████▍  | 43/58 [01:33<00:06,  2.38it/s]Capturing num tokens (num_tokens=144 avail_mem=34.57 GB):  74%|███████▍  | 43/58 [01:33<00:06,  2.38it/s]Capturing num tokens (num_tokens=144 avail_mem=34.57 GB):  76%|███████▌  | 44/58 [01:34<00:05,  2.38it/s]Capturing num tokens (num_tokens=128 avail_mem=34.56 GB):  76%|███████▌  | 44/58 [01:34<00:05,  2.38it/s]Capturing num tokens (num_tokens=128 avail_mem=34.56 GB):  78%|███████▊  | 45/58 [01:34<00:05,  2.39it/s]Capturing num tokens (num_tokens=112 avail_mem=34.55 GB):  78%|███████▊  | 45/58 [01:34<00:05,  2.39it/s]Capturing num tokens (num_tokens=112 avail_mem=34.55 GB):  79%|███████▉  | 46/58 [01:35<00:05,  2.36it/s]Capturing num tokens (num_tokens=96 avail_mem=34.54 GB):  79%|███████▉  | 46/58 [01:35<00:05,  2.36it/s] Capturing num tokens (num_tokens=96 avail_mem=34.54 GB):  81%|████████  | 47/58 [01:35<00:04,  2.36it/s]Capturing num tokens (num_tokens=80 avail_mem=34.53 GB):  81%|████████  | 47/58 [01:35<00:04,  2.36it/s]Capturing num tokens (num_tokens=80 avail_mem=34.53 GB):  83%|████████▎ | 48/58 [01:36<00:04,  2.34it/s]Capturing num tokens (num_tokens=64 avail_mem=34.51 GB):  83%|████████▎ | 48/58 [01:36<00:04,  2.34it/s]Capturing num tokens (num_tokens=64 avail_mem=34.51 GB):  84%|████████▍ | 49/58 [01:36<00:03,  2.34it/s]Capturing num tokens (num_tokens=48 avail_mem=34.50 GB):  84%|████████▍ | 49/58 [01:36<00:03,  2.34it/s]Capturing num tokens (num_tokens=48 avail_mem=34.50 GB):  86%|████████▌ | 50/58 [01:36<00:03,  2.35it/s]Capturing num tokens (num_tokens=32 avail_mem=34.49 GB):  86%|████████▌ | 50/58 [01:36<00:03,  2.35it/s]Capturing num tokens (num_tokens=32 avail_mem=34.49 GB):  88%|████████▊ | 51/58 [01:37<00:02,  2.34it/s]Capturing num tokens (num_tokens=28 avail_mem=34.48 GB):  88%|████████▊ | 51/58 [01:37<00:02,  2.34it/s]Capturing num tokens (num_tokens=28 avail_mem=34.48 GB):  90%|████████▉ | 52/58 [01:37<00:02,  2.31it/s]Capturing num tokens (num_tokens=24 avail_mem=34.47 GB):  90%|████████▉ | 52/58 [01:37<00:02,  2.31it/s]Capturing num tokens (num_tokens=24 avail_mem=34.47 GB):  91%|█████████▏| 53/58 [01:38<00:02,  2.32it/s]Capturing num tokens (num_tokens=20 avail_mem=34.46 GB):  91%|█████████▏| 53/58 [01:38<00:02,  2.32it/s]Capturing num tokens (num_tokens=20 avail_mem=34.46 GB):  93%|█████████▎| 54/58 [01:38<00:01,  2.31it/s]Capturing num tokens (num_tokens=16 avail_mem=34.45 GB):  93%|█████████▎| 54/58 [01:38<00:01,  2.31it/s]Capturing num tokens (num_tokens=16 avail_mem=34.45 GB):  95%|█████████▍| 55/58 [01:39<00:01,  2.32it/s]Capturing num tokens (num_tokens=12 avail_mem=34.44 GB):  95%|█████████▍| 55/58 [01:39<00:01,  2.32it/s]Capturing num tokens (num_tokens=12 avail_mem=34.44 GB):  97%|█████████▋| 56/58 [01:39<00:00,  2.32it/s]Capturing num tokens (num_tokens=8 avail_mem=34.42 GB):  97%|█████████▋| 56/58 [01:39<00:00,  2.32it/s] Capturing num tokens (num_tokens=8 avail_mem=34.42 GB):  98%|█████████▊| 57/58 [01:39<00:00,  2.27it/s]Capturing num tokens (num_tokens=4 avail_mem=34.41 GB):  98%|█████████▊| 57/58 [01:39<00:00,  2.27it/s]Capturing num tokens (num_tokens=4 avail_mem=34.41 GB): 100%|██████████| 58/58 [01:40<00:00,  2.27it/s]Capturing num tokens (num_tokens=4 avail_mem=34.41 GB): 100%|██████████| 58/58 [01:40<00:00,  1.73s/it]
+1792124581.589639642 [2026-10-16 04:23:01] Capture target prefill CUDA graph end. elapsed=101.56 s, mem usage=2.03 GB, avail mem=35.74 GB.
+1792124581.590783141 [2026-10-16 04:23:01] Capture target decode CUDA graph begin. backend=full, num_tokens_per_req=1, bs=[1, 2, 4, 8, 12, 16], avail mem=35.74 GB
+1792124582.190348935   0%|          | 0/6 [00:00<?, ?it/s]Capturing batches (bs=16 avail_mem=35.74 GB):   0%|          | 0/6 [00:00<?, ?it/s][2026-10-16 04:23:02] Using fused GDN decode QKVZ/BA unpack + indexed Conv1D.
+1792124584.505162411 Capturing batches (bs=16 avail_mem=35.74 GB):  17%|█▋        | 1/6 [00:00<00:02,  2.38it/s]Capturing batches (bs=12 avail_mem=35.74 GB):  17%|█▋        | 1/6 [00:00<00:02,  2.38it/s]Capturing batches (bs=12 avail_mem=35.74 GB):  33%|███▎      | 2/6 [00:00<00:01,  2.53it/s]Capturing batches (bs=8 avail_mem=35.73 GB):  33%|███▎      | 2/6 [00:00<00:01,  2.53it/s] Capturing batches (bs=8 avail_mem=35.73 GB):  50%|█████     | 3/6 [00:01<00:01,  2.56it/s]Capturing batches (bs=4 avail_mem=35.73 GB):  50%|█████     | 3/6 [00:01<00:01,  2.56it/s]Capturing batches (bs=4 avail_mem=35.73 GB):  67%|██████▋   | 4/6 [00:01<00:00,  2.61it/s]Capturing batches (bs=2 avail_mem=35.73 GB):  67%|██████▋   | 4/6 [00:01<00:00,  2.61it/s]Capturing batches (bs=2 avail_mem=35.73 GB):  83%|████████▎ | 5/6 [00:01<00:00,  2.64it/s]Capturing batches (bs=1 avail_mem=35.73 GB):  83%|████████▎ | 5/6 [00:01<00:00,  2.64it/s]Capturing batches (bs=1 avail_mem=35.73 GB): 100%|██████████| 6/6 [00:02<00:00,  2.47it/s]Capturing batches (bs=1 avail_mem=35.73 GB): 100%|██████████| 6/6 [00:02<00:00,  2.52it/s]
+1792124585.164699475 [2026-10-16 04:23:05] Capture target decode CUDA graph end. elapsed=3.57 s, mem usage=0.02 GB, avail mem=35.72 GB.
+1792124585.167770200 [2026-10-16 04:23:05] max_total_num_tokens=618512, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_requests=16, context_len=262144, available_gpu_mem=35.72 GB
+1792124585.168649939 [2026-10-16 04:23:05] Init Unified Radix Cache. Components: (<ComponentType.FULL: 0>, <ComponentType.MAMBA: 2>). Tree Core: UnifiedTreeCore
+1792124585.169875470 [2026-10-16 04:23:05] Tree cache initialized: source=default impl=UnifiedRadixCache hybrid_swa=False hybrid_ssm=True hicache_attached=False streaming_wrapped=False
+1792124586.393724669 [2026-10-16 04:23:06] Engine startup timings (s): load_weight=11.38, kv_cache_allocation=0.63, scheduler_e2e=143.82, cuda_graph={prefill=101.56, decode=3.57, target_verify=0.00, draft_prefill=0.00, draft_decode=0.00, draft_extend=0.00}, tokenizer_e2e=158.02
+1792124586.418893539 [2026-10-16 04:23:06] INFO:     Started server process [123877]
+1792124586.419921612 [2026-10-16 04:23:06] INFO:     Waiting for application startup.
+1792124586.479350728 [2026-10-16 04:23:06] INFO:     Application startup complete.
+1792124586.480752292 [2026-10-16 04:23:06] INFO:     Uvicorn running on http://127.0.0.1:31010 (Press CTRL+C to quit)
+1792124587.229812286 [2026-10-16 04:23:07] INFO:     127.0.0.1:47410 - "GET /health_generate HTTP/1.1" 503 Service Unavailable
+1792124587.484776236 [2026-10-16 04:23:07] INFO:     127.0.0.1:47442 - "GET /model_info HTTP/1.1" 200 OK
+1792124588.497725378 [2026-10-16 04:23:08] Prefill batch, #new-seq: 1, #new-token: 20, #cached-token: 0, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 6.01
+1792124588.545883706 [2026-10-16 04:23:08] INFO:     127.0.0.1:47444 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+1792124588.733277202 [2026-10-16 04:23:08] INFO:     127.0.0.1:47554 - "POST /freeze_gc HTTP/1.1" 200 OK
+1792124588.734332045 [2026-10-16 04:23:08] The server is fired up and ready to roll!
+1792124589.378690887 [2026-10-16 04:23:09] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: False, input throughput (token/s): 1.14
+1792124590.238274612 [2026-10-16 04:23:10] INFO:     127.0.0.1:47624 - "GET /health_generate HTTP/1.1" 200 OK
+1792124595.521229171 [2026-10-16 04:23:15] INFO:     127.0.0.1:48334 - "POST /generate HTTP/1.1" 200 OK
+1792124595.575393039 [2026-10-16 04:23:15] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 165.25
+1792124595.584341734 [2026-10-16 04:23:15] INFO:     127.0.0.1:48346 - "POST /generate HTTP/1.1" 200 OK
+1792124595.705728727 [2026-10-16 04:23:15] Prefill batch, #new-seq: 1, #new-token: 3072, #cached-token: 1024, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 23583.54
+1792124595.713861968 [2026-10-16 04:23:15] INFO:     127.0.0.1:48352 - "POST /generate HTTP/1.1" 200 OK
+1792124595.882552591 [2026-10-16 04:23:15] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 4096, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 23170.79
+1792124595.895654827 [2026-10-16 04:23:15] INFO:     127.0.0.1:48376 - "POST /generate HTTP/1.1" 200 OK
+1792124596.268358830 [2026-10-16 04:23:16] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 8192, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 21239.88
+1792124596.291167729 [2026-10-16 04:23:16] INFO:     127.0.0.1:48418 - "POST /generate HTTP/1.1" 200 OK
+1792124596.783208740 [2026-10-16 04:23:16] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 16384, full token usage: 0.05, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 15904.37
+1792124597.278390925 [2026-10-16 04:23:17] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 16552.15
+1792124597.287580779 [2026-10-16 04:23:17] INFO:     127.0.0.1:48522 - "POST /generate HTTP/1.1" 200 OK
+1792124597.295655040 /opt/sglang/lib/python3.12/site-packages/flashinfer/api_logging.py:2333: RuntimeWarning: CP delta rule heuristic matched but CP dispatch is unavailable: CP delta rule does not support state checkpointing yet; falling back to non-CP delta rule.
+1792124597.296791352   return _inner(*args, **kwargs)
+1792124600.994732004 [2026-10-16 04:23:20] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 4096, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 1102.10
+1792124601.000538350 [2026-10-16 04:23:20] INFO:     127.0.0.1:48914 - "POST /generate HTTP/1.1" 200 OK
+1792124601.052135065 [2026-10-16 04:23:21] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 1024, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 17872.39
+1792124601.064219299 [2026-10-16 04:23:21] INFO:     127.0.0.1:48916 - "POST /generate HTTP/1.1" 200 OK
+1792124601.109751305 [2026-10-16 04:23:21] Prefill batch, #new-seq: 1, #new-token: 64, #cached-token: 8128, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 1109.44
+1792124601.116687814 [2026-10-16 04:23:21] INFO:     127.0.0.1:48924 - "POST /generate HTTP/1.1" 200 OK
+1792124601.166394648 [2026-10-16 04:23:21] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 18154.21
+1792124606.887657581 [2026-10-16 04:23:26] INFO:     127.0.0.1:49590 - "POST /generate HTTP/1.1" 200 OK
+1792124606.938930930 [2026-10-16 04:23:26] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 177.39
+1792124606.941920425 [2026-10-16 04:23:26] INFO:     127.0.0.1:49596 - "POST /generate HTTP/1.1" 200 OK
+1792124606.990614195 [2026-10-16 04:23:26] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 19670.83
+1792124606.994981958 [2026-10-16 04:23:26] INFO:     127.0.0.1:49604 - "POST /generate HTTP/1.1" 200 OK
+1792124607.044297501 [2026-10-16 04:23:27] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 19224.82
+1792124607.047229942 [2026-10-16 04:23:27] INFO:     127.0.0.1:49612 - "POST /generate HTTP/1.1" 200 OK
+1792124607.096967453 [2026-10-16 04:23:27] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 19394.08
+1792124607.099713289 [2026-10-16 04:23:27] INFO:     127.0.0.1:49622 - "POST /generate HTTP/1.1" 200 OK
+1792124607.148826256 [2026-10-16 04:23:27] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 19703.33
+1792124607.152463734 [2026-10-16 04:23:27] INFO:     127.0.0.1:49626 - "POST /generate HTTP/1.1" 200 OK
+1792124607.200751702 [2026-10-16 04:23:27] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 19719.11
+1792124607.203682205 [2026-10-16 04:23:27] INFO:     127.0.0.1:49634 - "POST /generate HTTP/1.1" 200 OK
+1792124607.252758487 [2026-10-16 04:23:27] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 19674.73
+1792124607.255908014 [2026-10-16 04:23:27] INFO:     127.0.0.1:49644 - "POST /generate HTTP/1.1" 200 OK
+1792124607.304935785 [2026-10-16 04:23:27] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 19756.93
+1792124608.118559761 [2026-10-16 04:23:28] INFO:     127.0.0.1:49766 - "POST /generate HTTP/1.1" 200 OK
+1792124608.168172440 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 1185.51
+1792124608.171418220 [2026-10-16 04:23:28] INFO:     127.0.0.1:49776 - "POST /generate HTTP/1.1" 200 OK
+1792124608.219872535 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 19935.11
+1792124608.222720065 [2026-10-16 04:23:28] INFO:     127.0.0.1:49786 - "POST /generate HTTP/1.1" 200 OK
+1792124608.271041408 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 19899.56
+1792124608.274029315 [2026-10-16 04:23:28] INFO:     127.0.0.1:49788 - "POST /generate HTTP/1.1" 200 OK
+1792124608.322664310 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 19809.25
+1792124608.326706186 [2026-10-16 04:23:28] INFO:     127.0.0.1:49800 - "POST /generate HTTP/1.1" 200 OK
+1792124608.375924714 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 19394.13
+1792124608.378767814 [2026-10-16 04:23:28] INFO:     127.0.0.1:49808 - "POST /generate HTTP/1.1" 200 OK
+1792124608.427168715 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 19819.50
+1792124608.430411275 [2026-10-16 04:23:28] INFO:     127.0.0.1:49812 - "POST /generate HTTP/1.1" 200 OK
+1792124608.478203947 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 20020.85
+1792124608.481100044 [2026-10-16 04:23:28] INFO:     127.0.0.1:49826 - "POST /generate HTTP/1.1" 200 OK
+1792124608.528789818 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 20354.57
+1792124608.535311855 [2026-10-16 04:23:28] INFO:     127.0.0.1:49828 - "POST /generate HTTP/1.1" 200 OK
+1792124608.582434116 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 18997.04
+1792124608.584484478 [2026-10-16 04:23:28] INFO:     127.0.0.1:49834 - "POST /generate HTTP/1.1" 200 OK
+1792124608.633255008 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 20408.13
+1792124608.636100026 [2026-10-16 04:23:28] INFO:     127.0.0.1:49846 - "POST /generate HTTP/1.1" 200 OK
+1792124608.684096591 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 19988.93
+1792124608.686801891 [2026-10-16 04:23:28] INFO:     127.0.0.1:49852 - "POST /generate HTTP/1.1" 200 OK
+1792124608.687908954 [2026-10-16 04:23:28] Decode batch, #running-req: 1, #full token: 0, full token usage: 0.00, mamba num: 0, mamba usage: 0.00, cuda graph: True, gen throughput (token/s): 1.70, #queue-req: 0
+1792124608.733977750 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 20379.85
+1792124608.736630072 [2026-10-16 04:23:28] INFO:     127.0.0.1:49854 - "POST /generate HTTP/1.1" 200 OK
+1792124608.784534698 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 20396.70
+1792124608.787333347 [2026-10-16 04:23:28] INFO:     127.0.0.1:49874 - "POST /generate HTTP/1.1" 200 OK
+1792124608.836172283 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 19780.87
+1792124608.838993056 [2026-10-16 04:23:28] INFO:     127.0.0.1:49876 - "POST /generate HTTP/1.1" 200 OK
+1792124608.886867117 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 20154.71
+1792124608.888893819 [2026-10-16 04:23:28] INFO:     127.0.0.1:49880 - "POST /generate HTTP/1.1" 200 OK
+1792124608.937206200 [2026-10-16 04:23:28] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 20515.02
+1792124609.354479612 [2026-10-16 04:23:29] INFO:     127.0.0.1:49940 - "POST /generate HTTP/1.1" 200 OK
+1792124609.501603974 [2026-10-16 04:23:29] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 7253.11
+1792124609.505013353 [2026-10-16 04:23:29] INFO:     127.0.0.1:49958 - "POST /generate HTTP/1.1" 200 OK
+1792124609.651586901 [2026-10-16 04:23:29] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27340.07
+1792124609.655003011 [2026-10-16 04:23:29] INFO:     127.0.0.1:49980 - "POST /generate HTTP/1.1" 200 OK
+1792124609.801732857 [2026-10-16 04:23:29] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27253.05
+1792124609.805118728 [2026-10-16 04:23:29] INFO:     127.0.0.1:50004 - "POST /generate HTTP/1.1" 200 OK
+1792124609.951762981 [2026-10-16 04:23:29] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27313.40
+1792124609.955477490 [2026-10-16 04:23:29] INFO:     127.0.0.1:50022 - "POST /generate HTTP/1.1" 200 OK
+1792124610.102523087 [2026-10-16 04:23:30] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27194.78
+1792124610.107138279 [2026-10-16 04:23:30] INFO:     127.0.0.1:50042 - "POST /generate HTTP/1.1" 200 OK
+1792124610.253952100 [2026-10-16 04:23:30] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27056.26
+1792124610.257807425 [2026-10-16 04:23:30] INFO:     127.0.0.1:50066 - "POST /generate HTTP/1.1" 200 OK
+1792124610.404107184 [2026-10-16 04:23:30] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27239.16
+1792124610.408004668 [2026-10-16 04:23:30] INFO:     127.0.0.1:50086 - "POST /generate HTTP/1.1" 200 OK
+1792124610.554718894 [2026-10-16 04:23:30] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27193.69
+1792124612.818416872 [2026-10-16 04:23:32] INFO:     127.0.0.1:50392 - "POST /generate HTTP/1.1" 200 OK
+1792124612.965644689 [2026-10-16 04:23:32] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 1698.98
+1792124612.969193005 [2026-10-16 04:23:32] INFO:     127.0.0.1:50408 - "POST /generate HTTP/1.1" 200 OK
+1792124613.116341321 [2026-10-16 04:23:33] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27197.89
+1792124613.120228655 [2026-10-16 04:23:33] INFO:     127.0.0.1:50422 - "POST /generate HTTP/1.1" 200 OK
+1792124613.267249790 [2026-10-16 04:23:33] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27166.31
+1792124613.271011121 [2026-10-16 04:23:33] INFO:     127.0.0.1:50444 - "POST /generate HTTP/1.1" 200 OK
+1792124613.417948094 [2026-10-16 04:23:33] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27157.76
+1792124613.421875607 [2026-10-16 04:23:33] INFO:     127.0.0.1:50458 - "POST /generate HTTP/1.1" 200 OK
+1792124613.568422134 [2026-10-16 04:23:33] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27199.73
+1792124613.572611731 [2026-10-16 04:23:33] INFO:     127.0.0.1:50474 - "POST /generate HTTP/1.1" 200 OK
+1792124613.719395865 [2026-10-16 04:23:33] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27144.90
+1792124613.722977592 [2026-10-16 04:23:33] INFO:     127.0.0.1:50492 - "POST /generate HTTP/1.1" 200 OK
+1792124613.869370130 [2026-10-16 04:23:33] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27302.99
+1792124613.873056414 [2026-10-16 04:23:33] INFO:     127.0.0.1:50522 - "POST /generate HTTP/1.1" 200 OK
+1792124614.019718638 [2026-10-16 04:23:34] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27238.57
+1792124614.038366075 [2026-10-16 04:23:34] INFO:     127.0.0.1:50544 - "POST /generate HTTP/1.1" 200 OK
+1792124614.184591435 [2026-10-16 04:23:34] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 24828.36
+1792124614.188061911 [2026-10-16 04:23:34] INFO:     127.0.0.1:50562 - "POST /generate HTTP/1.1" 200 OK
+1792124614.334210987 [2026-10-16 04:23:34] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27425.04
+1792124614.337567031 [2026-10-16 04:23:34] INFO:     127.0.0.1:50580 - "POST /generate HTTP/1.1" 200 OK
+1792124614.483795685 [2026-10-16 04:23:34] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27350.44
+1792124614.488455426 [2026-10-16 04:23:34] INFO:     127.0.0.1:50602 - "POST /generate HTTP/1.1" 200 OK
+1792124614.636395197 [2026-10-16 04:23:34] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 26832.82
+1792124614.639935357 [2026-10-16 04:23:34] INFO:     127.0.0.1:50620 - "POST /generate HTTP/1.1" 200 OK
+1792124614.786697007 [2026-10-16 04:23:34] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27271.84
+1792124614.790452736 [2026-10-16 04:23:34] INFO:     127.0.0.1:50644 - "POST /generate HTTP/1.1" 200 OK
+1792124614.936909382 [2026-10-16 04:23:34] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27310.89
+1792124614.940661286 [2026-10-16 04:23:34] INFO:     127.0.0.1:50660 - "POST /generate HTTP/1.1" 200 OK
+1792124615.087333393 [2026-10-16 04:23:35] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27177.57
+1792124615.090652055 [2026-10-16 04:23:35] INFO:     127.0.0.1:50674 - "POST /generate HTTP/1.1" 200 OK
+1792124615.237505401 [2026-10-16 04:23:35] Prefill batch, #new-seq: 1, #new-token: 4096, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27289.53
+1792124616.392366545 [2026-10-16 04:23:36] INFO:     127.0.0.1:50832 - "POST /generate HTTP/1.1" 200 OK
+1792124616.680471133 [2026-10-16 04:23:36] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 5677.64
+1792124616.684567436 [2026-10-16 04:23:36] INFO:     127.0.0.1:50866 - "POST /generate HTTP/1.1" 200 OK
+1792124616.976615423 [2026-10-16 04:23:36] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27659.29
+1792124616.980311281 [2026-10-16 04:23:36] INFO:     127.0.0.1:50894 - "POST /generate HTTP/1.1" 200 OK
+1792124617.272718441 [2026-10-16 04:23:37] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27677.72
+1792124617.276170348 [2026-10-16 04:23:37] INFO:     127.0.0.1:50930 - "POST /generate HTTP/1.1" 200 OK
+1792124617.567275260 [2026-10-16 04:23:37] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27781.31
+1792124617.571120023 [2026-10-16 04:23:37] INFO:     127.0.0.1:50956 - "POST /generate HTTP/1.1" 200 OK
+1792124617.862895156 [2026-10-16 04:23:37] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27719.72
+1792124617.866625607 [2026-10-16 04:23:37] INFO:     127.0.0.1:50998 - "POST /generate HTTP/1.1" 200 OK
+1792124618.159201956 [2026-10-16 04:23:38] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27665.75
+1792124621.481604234 [2026-10-16 04:23:41] INFO:     127.0.0.1:51398 - "POST /generate HTTP/1.1" 200 OK
+1792124621.773138437 [2026-10-16 04:23:41] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 2266.87
+1792124621.777733442 [2026-10-16 04:23:41] INFO:     127.0.0.1:51438 - "POST /generate HTTP/1.1" 200 OK
+1792124622.069249630 [2026-10-16 04:23:42] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27628.97
+1792124622.073342707 [2026-10-16 04:23:42] INFO:     127.0.0.1:51472 - "POST /generate HTTP/1.1" 200 OK
+1792124622.364659446 [2026-10-16 04:23:42] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27743.47
+1792124622.368206643 [2026-10-16 04:23:42] INFO:     127.0.0.1:51510 - "POST /generate HTTP/1.1" 200 OK
+1792124622.659918956 [2026-10-16 04:23:42] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27769.61
+1792124622.663495141 [2026-10-16 04:23:42] INFO:     127.0.0.1:51550 - "POST /generate HTTP/1.1" 200 OK
+1792124622.954920215 [2026-10-16 04:23:42] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27736.20
+1792124622.957138622 [2026-10-16 04:23:42] Decode batch, #running-req: 1, #full token: 0, full token usage: 0.00, mamba num: 0, mamba usage: 0.00, cuda graph: True, gen throughput (token/s): 2.80, #queue-req: 0
+1792124622.959676949 [2026-10-16 04:23:42] INFO:     127.0.0.1:51584 - "POST /generate HTTP/1.1" 200 OK
+1792124623.253084761 [2026-10-16 04:23:43] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27485.80
+1792124623.284290697 [2026-10-16 04:23:43] INFO:     127.0.0.1:51630 - "POST /generate HTTP/1.1" 200 OK
+1792124623.576610569 [2026-10-16 04:23:43] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 25317.07
+1792124623.581088009 [2026-10-16 04:23:43] INFO:     127.0.0.1:51664 - "POST /generate HTTP/1.1" 200 OK
+1792124623.873135935 [2026-10-16 04:23:43] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27658.79
+1792124623.878285990 [2026-10-16 04:23:43] INFO:     127.0.0.1:51700 - "POST /generate HTTP/1.1" 200 OK
+1792124624.170046702 [2026-10-16 04:23:44] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27553.76
+1792124624.174032972 [2026-10-16 04:23:44] INFO:     127.0.0.1:51732 - "POST /generate HTTP/1.1" 200 OK
+1792124624.465551423 [2026-10-16 04:23:44] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27727.91
+1792124624.469702594 [2026-10-16 04:23:44] INFO:     127.0.0.1:51764 - "POST /generate HTTP/1.1" 200 OK
+1792124624.762344250 [2026-10-16 04:23:44] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27644.37
+1792124624.766976157 [2026-10-16 04:23:44] INFO:     127.0.0.1:51796 - "POST /generate HTTP/1.1" 200 OK
+1792124625.060527677 [2026-10-16 04:23:45] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 27419.53
+1792124626.771556192 [2026-10-16 04:23:46] INFO:     127.0.0.1:52030 - "POST /generate HTTP/1.1" 200 OK
+1792124627.100594511 [2026-10-16 04:23:47] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 4015.45
+1792124627.431808524 [2026-10-16 04:23:47] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 24746.30
+1792124627.436256046 [2026-10-16 04:23:47] INFO:     127.0.0.1:52102 - "POST /generate HTTP/1.1" 200 OK
+1792124627.765052045 [2026-10-16 04:23:47] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 24617.17
+1792124628.096256674 [2026-10-16 04:23:48] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 24703.36
+1792124628.102323070 [2026-10-16 04:23:48] INFO:     127.0.0.1:52176 - "POST /generate HTTP/1.1" 200 OK
+1792124628.431369735 [2026-10-16 04:23:48] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 24437.75
+1792124628.762475840 [2026-10-16 04:23:48] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 24740.91
+1792124628.767432179 [2026-10-16 04:23:48] INFO:     127.0.0.1:52254 - "POST /generate HTTP/1.1" 200 OK
+1792124629.095755783 [2026-10-16 04:23:49] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 24567.88
+1792124629.427137273 [2026-10-16 04:23:49] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 24716.15
+1792124634.463750901 [2026-10-16 04:23:54] INFO:     127.0.0.1:52892 - "POST /generate HTTP/1.1" 200 OK
+1792124634.791449727 [2026-10-16 04:23:54] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 1527.23
+1792124635.123519516 [2026-10-16 04:23:55] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 24642.15
+1792124635.128572217 [2026-10-16 04:23:55] INFO:     127.0.0.1:52974 - "POST /generate HTTP/1.1" 200 OK
+1792124635.457128232 [2026-10-16 04:23:55] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 24594.16
+1792124635.789282954 [2026-10-16 04:23:55] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 24653.74
+1792124635.793551798 [2026-10-16 04:23:55] INFO:     127.0.0.1:53042 - "POST /generate HTTP/1.1" 200 OK
+1792124636.121910009 [2026-10-16 04:23:56] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 24625.54
+1792124636.453442493 [2026-10-16 04:23:56] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 24708.95
+1792124636.458142546 [2026-10-16 04:23:56] INFO:     127.0.0.1:53116 - "POST /generate HTTP/1.1" 200 OK
+1792124636.785761420 [2026-10-16 04:23:56] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 24639.52
+1792124637.118763570 [2026-10-16 04:23:57] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 24607.71
+1792124637.155103326 [2026-10-16 04:23:57] INFO:     127.0.0.1:53188 - "POST /generate HTTP/1.1" 200 OK
+1792124637.484279045 [2026-10-16 04:23:57] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 22403.65
+1792124637.815712014 [2026-10-16 04:23:57] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 24718.28
+1792124637.820747506 [2026-10-16 04:23:57] INFO:     127.0.0.1:53270 - "POST /generate HTTP/1.1" 200 OK
+1792124638.148451795 [2026-10-16 04:23:58] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 24609.76
+1792124638.481154599 [2026-10-16 04:23:58] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 24653.83
+1792124638.485902289 [2026-10-16 04:23:58] INFO:     127.0.0.1:53352 - "POST /generate HTTP/1.1" 200 OK
+1792124638.813987600 [2026-10-16 04:23:58] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 24600.16
+1792124639.145712963 [2026-10-16 04:23:59] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 24684.47
+1792124639.150816435 [2026-10-16 04:23:59] INFO:     127.0.0.1:53428 - "POST /generate HTTP/1.1" 200 OK
+1792124639.479059297 [2026-10-16 04:23:59] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 24570.43
+1792124639.810669370 [2026-10-16 04:23:59] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 24709.61
+1792124642.363757305 [2026-10-16 04:24:02] INFO:     127.0.0.1:53782 - "POST /generate HTTP/1.1" 200 OK
+1792124642.692601624 [2026-10-16 04:24:02] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 24576, cuda graph: True, input throughput (token/s): 2842.55
+1792124643.061327027 [2026-10-16 04:24:03] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.04, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: True, input throughput (token/s): 22219.38
+1792124643.510998636 [2026-10-16 04:24:03] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.05, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 18210.59
+1792124644.006911453 [2026-10-16 04:24:04] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 16531.70
+1792124644.013235412 [2026-10-16 04:24:04] INFO:     127.0.0.1:53980 - "POST /generate HTTP/1.1" 200 OK
+1792124644.343795790 [2026-10-16 04:24:04] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 24576, cuda graph: True, input throughput (token/s): 24308.59
+1792124644.712325038 [2026-10-16 04:24:04] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.04, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: True, input throughput (token/s): 22240.98
+1792124645.161286377 [2026-10-16 04:24:05] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.05, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 18240.30
+1792124645.655378664 [2026-10-16 04:24:05] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 16574.13
+1792124645.662149122 [2026-10-16 04:24:05] INFO:     127.0.0.1:54154 - "POST /generate HTTP/1.1" 200 OK
+1792124645.990888244 [2026-10-16 04:24:05] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 24576, cuda graph: True, input throughput (token/s): 24430.23
+1792124646.359109587 [2026-10-16 04:24:06] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.04, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: True, input throughput (token/s): 22242.89
+1792124646.808886203 [2026-10-16 04:24:06] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.05, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 18205.65
+1792124647.303053968 [2026-10-16 04:24:07] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 16580.07
+1792124656.778690378 [2026-10-16 04:24:16] INFO:     127.0.0.1:55452 - "POST /generate HTTP/1.1" 200 OK
+1792124657.106657300 [2026-10-16 04:24:17] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 24576, cuda graph: True, input throughput (token/s): 835.63
+1792124657.476490168 [2026-10-16 04:24:17] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.04, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: True, input throughput (token/s): 22156.91
+1792124657.926775123 [2026-10-16 04:24:17] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.05, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 18186.17
+1792124658.421283903 [2026-10-16 04:24:18] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 16566.17
+1792124658.428099130 [2026-10-16 04:24:18] INFO:     127.0.0.1:55662 - "POST /generate HTTP/1.1" 200 OK
+1792124658.757638013 [2026-10-16 04:24:18] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 24576, cuda graph: True, input throughput (token/s): 24341.79
+1792124659.127318963 [2026-10-16 04:24:19] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.04, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: True, input throughput (token/s): 22166.69
+1792124659.577692176 [2026-10-16 04:24:19] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.05, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 18181.68
+1792124660.072311004 [2026-10-16 04:24:20] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 16569.88
+1792124660.079534480 [2026-10-16 04:24:20] INFO:     127.0.0.1:55874 - "POST /generate HTTP/1.1" 200 OK
+1792124660.410699254 [2026-10-16 04:24:20] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 24576, cuda graph: True, input throughput (token/s): 24201.32
+1792124660.778927467 [2026-10-16 04:24:20] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.04, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: True, input throughput (token/s): 22273.80
+1792124661.228561145 [2026-10-16 04:24:21] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.05, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 18204.61
+1792124661.723797871 [2026-10-16 04:24:21] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 16536.54
+1792124661.775166550 [2026-10-16 04:24:21] INFO:     127.0.0.1:56078 - "POST /generate HTTP/1.1" 200 OK
+1792124662.104680788 [2026-10-16 04:24:22] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 24576, cuda graph: True, input throughput (token/s): 21509.05
+1792124662.474373526 [2026-10-16 04:24:22] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.04, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: True, input throughput (token/s): 22169.90
+1792124662.923666586 [2026-10-16 04:24:22] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.05, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 18223.65
+1792124663.418503842 [2026-10-16 04:24:23] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 16560.64
+1792124663.425888011 [2026-10-16 04:24:23] INFO:     127.0.0.1:56316 - "POST /generate HTTP/1.1" 200 OK
+1792124663.755605560 [2026-10-16 04:24:23] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 24576, cuda graph: True, input throughput (token/s): 24315.67
+1792124664.124577546 [2026-10-16 04:24:24] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.04, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: True, input throughput (token/s): 22188.31
+1792124664.574670038 [2026-10-16 04:24:24] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.05, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 18211.29
+1792124665.069374420 [2026-10-16 04:24:25] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 16551.72
+1792124665.080756900 [2026-10-16 04:24:25] INFO:     127.0.0.1:56520 - "POST /generate HTTP/1.1" 200 OK
+1792124665.410490268 [2026-10-16 04:24:25] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 24576, cuda graph: True, input throughput (token/s): 24016.14
+1792124665.779058893 [2026-10-16 04:24:25] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.04, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 16384, cuda graph: True, input throughput (token/s): 22220.87
+1792124666.232838614 [2026-10-16 04:24:26] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.05, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 18104.53
+1792124666.725109225 [2026-10-16 04:24:26] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 16600.27
+1792124671.463249947 [2026-10-16 04:24:31] INFO:     127.0.0.1:57336 - "POST /generate HTTP/1.1" 200 OK
+1792124671.465146724 [2026-10-16 04:24:31] INFO:     127.0.0.1:57338 - "POST /generate HTTP/1.1" 200 OK
+1792124671.467839587 [2026-10-16 04:24:31] INFO:     127.0.0.1:57340 - "POST /generate HTTP/1.1" 200 OK
+1792124671.468927391 [2026-10-16 04:24:31] INFO:     127.0.0.1:57342 - "POST /generate HTTP/1.1" 200 OK
+1792124671.795013108 [2026-10-16 04:24:31] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 2, #pending-token: 0, cuda graph: True, input throughput (token/s): 1615.77
+1792124671.799015004 [2026-10-16 04:24:31] INFO:     127.0.0.1:57380 - "POST /generate HTTP/1.1" 200 OK
+1792124672.088104772 [2026-10-16 04:24:32] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 1, #queue-req: 1, #pending-token: 16384, cuda graph: True, input throughput (token/s): 27952.28
+1792124672.092393709 [2026-10-16 04:24:32] INFO:     127.0.0.1:57414 - "POST /generate HTTP/1.1" 200 OK
+1792124672.375057418 [2026-10-16 04:24:32] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 2, #queue-req: 1, #pending-token: 8192, cuda graph: True, input throughput (token/s): 28552.76
+1792124672.378861487 [2026-10-16 04:24:32] INFO:     127.0.0.1:57460 - "POST /generate HTTP/1.1" 200 OK
+1792124672.668636641 [2026-10-16 04:24:32] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 3, #queue-req: 1, #pending-token: 8192, cuda graph: True, input throughput (token/s): 27910.91
+1792124672.672660397 [2026-10-16 04:24:32] INFO:     127.0.0.1:57492 - "POST /generate HTTP/1.1" 200 OK
+1792124672.957654981 [2026-10-16 04:24:32] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 4, #queue-req: 1, #pending-token: 8192, cuda graph: True, input throughput (token/s): 28323.39
+1792124673.247000588 [2026-10-16 04:24:33] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 5, #queue-req: 1, #pending-token: 8192, cuda graph: True, input throughput (token/s): 28337.24
+1792124673.543843787 [2026-10-16 04:24:33] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 6, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 27605.11
+1792124673.781471655 [2026-10-16 04:24:33] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 7, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 34449.96
+1792124678.128680850 [2026-10-16 04:24:38] INFO:     127.0.0.1:58142 - "POST /generate HTTP/1.1" 200 OK
+1792124678.130552719 [2026-10-16 04:24:38] INFO:     127.0.0.1:58144 - "POST /generate HTTP/1.1" 200 OK
+1792124678.131726655 [2026-10-16 04:24:38] INFO:     127.0.0.1:58146 - "POST /generate HTTP/1.1" 200 OK
+1792124678.133386147 [2026-10-16 04:24:38] INFO:     127.0.0.1:58148 - "POST /generate HTTP/1.1" 200 OK
+1792124678.464192973 [2026-10-16 04:24:38] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 2, #pending-token: 0, cuda graph: True, input throughput (token/s): 1749.40
+1792124678.468243961 [2026-10-16 04:24:38] INFO:     127.0.0.1:58188 - "POST /generate HTTP/1.1" 200 OK
+1792124678.750706333 [2026-10-16 04:24:38] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 1, #queue-req: 1, #pending-token: 16384, cuda graph: True, input throughput (token/s): 28609.20
+1792124678.754412482 [2026-10-16 04:24:38] INFO:     127.0.0.1:58224 - "POST /generate HTTP/1.1" 200 OK
+1792124679.039843645 [2026-10-16 04:24:39] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 2, #queue-req: 1, #pending-token: 8192, cuda graph: True, input throughput (token/s): 28308.99
+1792124679.043737980 [2026-10-16 04:24:39] INFO:     127.0.0.1:58256 - "POST /generate HTTP/1.1" 200 OK
+1792124679.329979815 [2026-10-16 04:24:39] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 3, #queue-req: 1, #pending-token: 8192, cuda graph: True, input throughput (token/s): 28244.56
+1792124679.334557943 [2026-10-16 04:24:39] INFO:     127.0.0.1:58288 - "POST /generate HTTP/1.1" 200 OK
+1792124679.623706158 [2026-10-16 04:24:39] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 4, #queue-req: 1, #pending-token: 8192, cuda graph: True, input throughput (token/s): 27883.13
+1792124679.907707280 [2026-10-16 04:24:39] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 5, #queue-req: 1, #pending-token: 8192, cuda graph: True, input throughput (token/s): 28868.29
+1792124680.198015512 [2026-10-16 04:24:40] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 6, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 28199.09
+1792124680.445940767 [2026-10-16 04:24:40] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 7, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 33081.28
+1792124680.511946529 [2026-10-16 04:24:40] INFO:     127.0.0.1:58424 - "POST /generate HTTP/1.1" 200 OK
+1792124680.513042673 [2026-10-16 04:24:40] INFO:     127.0.0.1:58422 - "POST /generate HTTP/1.1" 200 OK
+1792124680.515321679 [2026-10-16 04:24:40] INFO:     127.0.0.1:58426 - "POST /generate HTTP/1.1" 200 OK
+1792124680.516605795 [2026-10-16 04:24:40] INFO:     127.0.0.1:58428 - "POST /generate HTTP/1.1" 200 OK
+1792124680.845112346 [2026-10-16 04:24:40] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 2, #pending-token: 0, cuda graph: True, input throughput (token/s): 20508.16
+1792124680.848652629 [2026-10-16 04:24:40] INFO:     127.0.0.1:58462 - "POST /generate HTTP/1.1" 200 OK
+1792124681.132111164 [2026-10-16 04:24:41] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 1, #queue-req: 1, #pending-token: 16384, cuda graph: True, input throughput (token/s): 28521.46
+1792124681.136242047 [2026-10-16 04:24:41] INFO:     127.0.0.1:58496 - "POST /generate HTTP/1.1" 200 OK
+1792124681.421828464 [2026-10-16 04:24:41] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 2, #queue-req: 1, #pending-token: 8192, cuda graph: True, input throughput (token/s): 28309.78
+1792124681.425229440 [2026-10-16 04:24:41] INFO:     127.0.0.1:58522 - "POST /generate HTTP/1.1" 200 OK
+1792124681.711773380 [2026-10-16 04:24:41] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 3, #queue-req: 1, #pending-token: 8192, cuda graph: True, input throughput (token/s): 28237.67
+1792124681.715833837 [2026-10-16 04:24:41] INFO:     127.0.0.1:58554 - "POST /generate HTTP/1.1" 200 OK
+1792124682.002618860 [2026-10-16 04:24:42] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 4, #queue-req: 1, #pending-token: 8192, cuda graph: True, input throughput (token/s): 28174.22
+1792124682.289588322 [2026-10-16 04:24:42] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 5, #queue-req: 1, #pending-token: 8192, cuda graph: True, input throughput (token/s): 28544.19
+1792124682.579355905 [2026-10-16 04:24:42] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 6, #queue-req: 0, #pending-token: 8192, cuda graph: True, input throughput (token/s): 28259.34
+1792124682.826460361 [2026-10-16 04:24:42] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 7, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 33146.78
+1792124684.986275305 [2026-10-16 04:24:44] INFO:     127.0.0.1:58970 - "POST /generate HTTP/1.1" 200 OK
+1792124685.066450433 [2026-10-16 04:24:45] Prefill batch, #new-seq: 1, #new-token: 2048, #cached-token: 0, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 914.40
+1792124685.098031491 [2026-10-16 04:24:45] Decode batch, #running-req: 1, #full token: 2064, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 0.64, #queue-req: 0
+1792124685.243618508 [2026-10-16 04:24:45] Decode batch, #running-req: 1, #full token: 2112, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 274.92, #queue-req: 0
+1792124685.388769148 [2026-10-16 04:24:45] Decode batch, #running-req: 1, #full token: 2144, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 275.66, #queue-req: 0
+1792124685.530367170 [2026-10-16 04:24:45] INFO:     127.0.0.1:59046 - "POST /generate HTTP/1.1" 200 OK
+1792124685.609900344 [2026-10-16 04:24:45] Prefill batch, #new-seq: 1, #new-token: 2048, #cached-token: 0, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 3767.17
+1792124685.613287940 [2026-10-16 04:24:45] Decode batch, #running-req: 1, #full token: 2064, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 178.09, #queue-req: 0
+1792124685.758141394 [2026-10-16 04:24:45] Decode batch, #running-req: 1, #full token: 2096, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 276.11, #queue-req: 0
+1792124685.903024126 [2026-10-16 04:24:45] Decode batch, #running-req: 1, #full token: 2144, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 276.41, #queue-req: 0
+1792124686.048816744 [2026-10-16 04:24:46] Decode batch, #running-req: 1, #full token: 2176, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 274.75, #queue-req: 0
+1792124686.073349556 [2026-10-16 04:24:46] INFO:     127.0.0.1:59106 - "POST /generate HTTP/1.1" 200 OK
+1792124686.153259291 [2026-10-16 04:24:46] Prefill batch, #new-seq: 1, #new-token: 2048, #cached-token: 0, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 3770.13
+1792124686.272586419 [2026-10-16 04:24:46] Decode batch, #running-req: 1, #full token: 2096, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 178.63, #queue-req: 0
+1792124686.418164128 [2026-10-16 04:24:46] Decode batch, #running-req: 1, #full token: 2128, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 275.13, #queue-req: 0
+1792124686.560341370 [2026-10-16 04:24:46] Decode batch, #running-req: 1, #full token: 2176, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 281.12, #queue-req: 0
+1792124686.614622149 [2026-10-16 04:24:46] INFO:     127.0.0.1:59180 - "POST /generate HTTP/1.1" 200 OK
+1792124686.694051066 [2026-10-16 04:24:46] Prefill batch, #new-seq: 1, #new-token: 2048, #cached-token: 0, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 3786.76
+1792124686.783999268 [2026-10-16 04:24:46] Decode batch, #running-req: 1, #full token: 2080, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 178.78, #queue-req: 0
+1792124686.929282961 [2026-10-16 04:24:46] Decode batch, #running-req: 1, #full token: 2128, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 275.06, #queue-req: 0
+1792124687.074648725 [2026-10-16 04:24:47] Decode batch, #running-req: 1, #full token: 2160, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 274.91, #queue-req: 0
+1792124690.912168016 [2026-10-16 04:24:50] INFO:     127.0.0.1:59676 - "POST /generate HTTP/1.1" 200 OK
+1792124690.992377182 [2026-10-16 04:24:50] Prefill batch, #new-seq: 1, #new-token: 2048, #cached-token: 0, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 476.45
+1792124691.053168246 [2026-10-16 04:24:51] Decode batch, #running-req: 1, #full token: 2080, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 10.05, #queue-req: 0
+1792124691.197748513 [2026-10-16 04:24:51] Decode batch, #running-req: 1, #full token: 2112, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 276.62, #queue-req: 0
+1792124691.342846630 [2026-10-16 04:24:51] Decode batch, #running-req: 1, #full token: 2160, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 275.58, #queue-req: 0
+1792124691.455328350 [2026-10-16 04:24:51] INFO:     127.0.0.1:59736 - "POST /generate HTTP/1.1" 200 OK
+1792124691.535009241 [2026-10-16 04:24:51] Prefill batch, #new-seq: 1, #new-token: 2048, #cached-token: 0, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 3772.72
+1792124691.567092655 [2026-10-16 04:24:51] Decode batch, #running-req: 1, #full token: 2064, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 178.31, #queue-req: 0
+1792124691.712585351 [2026-10-16 04:24:51] Decode batch, #running-req: 1, #full token: 2112, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 275.00, #queue-req: 0
+1792124691.858045378 [2026-10-16 04:24:51] Decode batch, #running-req: 1, #full token: 2144, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 275.02, #queue-req: 0
+1792124692.000039206 [2026-10-16 04:24:51] INFO:     127.0.0.1:59798 - "POST /generate HTTP/1.1" 200 OK
+1792124692.078372099 [2026-10-16 04:24:52] Prefill batch, #new-seq: 1, #new-token: 2048, #cached-token: 0, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 3770.86
+1792124692.081129722 [2026-10-16 04:24:52] Decode batch, #running-req: 1, #full token: 2064, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 179.23, #queue-req: 0
+1792124692.225716517 [2026-10-16 04:24:52] Decode batch, #running-req: 1, #full token: 2096, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 277.11, #queue-req: 0
+1792124692.371163418 [2026-10-16 04:24:52] Decode batch, #running-req: 1, #full token: 2144, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 274.77, #queue-req: 0
+1792124692.516033711 [2026-10-16 04:24:52] Decode batch, #running-req: 1, #full token: 2176, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 276.10, #queue-req: 0
+1792124692.540656204 [2026-10-16 04:24:52] INFO:     127.0.0.1:59864 - "POST /generate HTTP/1.1" 200 OK
+1792124692.620436546 [2026-10-16 04:24:52] Prefill batch, #new-seq: 1, #new-token: 2048, #cached-token: 0, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 3779.51
+1792124692.739470369 [2026-10-16 04:24:52] Decode batch, #running-req: 1, #full token: 2096, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 178.97, #queue-req: 0
+1792124692.885030362 [2026-10-16 04:24:52] Decode batch, #running-req: 1, #full token: 2128, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 275.23, #queue-req: 0
+1792124693.030459063 [2026-10-16 04:24:53] Decode batch, #running-req: 1, #full token: 2176, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 274.83, #queue-req: 0
+1792124693.089534854 [2026-10-16 04:24:53] INFO:     127.0.0.1:59914 - "POST /generate HTTP/1.1" 200 OK
+1792124693.170342049 [2026-10-16 04:24:53] Prefill batch, #new-seq: 1, #new-token: 2048, #cached-token: 0, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 3722.68
+1792124693.259594545 [2026-10-16 04:24:53] Decode batch, #running-req: 1, #full token: 2080, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 174.62, #queue-req: 0
+1792124693.403822401 [2026-10-16 04:24:53] Decode batch, #running-req: 1, #full token: 2128, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 277.07, #queue-req: 0
+1792124693.546258165 [2026-10-16 04:24:53] Decode batch, #running-req: 1, #full token: 2160, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 281.05, #queue-req: 0
+1792124693.629303987 [2026-10-16 04:24:53] INFO:     127.0.0.1:59980 - "POST /generate HTTP/1.1" 200 OK
+1792124693.708043627 [2026-10-16 04:24:53] Prefill batch, #new-seq: 1, #new-token: 2048, #cached-token: 0, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 3809.45
+1792124693.768821104 [2026-10-16 04:24:53] Decode batch, #running-req: 1, #full token: 2080, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 179.53, #queue-req: 0
+1792124693.914425292 [2026-10-16 04:24:53] Decode batch, #running-req: 1, #full token: 2112, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 275.03, #queue-req: 0
+1792124694.059569679 [2026-10-16 04:24:54] Decode batch, #running-req: 1, #full token: 2160, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 275.39, #queue-req: 0
+1792124694.172872381 [2026-10-16 04:24:54] INFO:     127.0.0.1:60048 - "POST /generate HTTP/1.1" 200 OK
+1792124694.252015814 [2026-10-16 04:24:54] Prefill batch, #new-seq: 1, #new-token: 2048, #cached-token: 0, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 3763.87
+1792124694.283848556 [2026-10-16 04:24:54] Decode batch, #running-req: 1, #full token: 2064, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 178.34, #queue-req: 0
+1792124694.428708301 [2026-10-16 04:24:54] Decode batch, #running-req: 1, #full token: 2112, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 276.58, #queue-req: 0
+1792124694.574232198 [2026-10-16 04:24:54] Decode batch, #running-req: 1, #full token: 2144, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 274.84, #queue-req: 0
+1792124694.713081822 [2026-10-16 04:24:54] INFO:     127.0.0.1:60116 - "POST /generate HTTP/1.1" 200 OK
+1792124694.792957496 [2026-10-16 04:24:54] Prefill batch, #new-seq: 1, #new-token: 2048, #cached-token: 0, full token usage: 0.00, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 3787.13
+1792124694.795715743 [2026-10-16 04:24:54] Decode batch, #running-req: 1, #full token: 2064, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 180.39, #queue-req: 0
+1792124694.941364575 [2026-10-16 04:24:54] Decode batch, #running-req: 1, #full token: 2096, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 275.23, #queue-req: 0
+1792124695.086662998 [2026-10-16 04:24:55] Decode batch, #running-req: 1, #full token: 2144, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 275.26, #queue-req: 0
+1792124695.229646524 [2026-10-16 04:24:55] Decode batch, #running-req: 1, #full token: 2176, full token usage: 0.00, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 279.48, #queue-req: 0
+1792124697.286976583 [2026-10-16 04:24:57] INFO:     127.0.0.1:60394 - "POST /generate HTTP/1.1" 200 OK
+1792124697.578873671 [2026-10-16 04:24:57] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 2940.42
+1792124697.703825997 [2026-10-16 04:24:57] Decode batch, #running-req: 1, #full token: 8240, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 16.17, #queue-req: 0
+1792124697.856406245 [2026-10-16 04:24:57] Decode batch, #running-req: 1, #full token: 8272, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.15, #queue-req: 0
+1792124698.008873036 [2026-10-16 04:24:58] Decode batch, #running-req: 1, #full token: 8320, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.25, #queue-req: 0
+1792124698.066108287 [2026-10-16 04:24:58] INFO:     127.0.0.1:60494 - "POST /generate HTTP/1.1" 200 OK
+1792124698.357072894 [2026-10-16 04:24:58] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 10526.57
+1792124698.450599302 [2026-10-16 04:24:58] Decode batch, #running-req: 1, #full token: 8224, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 90.57, #queue-req: 0
+1792124698.602982321 [2026-10-16 04:24:58] Decode batch, #running-req: 1, #full token: 8272, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.49, #queue-req: 0
+1792124698.755243411 [2026-10-16 04:24:58] Decode batch, #running-req: 1, #full token: 8304, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.82, #queue-req: 0
+1792124698.842622334 [2026-10-16 04:24:58] INFO:     127.0.0.1:60588 - "POST /generate HTTP/1.1" 200 OK
+1792124699.133691044 [2026-10-16 04:24:59] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 10548.52
+1792124699.197380163 [2026-10-16 04:24:59] Decode batch, #running-req: 1, #full token: 8224, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 90.44, #queue-req: 0
+1792124699.349975256 [2026-10-16 04:24:59] Decode batch, #running-req: 1, #full token: 8256, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.45, #queue-req: 0
+1792124699.499040472 [2026-10-16 04:24:59] Decode batch, #running-req: 1, #full token: 8304, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 268.49, #queue-req: 0
+1792124699.617123337 [2026-10-16 04:24:59] INFO:     127.0.0.1:60672 - "POST /generate HTTP/1.1" 200 OK
+1792124699.908060236 [2026-10-16 04:24:59] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 10579.06
+1792124699.941095515 [2026-10-16 04:24:59] Decode batch, #running-req: 1, #full token: 8208, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 90.45, #queue-req: 0
+1792124700.092644815 [2026-10-16 04:25:00] Decode batch, #running-req: 1, #full token: 8256, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 263.71, #queue-req: 0
+1792124700.245087780 [2026-10-16 04:25:00] Decode batch, #running-req: 1, #full token: 8288, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.20, #queue-req: 0
+1792124705.891779285 [2026-10-16 04:25:05] INFO:     127.0.0.1:61388 - "POST /generate HTTP/1.1" 200 OK
+1792124706.183922228 [2026-10-16 04:25:06] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 1305.31
+1792124706.187652714 [2026-10-16 04:25:06] Decode batch, #running-req: 1, #full token: 8208, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 6.73, #queue-req: 0
+1792124706.339522786 [2026-10-16 04:25:06] Decode batch, #running-req: 1, #full token: 8240, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 263.39, #queue-req: 0
+1792124706.490119729 [2026-10-16 04:25:06] Decode batch, #running-req: 1, #full token: 8288, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 264.92, #queue-req: 0
+1792124706.641545898 [2026-10-16 04:25:06] Decode batch, #running-req: 1, #full token: 8320, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 264.73, #queue-req: 0
+1792124706.670854008 [2026-10-16 04:25:06] INFO:     127.0.0.1:61486 - "POST /generate HTTP/1.1" 200 OK
+1792124706.961116893 [2026-10-16 04:25:06] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 10542.77
+1792124707.085254490 [2026-10-16 04:25:07] Decode batch, #running-req: 1, #full token: 8240, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 90.17, #queue-req: 0
+1792124707.237609580 [2026-10-16 04:25:07] Decode batch, #running-req: 1, #full token: 8272, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.50, #queue-req: 0
+1792124707.390084135 [2026-10-16 04:25:07] Decode batch, #running-req: 1, #full token: 8320, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.27, #queue-req: 0
+1792124707.447698508 [2026-10-16 04:25:07] INFO:     127.0.0.1:61588 - "POST /generate HTTP/1.1" 200 OK
+1792124707.739066425 [2026-10-16 04:25:07] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 10528.84
+1792124707.832811087 [2026-10-16 04:25:07] Decode batch, #running-req: 1, #full token: 8224, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 90.37, #queue-req: 0
+1792124707.984219324 [2026-10-16 04:25:07] Decode batch, #running-req: 1, #full token: 8272, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 266.85, #queue-req: 0
+1792124708.135087022 [2026-10-16 04:25:08] Decode batch, #running-req: 1, #full token: 8304, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.42, #queue-req: 0
+1792124708.222490568 [2026-10-16 04:25:08] INFO:     127.0.0.1:61682 - "POST /generate HTTP/1.1" 200 OK
+1792124708.513363232 [2026-10-16 04:25:08] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 10579.03
+1792124708.577055519 [2026-10-16 04:25:08] Decode batch, #running-req: 1, #full token: 8224, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 90.47, #queue-req: 0
+1792124708.729669016 [2026-10-16 04:25:08] Decode batch, #running-req: 1, #full token: 8256, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.32, #queue-req: 0
+1792124708.882134571 [2026-10-16 04:25:08] Decode batch, #running-req: 1, #full token: 8304, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.40, #queue-req: 0
+1792124709.017837161 [2026-10-16 04:25:09] INFO:     127.0.0.1:61772 - "POST /generate HTTP/1.1" 200 OK
+1792124709.309831917 [2026-10-16 04:25:09] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 10288.79
+1792124709.342098550 [2026-10-16 04:25:09] Decode batch, #running-req: 1, #full token: 8208, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 86.91, #queue-req: 0
+1792124709.493334326 [2026-10-16 04:25:09] Decode batch, #running-req: 1, #full token: 8256, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 265.08, #queue-req: 0
+1792124709.645380803 [2026-10-16 04:25:09] Decode batch, #running-req: 1, #full token: 8288, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.90, #queue-req: 0
+1792124709.794311321 [2026-10-16 04:25:09] INFO:     127.0.0.1:61860 - "POST /generate HTTP/1.1" 200 OK
+1792124710.085784305 [2026-10-16 04:25:10] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 10557.89
+1792124710.089646988 [2026-10-16 04:25:10] Decode batch, #running-req: 1, #full token: 8208, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 90.14, #queue-req: 0
+1792124710.240970590 [2026-10-16 04:25:10] Decode batch, #running-req: 1, #full token: 8240, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 263.44, #queue-req: 0
+1792124710.391216027 [2026-10-16 04:25:10] Decode batch, #running-req: 1, #full token: 8288, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 266.71, #queue-req: 0
+1792124710.543486775 [2026-10-16 04:25:10] Decode batch, #running-req: 1, #full token: 8320, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.43, #queue-req: 0
+1792124710.570001496 [2026-10-16 04:25:10] INFO:     127.0.0.1:61954 - "POST /generate HTTP/1.1" 200 OK
+1792124710.860898292 [2026-10-16 04:25:10] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 10567.35
+1792124710.984046794 [2026-10-16 04:25:10] Decode batch, #running-req: 1, #full token: 8240, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 90.77, #queue-req: 0
+1792124711.136325533 [2026-10-16 04:25:11] Decode batch, #running-req: 1, #full token: 8272, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.93, #queue-req: 0
+1792124711.287147008 [2026-10-16 04:25:11] Decode batch, #running-req: 1, #full token: 8320, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 265.09, #queue-req: 0
+1792124711.344289866 [2026-10-16 04:25:11] INFO:     127.0.0.1:62046 - "POST /generate HTTP/1.1" 200 OK
+1792124711.635098375 [2026-10-16 04:25:11] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 10578.09
+1792124711.729524372 [2026-10-16 04:25:11] Decode batch, #running-req: 1, #full token: 8224, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 90.43, #queue-req: 0
+1792124711.881906523 [2026-10-16 04:25:11] Decode batch, #running-req: 1, #full token: 8272, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.23, #queue-req: 0
+1792124712.034109098 [2026-10-16 04:25:12] Decode batch, #running-req: 1, #full token: 8304, full token usage: 0.01, mamba num: 4, mamba usage: 0.02, cuda graph: True, gen throughput (token/s): 262.94, #queue-req: 0
+1792124714.889882777 [2026-10-16 04:25:14] INFO:     127.0.0.1:62490 - "POST /generate HTTP/1.1" 200 OK
+1792124714.891606918 [2026-10-16 04:25:14] INFO:     127.0.0.1:62492 - "POST /generate HTTP/1.1" 200 OK
+1792124714.892787573 [2026-10-16 04:25:14] INFO:     127.0.0.1:62494 - "POST /generate HTTP/1.1" 200 OK
+1792124714.893874605 [2026-10-16 04:25:14] INFO:     127.0.0.1:62496 - "POST /generate HTTP/1.1" 200 OK
+1792124714.894830243 [2026-10-16 04:25:14] INFO:     127.0.0.1:62498 - "POST /generate HTTP/1.1" 200 OK
+1792124714.895954014 [2026-10-16 04:25:14] INFO:     127.0.0.1:62500 - "POST /generate HTTP/1.1" 200 OK
+1792124714.897096970 [2026-10-16 04:25:14] INFO:     127.0.0.1:62502 - "POST /generate HTTP/1.1" 200 OK
+1792124714.898352749 [2026-10-16 04:25:14] INFO:     127.0.0.1:62504 - "POST /generate HTTP/1.1" 200 OK
+1792124714.899467539 [2026-10-16 04:25:14] INFO:     127.0.0.1:62506 - "POST /generate HTTP/1.1" 200 OK
+1792124714.900535809 [2026-10-16 04:25:14] INFO:     127.0.0.1:62508 - "POST /generate HTTP/1.1" 200 OK
+1792124714.901367368 [2026-10-16 04:25:14] INFO:     127.0.0.1:62510 - "POST /generate HTTP/1.1" 200 OK
+1792124714.902427724 [2026-10-16 04:25:14] INFO:     127.0.0.1:62512 - "POST /generate HTTP/1.1" 200 OK
+1792124714.903522249 [2026-10-16 04:25:14] INFO:     127.0.0.1:62514 - "POST /generate HTTP/1.1" 200 OK
+1792124714.907538172 [2026-10-16 04:25:14] INFO:     127.0.0.1:62516 - "POST /generate HTTP/1.1" 200 OK
+1792124714.908446664 [2026-10-16 04:25:14] INFO:     127.0.0.1:62518 - "POST /generate HTTP/1.1" 200 OK
+1792124714.909519556 [2026-10-16 04:25:14] INFO:     127.0.0.1:62520 - "POST /generate HTTP/1.1" 200 OK
+1792124718.472090790 [2026-10-16 04:25:18] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.01, mamba usage: 0.16, #running-req: 0, #queue-req: 7, #pending-token: 0, cuda graph: True, input throughput (token/s): 149.78
+1792124718.720579550 [2026-10-16 04:25:18] Prefill batch, #new-seq: 8, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.33, #running-req: 1, #queue-req: 0, #pending-token: 7168, cuda graph: True, input throughput (token/s): 32949.52
+1792124718.896348150 [2026-10-16 04:25:18] Prefill batch, #new-seq: 7, #new-token: 7168, #cached-token: 0, full token usage: 0.03, mamba usage: 0.37, #running-req: 9, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 40810.28
+1792124719.009913809 [2026-10-16 04:25:19] Decode batch, #running-req: 16, #full token: 16896, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 42.29, #queue-req: 0
+1792124719.300440603 [2026-10-16 04:25:19] Decode batch, #running-req: 16, #full token: 17408, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2202.94, #queue-req: 0
+1792124719.603387686 [2026-10-16 04:25:19] Decode batch, #running-req: 16, #full token: 18176, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2113.08, #queue-req: 0
+1792124719.912098149 [2026-10-16 04:25:19] Decode batch, #running-req: 16, #full token: 18688, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2071.64, #queue-req: 0
+1792124720.223695707 [2026-10-16 04:25:20] Decode batch, #running-req: 16, #full token: 19456, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2054.16, #queue-req: 0
+1792124720.534117862 [2026-10-16 04:25:20] Decode batch, #running-req: 16, #full token: 19968, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2061.85, #queue-req: 0
+1792124720.845967482 [2026-10-16 04:25:20] INFO:     127.0.0.1:63184 - "POST /generate HTTP/1.1" 200 OK
+1792124720.848073122 [2026-10-16 04:25:20] INFO:     127.0.0.1:63188 - "POST /generate HTTP/1.1" 200 OK
+1792124720.849250272 [2026-10-16 04:25:20] INFO:     127.0.0.1:63180 - "POST /generate HTTP/1.1" 200 OK
+1792124720.850645696 [2026-10-16 04:25:20] INFO:     127.0.0.1:63182 - "POST /generate HTTP/1.1" 200 OK
+1792124720.851701992 [2026-10-16 04:25:20] INFO:     127.0.0.1:63200 - "POST /generate HTTP/1.1" 200 OK
+1792124720.853257863 [2026-10-16 04:25:20] INFO:     127.0.0.1:63198 - "POST /generate HTTP/1.1" 200 OK
+1792124720.854207213 [2026-10-16 04:25:20] INFO:     127.0.0.1:63186 - "POST /generate HTTP/1.1" 200 OK
+1792124720.855278557 [2026-10-16 04:25:20] INFO:     127.0.0.1:63192 - "POST /generate HTTP/1.1" 200 OK
+1792124720.856258646 [2026-10-16 04:25:20] INFO:     127.0.0.1:63190 - "POST /generate HTTP/1.1" 200 OK
+1792124720.857217296 [2026-10-16 04:25:20] INFO:     127.0.0.1:63196 - "POST /generate HTTP/1.1" 200 OK
+1792124720.858107564 [2026-10-16 04:25:20] INFO:     127.0.0.1:63202 - "POST /generate HTTP/1.1" 200 OK
+1792124720.859062883 [2026-10-16 04:25:20] INFO:     127.0.0.1:63204 - "POST /generate HTTP/1.1" 200 OK
+1792124720.859997363 [2026-10-16 04:25:20] INFO:     127.0.0.1:63206 - "POST /generate HTTP/1.1" 200 OK
+1792124720.860926109 [2026-10-16 04:25:20] INFO:     127.0.0.1:63208 - "POST /generate HTTP/1.1" 200 OK
+1792124720.861962719 [2026-10-16 04:25:20] INFO:     127.0.0.1:63210 - "POST /generate HTTP/1.1" 200 OK
+1792124720.862959159 [2026-10-16 04:25:20] INFO:     127.0.0.1:63212 - "POST /generate HTTP/1.1" 200 OK
+1792124720.935621757 [2026-10-16 04:25:20] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.01, mamba usage: 0.16, #running-req: 0, #queue-req: 7, #pending-token: 0, cuda graph: True, input throughput (token/s): 502.10
+1792124721.183153906 [2026-10-16 04:25:21] Prefill batch, #new-seq: 8, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.33, #running-req: 1, #queue-req: 0, #pending-token: 7168, cuda graph: True, input throughput (token/s): 33098.53
+1792124721.356431751 [2026-10-16 04:25:21] Prefill batch, #new-seq: 7, #new-token: 7168, #cached-token: 0, full token usage: 0.03, mamba usage: 0.37, #running-req: 9, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 41383.49
+1792124721.360485603 [2026-10-16 04:25:21] Decode batch, #running-req: 16, #full token: 16640, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 774.41, #queue-req: 0
+1792124721.650105239 [2026-10-16 04:25:21] Decode batch, #running-req: 16, #full token: 17152, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2212.33, #queue-req: 0
+1792124721.954806128 [2026-10-16 04:25:21] Decode batch, #running-req: 16, #full token: 17920, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2098.12, #queue-req: 0
+1792124722.267379917 [2026-10-16 04:25:22] Decode batch, #running-req: 16, #full token: 18432, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2047.94, #queue-req: 0
+1792124722.579298542 [2026-10-16 04:25:22] Decode batch, #running-req: 16, #full token: 19200, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2052.91, #queue-req: 0
+1792124722.894926426 [2026-10-16 04:25:22] Decode batch, #running-req: 16, #full token: 19712, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2028.58, #queue-req: 0
+1792124723.210388806 [2026-10-16 04:25:23] Decode batch, #running-req: 16, #full token: 20480, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2026.93, #queue-req: 0
+1792124735.899894988 [2026-10-16 04:25:35] INFO:     127.0.0.1:10026 - "POST /generate HTTP/1.1" 200 OK
+1792124735.901737938 [2026-10-16 04:25:35] INFO:     127.0.0.1:10024 - "POST /generate HTTP/1.1" 200 OK
+1792124735.903021008 [2026-10-16 04:25:35] INFO:     127.0.0.1:10028 - "POST /generate HTTP/1.1" 200 OK
+1792124735.904085184 [2026-10-16 04:25:35] INFO:     127.0.0.1:10030 - "POST /generate HTTP/1.1" 200 OK
+1792124735.905212663 [2026-10-16 04:25:35] INFO:     127.0.0.1:10032 - "POST /generate HTTP/1.1" 200 OK
+1792124735.906282923 [2026-10-16 04:25:35] INFO:     127.0.0.1:10034 - "POST /generate HTTP/1.1" 200 OK
+1792124735.907337737 [2026-10-16 04:25:35] INFO:     127.0.0.1:10036 - "POST /generate HTTP/1.1" 200 OK
+1792124735.908390180 [2026-10-16 04:25:35] INFO:     127.0.0.1:10038 - "POST /generate HTTP/1.1" 200 OK
+1792124735.909345441 [2026-10-16 04:25:35] INFO:     127.0.0.1:10040 - "POST /generate HTTP/1.1" 200 OK
+1792124735.910639587 [2026-10-16 04:25:35] INFO:     127.0.0.1:10042 - "POST /generate HTTP/1.1" 200 OK
+1792124735.911701118 [2026-10-16 04:25:35] INFO:     127.0.0.1:10044 - "POST /generate HTTP/1.1" 200 OK
+1792124735.912726127 [2026-10-16 04:25:35] INFO:     127.0.0.1:10046 - "POST /generate HTTP/1.1" 200 OK
+1792124735.913796350 [2026-10-16 04:25:35] INFO:     127.0.0.1:10050 - "POST /generate HTTP/1.1" 200 OK
+1792124735.914759085 [2026-10-16 04:25:35] INFO:     127.0.0.1:10048 - "POST /generate HTTP/1.1" 200 OK
+1792124735.915722036 [2026-10-16 04:25:35] INFO:     127.0.0.1:10052 - "POST /generate HTTP/1.1" 200 OK
+1792124735.916649677 [2026-10-16 04:25:35] INFO:     127.0.0.1:10054 - "POST /generate HTTP/1.1" 200 OK
+1792124735.989802840 [2026-10-16 04:25:35] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.01, mamba usage: 0.16, #running-req: 0, #queue-req: 7, #pending-token: 0, cuda graph: True, input throughput (token/s): 69.98
+1792124736.238715520 [2026-10-16 04:25:36] Prefill batch, #new-seq: 8, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.33, #running-req: 1, #queue-req: 0, #pending-token: 7168, cuda graph: True, input throughput (token/s): 32955.38
+1792124736.412308634 [2026-10-16 04:25:36] Prefill batch, #new-seq: 7, #new-token: 7168, #cached-token: 0, full token usage: 0.03, mamba usage: 0.37, #running-req: 9, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 41264.83
+1792124736.575465194 [2026-10-16 04:25:36] Decode batch, #running-req: 16, #full token: 16896, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 47.89, #queue-req: 0
+1792124736.866053000 [2026-10-16 04:25:36] Decode batch, #running-req: 16, #full token: 17664, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2202.79, #queue-req: 0
+1792124737.171026369 [2026-10-16 04:25:37] Decode batch, #running-req: 16, #full token: 18176, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2099.36, #queue-req: 0
+1792124737.486574719 [2026-10-16 04:25:37] Decode batch, #running-req: 16, #full token: 18944, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2027.85, #queue-req: 0
+1792124737.803953448 [2026-10-16 04:25:37] Decode batch, #running-req: 16, #full token: 19456, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2016.57, #queue-req: 0
+1792124738.112332198 [2026-10-16 04:25:38] Decode batch, #running-req: 16, #full token: 20224, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2074.93, #queue-req: 0
+1792124738.361790103 [2026-10-16 04:25:38] INFO:     127.0.0.1:10352 - "POST /generate HTTP/1.1" 200 OK
+1792124738.364692605 [2026-10-16 04:25:38] INFO:     127.0.0.1:10348 - "POST /generate HTTP/1.1" 200 OK
+1792124738.365717280 [2026-10-16 04:25:38] INFO:     127.0.0.1:10354 - "POST /generate HTTP/1.1" 200 OK
+1792124738.366652148 [2026-10-16 04:25:38] INFO:     127.0.0.1:10344 - "POST /generate HTTP/1.1" 200 OK
+1792124738.367662942 [2026-10-16 04:25:38] INFO:     127.0.0.1:10362 - "POST /generate HTTP/1.1" 200 OK
+1792124738.368691916 [2026-10-16 04:25:38] INFO:     127.0.0.1:10346 - "POST /generate HTTP/1.1" 200 OK
+1792124738.369726535 [2026-10-16 04:25:38] INFO:     127.0.0.1:10360 - "POST /generate HTTP/1.1" 200 OK
+1792124738.370889515 [2026-10-16 04:25:38] INFO:     127.0.0.1:10342 - "POST /generate HTTP/1.1" 200 OK
+1792124738.372069988 [2026-10-16 04:25:38] INFO:     127.0.0.1:10356 - "POST /generate HTTP/1.1" 200 OK
+1792124738.373140660 [2026-10-16 04:25:38] INFO:     127.0.0.1:10350 - "POST /generate HTTP/1.1" 200 OK
+1792124738.374212479 [2026-10-16 04:25:38] INFO:     127.0.0.1:10364 - "POST /generate HTTP/1.1" 200 OK
+1792124738.375240625 [2026-10-16 04:25:38] INFO:     127.0.0.1:10366 - "POST /generate HTTP/1.1" 200 OK
+1792124738.376169818 [2026-10-16 04:25:38] INFO:     127.0.0.1:10368 - "POST /generate HTTP/1.1" 200 OK
+1792124738.377280343 [2026-10-16 04:25:38] INFO:     127.0.0.1:10370 - "POST /generate HTTP/1.1" 200 OK
+1792124738.378298019 [2026-10-16 04:25:38] INFO:     127.0.0.1:10372 - "POST /generate HTTP/1.1" 200 OK
+1792124738.379233907 [2026-10-16 04:25:38] INFO:     127.0.0.1:10374 - "POST /generate HTTP/1.1" 200 OK
+1792124738.451709215 [2026-10-16 04:25:38] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.01, mamba usage: 0.16, #running-req: 0, #queue-req: 7, #pending-token: 0, cuda graph: True, input throughput (token/s): 502.06
+1792124738.702444771 [2026-10-16 04:25:38] Prefill batch, #new-seq: 8, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.33, #running-req: 1, #queue-req: 0, #pending-token: 7168, cuda graph: True, input throughput (token/s): 32694.25
+1792124738.873090475 [2026-10-16 04:25:38] Prefill batch, #new-seq: 7, #new-token: 7168, #cached-token: 0, full token usage: 0.03, mamba usage: 0.37, #running-req: 9, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 41982.60
+1792124738.930373973 [2026-10-16 04:25:38] Decode batch, #running-req: 16, #full token: 16640, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 782.40, #queue-req: 0
+1792124739.219078671 [2026-10-16 04:25:39] Decode batch, #running-req: 16, #full token: 17408, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2217.88, #queue-req: 0
+1792124739.523920011 [2026-10-16 04:25:39] Decode batch, #running-req: 16, #full token: 17920, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2098.81, #queue-req: 0
+1792124739.838046590 [2026-10-16 04:25:39] Decode batch, #running-req: 16, #full token: 18688, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2037.18, #queue-req: 0
+1792124740.157756087 [2026-10-16 04:25:40] Decode batch, #running-req: 16, #full token: 19200, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2002.23, #queue-req: 0
+1792124740.474207994 [2026-10-16 04:25:40] Decode batch, #running-req: 16, #full token: 19968, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2022.93, #queue-req: 0
+1792124740.792232619 [2026-10-16 04:25:40] Decode batch, #running-req: 16, #full token: 20480, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2010.92, #queue-req: 0
+1792124740.868167324 [2026-10-16 04:25:40] INFO:     127.0.0.1:10668 - "POST /generate HTTP/1.1" 200 OK
+1792124740.869359660 [2026-10-16 04:25:40] INFO:     127.0.0.1:10670 - "POST /generate HTTP/1.1" 200 OK
+1792124740.870454331 [2026-10-16 04:25:40] INFO:     127.0.0.1:10672 - "POST /generate HTTP/1.1" 200 OK
+1792124740.871529491 [2026-10-16 04:25:40] INFO:     127.0.0.1:10674 - "POST /generate HTTP/1.1" 200 OK
+1792124740.872483543 [2026-10-16 04:25:40] INFO:     127.0.0.1:10676 - "POST /generate HTTP/1.1" 200 OK
+1792124740.873435933 [2026-10-16 04:25:40] INFO:     127.0.0.1:10678 - "POST /generate HTTP/1.1" 200 OK
+1792124740.874474677 [2026-10-16 04:25:40] INFO:     127.0.0.1:10680 - "POST /generate HTTP/1.1" 200 OK
+1792124740.875521656 [2026-10-16 04:25:40] INFO:     127.0.0.1:10682 - "POST /generate HTTP/1.1" 200 OK
+1792124740.876556696 [2026-10-16 04:25:40] INFO:     127.0.0.1:10684 - "POST /generate HTTP/1.1" 200 OK
+1792124740.877403630 [2026-10-16 04:25:40] INFO:     127.0.0.1:10686 - "POST /generate HTTP/1.1" 200 OK
+1792124740.879485838 [2026-10-16 04:25:40] INFO:     127.0.0.1:10688 - "POST /generate HTTP/1.1" 200 OK
+1792124740.880546104 [2026-10-16 04:25:40] INFO:     127.0.0.1:10690 - "POST /generate HTTP/1.1" 200 OK
+1792124740.881599669 [2026-10-16 04:25:40] INFO:     127.0.0.1:10692 - "POST /generate HTTP/1.1" 200 OK
+1792124740.882570481 [2026-10-16 04:25:40] INFO:     127.0.0.1:10694 - "POST /generate HTTP/1.1" 200 OK
+1792124740.883490768 [2026-10-16 04:25:40] INFO:     127.0.0.1:10696 - "POST /generate HTTP/1.1" 200 OK
+1792124740.884459505 [2026-10-16 04:25:40] INFO:     127.0.0.1:10698 - "POST /generate HTTP/1.1" 200 OK
+1792124740.955806895 [2026-10-16 04:25:40] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.01, mamba usage: 0.16, #running-req: 0, #queue-req: 7, #pending-token: 0, cuda graph: True, input throughput (token/s): 491.68
+1792124741.204653222 [2026-10-16 04:25:41] Prefill batch, #new-seq: 8, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.33, #running-req: 1, #queue-req: 0, #pending-token: 7168, cuda graph: True, input throughput (token/s): 32934.21
+1792124741.378130807 [2026-10-16 04:25:41] Prefill batch, #new-seq: 7, #new-token: 7168, #cached-token: 0, full token usage: 0.03, mamba usage: 0.37, #running-req: 9, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 41274.48
+1792124741.604507617 [2026-10-16 04:25:41] Decode batch, #running-req: 16, #full token: 17152, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 787.99, #queue-req: 0
+1792124741.903740669 [2026-10-16 04:25:41] Decode batch, #running-req: 16, #full token: 17664, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2138.66, #queue-req: 0
+1792124742.213950733 [2026-10-16 04:25:42] Decode batch, #running-req: 16, #full token: 18432, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2063.54, #queue-req: 0
+1792124742.532273933 [2026-10-16 04:25:42] Decode batch, #running-req: 16, #full token: 18944, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2012.44, #queue-req: 0
+1792124742.850364473 [2026-10-16 04:25:42] Decode batch, #running-req: 16, #full token: 19712, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2012.00, #queue-req: 0
+1792124743.165663105 [2026-10-16 04:25:43] Decode batch, #running-req: 16, #full token: 20224, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2026.73, #queue-req: 0
+1792124743.352976773 [2026-10-16 04:25:43] INFO:     127.0.0.1:10998 - "POST /generate HTTP/1.1" 200 OK
+1792124743.355550013 [2026-10-16 04:25:43] INFO:     127.0.0.1:11002 - "POST /generate HTTP/1.1" 200 OK
+1792124743.356629754 [2026-10-16 04:25:43] INFO:     127.0.0.1:11004 - "POST /generate HTTP/1.1" 200 OK
+1792124743.362548306 [2026-10-16 04:25:43] INFO:     127.0.0.1:11000 - "POST /generate HTTP/1.1" 200 OK
+1792124743.363528071 [2026-10-16 04:25:43] INFO:     127.0.0.1:11008 - "POST /generate HTTP/1.1" 200 OK
+1792124743.364656685 [2026-10-16 04:25:43] INFO:     127.0.0.1:11014 - "POST /generate HTTP/1.1" 200 OK
+1792124743.365693983 [2026-10-16 04:25:43] INFO:     127.0.0.1:11006 - "POST /generate HTTP/1.1" 200 OK
+1792124743.366707621 [2026-10-16 04:25:43] INFO:     127.0.0.1:11020 - "POST /generate HTTP/1.1" 200 OK
+1792124743.368891240 [2026-10-16 04:25:43] INFO:     127.0.0.1:10996 - "POST /generate HTTP/1.1" 200 OK
+1792124743.369936567 [2026-10-16 04:25:43] INFO:     127.0.0.1:11016 - "POST /generate HTTP/1.1" 200 OK
+1792124743.370886514 [2026-10-16 04:25:43] INFO:     127.0.0.1:11010 - "POST /generate HTTP/1.1" 200 OK
+1792124743.371748860 [2026-10-16 04:25:43] INFO:     127.0.0.1:11018 - "POST /generate HTTP/1.1" 200 OK
+1792124743.372700128 [2026-10-16 04:25:43] INFO:     127.0.0.1:11012 - "POST /generate HTTP/1.1" 200 OK
+1792124743.373731620 [2026-10-16 04:25:43] INFO:     127.0.0.1:11022 - "POST /generate HTTP/1.1" 200 OK
+1792124743.374768567 [2026-10-16 04:25:43] INFO:     127.0.0.1:11024 - "POST /generate HTTP/1.1" 200 OK
+1792124743.375774555 [2026-10-16 04:25:43] INFO:     127.0.0.1:11026 - "POST /generate HTTP/1.1" 200 OK
+1792124743.443794223 [2026-10-16 04:25:43] Prefill batch, #new-seq: 1, #new-token: 1024, #cached-token: 0, full token usage: 0.01, mamba usage: 0.16, #running-req: 0, #queue-req: 7, #pending-token: 0, cuda graph: True, input throughput (token/s): 495.79
+1792124743.691860105 [2026-10-16 04:25:43] Prefill batch, #new-seq: 8, #new-token: 8192, #cached-token: 0, full token usage: 0.03, mamba usage: 0.33, #running-req: 1, #queue-req: 0, #pending-token: 7168, cuda graph: True, input throughput (token/s): 33000.66
+1792124743.866057439 [2026-10-16 04:25:43] Prefill batch, #new-seq: 7, #new-token: 7168, #cached-token: 0, full token usage: 0.03, mamba usage: 0.37, #running-req: 9, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 41209.07
+1792124743.981568745 [2026-10-16 04:25:43] Decode batch, #running-req: 16, #full token: 16896, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 784.65, #queue-req: 0
+1792124744.277636850 [2026-10-16 04:25:44] Decode batch, #running-req: 16, #full token: 17408, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2160.31, #queue-req: 0
+1792124744.586302757 [2026-10-16 04:25:44] Decode batch, #running-req: 16, #full token: 18176, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2077.65, #queue-req: 0
+1792124744.901542992 [2026-10-16 04:25:44] Decode batch, #running-req: 16, #full token: 18688, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2026.94, #queue-req: 0
+1792124745.216960035 [2026-10-16 04:25:45] Decode batch, #running-req: 16, #full token: 19456, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2030.47, #queue-req: 0
+1792124745.532010049 [2026-10-16 04:25:45] Decode batch, #running-req: 16, #full token: 19968, full token usage: 0.03, mamba num: 64, mamba usage: 0.37, cuda graph: True, gen throughput (token/s): 2029.49, #queue-req: 0

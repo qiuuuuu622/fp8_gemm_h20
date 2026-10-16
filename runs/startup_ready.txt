@@ -1,0 +1,8 @@
+# READY_SEC = launch -> /health_generate OK. Same args, /prefill_model copied to /dev/shm, 1 GPU each.
+# warm = reuse the run's SGLANG_CACHE_DIR; warm2 = second warm run with GPUs swapped (dg on GPU6, ours on GPU3).
+dg_cold READY_SEC 334.2
+ours_cold READY_SEC 173.6
+dg_warm READY_SEC 183.6
+ours_warm READY_SEC 117.7
+dg_warm2 READY_SEC 178.6
+ours_warm2 READY_SEC 114.2

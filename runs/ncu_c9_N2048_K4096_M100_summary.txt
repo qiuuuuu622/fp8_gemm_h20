@@ -1,0 +1,11 @@
+ Section: GPU Speed Of Light Throughput
+ Memory Throughput % 46.15
+ DRAM Throughput % 12.25
+ Duration us 17.95
+ L1/TEX Cache Throughput % 53.27
+ L2 Cache Throughput % 30.59
+ Compute (SM) Throughput % 40.29
+ One or More Eligible % 45.99
+ No Eligible % 54.01
+ Eligible Warps Per Scheduler warp 0.68
+ of 2.81 active warps per scheduler, but only an average of 0.68 warps were eligible per cycle. Eligible 
