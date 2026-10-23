@@ -1,0 +1,27 @@
+Dispatch policy corrections and evaluation separation
+
+The 110-entry kernel table was frozen before performance validation. It did not
+change during either routing correction below.
+
+1. Initial policy: exact M, otherwise any anchor with equal ceil(M/token_tile),
+   otherwise log-nearest new-table M. The 90 kernel-search holdout points exposed
+   regressions at M=65 and M=129. validation_initial/ retains all 200 first-pass
+   points. These 90 points became policy regression tests.
+2. Added guard: only equal-tile anchors within 8 tokens; otherwise use the original
+   optimized.json dispatch. Added 40 new points at M=[23,39,95,130,191,258,510,1026].
+   Cross-GPU measurements subsequently confirmed an 8% regression at M=511 for
+   the direct-load short-K kernel. validation_before_shortk_guard/ and
+   crosscheck_before_shortk_guard/ preserve this stage.
+3. Final guard: short-K is exact-M only, preserving its M=512 benefit and avoiding
+   masked-tail interpolation. M=510/511 were revalidated and cross-GPU retimed.
+   The first two off-grid batches form the 130-point policy regression set.
+
+Final independent policy holdout: M=[47,79,194,509] across all five N/K pairs,
+20 points not used to select kernels or modify the final policy.
+
+Final dataset: 110 search points + 130 policy regression points + 20 final
+holdout points = 260. Changed selections were revalidated/retimed; unchanged
+selections retain their existing independent timing evidence. Every entry in
+the distributable package was additionally checked with another input seed.
+
+All initial observations, including failures and regressions, remain available.

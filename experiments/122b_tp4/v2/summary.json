@@ -1,0 +1,91 @@
+{
+  "groups": {
+    "training_110": {
+      "cases": 110,
+      "gm_baseline": 1.0463514143060328,
+      "gm_dg": 1.1624490964776564,
+      "wins_dg": 92,
+      "wins_dg_3pct": 81,
+      "baseline_wins_dg": 78,
+      "regressions_3pct": 0,
+      "worst_speedup_baseline": 0.9872053426134596
+    },
+    "small_70": {
+      "cases": 70,
+      "gm_baseline": 1.0702578116737813,
+      "gm_dg": 1.1761306187536018,
+      "wins_dg": 53,
+      "wins_dg_3pct": 47,
+      "baseline_wins_dg": 42,
+      "regressions_3pct": 0,
+      "worst_speedup_baseline": 0.9891904928838988
+    },
+    "large_20": {
+      "cases": 20,
+      "gm_baseline": 1.000296338942158,
+      "gm_dg": 1.1563294984268357,
+      "wins_dg": 20,
+      "wins_dg_3pct": 18,
+      "baseline_wins_dg": 20,
+      "regressions_3pct": 0,
+      "worst_speedup_baseline": 0.9872053426134596
+    },
+    "policy_checks_130": {
+      "cases": 130,
+      "gm_baseline": 1.0311323425817478,
+      "gm_dg": 1.1012546984648783,
+      "wins_dg": 96,
+      "wins_dg_3pct": 82,
+      "baseline_wins_dg": 81,
+      "regressions_3pct": 0,
+      "worst_speedup_baseline": 0.9868078939658429
+    },
+    "final_holdout_20": {
+      "cases": 20,
+      "gm_baseline": 1.042112699852682,
+      "gm_dg": 1.0355610833550357,
+      "wins_dg": 13,
+      "wins_dg_3pct": 11,
+      "baseline_wins_dg": 8,
+      "regressions_3pct": 0,
+      "worst_speedup_baseline": 0.9968471759767508
+    },
+    "all_260": {
+      "cases": 260,
+      "gm_baseline": 1.038389723596003,
+      "gm_dg": 1.121422995963972,
+      "wins_dg": 201,
+      "wins_dg_3pct": 174,
+      "baseline_wins_dg": 167,
+      "regressions_3pct": 0,
+      "worst_speedup_baseline": 0.9868078939658429
+    }
+  },
+  "families": {
+    "gluon": 34,
+    "v2": 53,
+    "scale_tma": 4,
+    "triton": 18,
+    "shortk": 1
+  },
+  "search_candidates": 3105,
+  "search_failures": 0,
+  "scale_tma_trials": 83,
+  "scale_tma_accepted": 4,
+  "scale_tma_failures": 0,
+  "correctness_cases": 1040,
+  "worst_error": 0.0037282367702573538,
+  "crosscheck_cases": 21,
+  "crosscheck_regressions_3pct": 0,
+  "config_sha256": "b53870af83d0ffb5796df12f429928d786fd5057c1d425adca8127428655976e",
+  "cold_cache": {
+    "cases": 25,
+    "gm_baseline": 1.02361531584607,
+    "gm_dg": 1.1208914713181581,
+    "wins_dg": 24,
+    "wins_dg_3pct": 22,
+    "baseline_wins_dg": 21,
+    "regressions_3pct": 0,
+    "worst_speedup_baseline": 0.9909774624313313
+  }
+}

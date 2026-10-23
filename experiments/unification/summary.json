@@ -1,0 +1,28 @@
+{
+  "35b": {
+    "correctness_cases": 400,
+    "bitwise_equal": true,
+    "worst_error": 0.00379650155082345,
+    "graph_paths": 13,
+    "streams": 2,
+    "replays_per_stream": 100,
+    "strided_scale_cases": 13,
+    "timing_cases": 35,
+    "gm_speedup": 0.9991218054136398,
+    "min_speedup": 0.9814060824936611,
+    "regressions_over_3pct": 0
+  },
+  "122b": {
+    "correctness_cases": 1040,
+    "bitwise_equal": true,
+    "worst_error": 0.0038100979290902615,
+    "graph_paths": 27,
+    "streams": 2,
+    "replays_per_stream": 100,
+    "strided_scale_cases": 27,
+    "timing_cases": 40,
+    "gm_speedup": 0.999180180787089,
+    "min_speedup": 0.9784178842478823,
+    "regressions_over_3pct": 0
+  }
+}

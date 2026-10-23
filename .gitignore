@@ -5,3 +5,8 @@ profile/
 startup/cache_*/
 startup/pid_*
 startup_*.out
+
+# Python package build output
+build/
+dist/
+*.egg-info/

@@ -1,0 +1,19 @@
+test_non_deepgemm_dispatch_is_unchanged (test_adapter.Adapter) ... [fp8mm] patched sglang.srt.layers.quantization.fp8_utils.dispatch_w8a8_block_fp8_linear (profile=122b_tp4, table NK=['3072,2048', '3072,256', '4608,3072', '512,3072', '5120,3072'], dg_precompile=1)
+[fp8mm] patched sglang.srt.layers.quantization.fp8_utils.dispatch_w8a8_block_fp8_linear (profile=122b_tp4, table NK=['3072,2048', '3072,256', '4608,3072', '512,3072', '5120,3072'], dg_precompile=1)
+ok
+test_profile_is_forwarded (test_adapter.Adapter) ... [fp8mm] patched sglang.srt.layers.quantization.fp8_utils.dispatch_w8a8_block_fp8_linear (profile=122b_tp4, table NK=['3072,2048', '3072,256', '4608,3072', '512,3072', '5120,3072'], dg_precompile=1)
+ok
+test_unsupported_inputs_fall_back_before_quantization (test_adapter.Adapter) ... [fp8mm] patched sglang.srt.layers.quantization.fp8_utils.dispatch_w8a8_block_fp8_linear (profile=122b_tp4, table NK=['3072,2048', '3072,256', '4608,3072', '512,3072', '5120,3072'], dg_precompile=1)
+ok
+test_122b_full_config_migration (test_profiles.Profiles) ... ok
+test_122b_routing_matches_recorded_260_cases (test_profiles.Profiles) ... ok
+test_35b_preserves_historical_dispatch (test_profiles.Profiles) ... ok
+test_all_offgrid_choices_obey_policy (test_profiles.Profiles) ... ok
+test_bounds_unknown_profile_and_mutability (test_profiles.Profiles) ... ok
+test_reject_malformed_config (test_profiles.Profiles) ... ok
+test_shortk_is_exact_only (test_profiles.Profiles) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.817s
+
+OK

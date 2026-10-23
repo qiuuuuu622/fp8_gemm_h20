@@ -1,0 +1,4286 @@
+{
+  "profile": "35b_tp1",
+  "device": "NVIDIA H20",
+  "torch": "2.13.0+cu130",
+  "triton": "3.7.1",
+  "accuracy": [
+    {
+      "M": 1,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0029869021382182837,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0026547296438366175,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0023071246687322855,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0033158818259835243,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.002003454603254795,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002744660247117281,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002743240213021636,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0020495790522545576,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0029070889577269554,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0030016025993973017,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.002099934034049511,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002911180956289172,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002780422568321228,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0025197300128638744,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0027674289885908365,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0029485353734344244,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0024547011125832796,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002613476011902094,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002841169945895672,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.002274282742291689,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0027380352839827538,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0026734694838523865,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0036996135022491217,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0026472655590623617,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0026438680943101645,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0020788817200809717,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002457383554428816,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0026209542993456125,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0022119812201708555,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0024039251729846,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0027261306531727314,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0022977679036557674,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0025239314418286085,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0026469025760889053,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0021479998249560595,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0023468914441764355,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0026037865318357944,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0032255493570119143,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0025987636763602495,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0026086235884577036,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0031220081727951765,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002431002911180258,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0026827319525182247,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0031202209647744894,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0023486241698265076,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002564838854596019,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.003001060336828232,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0021665282547473907,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002352362032979727,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.003287743078544736,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0023549676407128572,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002301484812051058,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0029563994612544775,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0023607281036674976,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0023578337859362364,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0031633127946406603,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0022865720093250275,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 12288,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0025578737258911133,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 12288,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0030869157053530216,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 12288,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002264017704874277,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 12288,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0032679906580597162,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.003211080562323332,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0026594328228384256,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.003072635969147086,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0023393353912979364,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.003344978904351592,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0032278005965054035,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0027001937851309776,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002540591871365905,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0027415077202022076,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0020514570642262697,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002755414694547653,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002972142305225134,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0024970134254544973,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0028082062490284443,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0029069241136312485,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0022421381436288357,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002775411820039153,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002874014899134636,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0021476512774825096,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002985169878229499,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0025983010418713093,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0022503577638417482,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0029075625352561474,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002835469087585807,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0022124797105789185,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0026772073470056057,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002637359779328108,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0021356106735765934,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0026075171772390604,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0028003111947327852,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0020833301823586226,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002673785202205181,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002809631172567606,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.003193570300936699,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002643166808411479,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002542475238442421,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0018574887653812766,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002537120133638382,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0026039567310363054,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0021712342277169228,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002340288134291768,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002550944685935974,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.003159062471240759,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0021729692816734314,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0027060946449637413,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0031546547543257475,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002257650950923562,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002423493890091777,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0030054296366870403,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0019465246004983783,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002425879007205367,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0032400183845311403,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002414580201730132,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002354871714487672,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0033797204960137606,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0023353619035333395,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 9216,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002517478307709098,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 9216,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0031165441032499075,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 9216,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002180619863793254,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 9216,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002016178099438548,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0024868871551007032,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002004795940592885,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0019232816994190216,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.002999901073053479,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002384195104241371,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0017710948595777154,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.002754323184490204,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0031429005321115255,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002686101710423827,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0021138370502740145,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0022192238830029964,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0029154408257454634,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0026810429990291595,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0023264845367521048,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002883040113374591,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.003073052503168583,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0025524620432406664,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0030525887850672007,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.002262142952531576,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0024295165203511715,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0027971880044788122,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.002172330627217889,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002454213099554181,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0030889855697751045,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0025538913905620575,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0024860019329935312,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0028921321500092745,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0022482711356133223,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0024156447034329176,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0029090733733028173,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0020996409002691507,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002561306580901146,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0028350919019430876,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.002151450840756297,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0025483062490820885,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0029871929436922073,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0022209601011127234,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002462807111442089,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0027882957365363836,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0022856879513710737,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0025461388286203146,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0026196581311523914,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0036771243903785944,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002526635769754648,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002784236567094922,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0034211298916488886,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0022728778421878815,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0026398412883281708,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0034348866902291775,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0024343428667634726,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.0027406085282564163,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.001990758813917637,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.002299474086612463,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.002744506113231182,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.0035718840081244707,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0024159657768905163,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 1024,
+      "K": 2048,
+      "mode": "normal",
+      "error": 0.00260505941696465,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 1024,
+      "K": 2048,
+      "mode": "outlier",
+      "error": 0.00339580699801445,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 1024,
+      "K": 2048,
+      "mode": "skew",
+      "error": 0.0022156890481710434,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 1024,
+      "K": 2048,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.002939879894256592,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.0027077735867351294,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.00184158596675843,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.0022789700888097286,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.002108960412442684,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.002199695911258459,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.0023878379724919796,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.0029438836500048637,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.002303462941199541,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.0023126453161239624,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.0031560203060507774,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.002486332319676876,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.0022364621981978416,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.003307977458462119,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.001997427549213171,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.002219209913164377,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.0027384234126657248,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.0020841541700065136,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.002137604169547558,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.0029724566265940666,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.003027557861059904,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.002144236583262682,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.0026186646427959204,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.003265996929258108,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.002236038213595748,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.003121517365798354,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.00379650155082345,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.0021423837170004845,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.0031200391240417957,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.002560440916568041,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.0035152058117091656,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.003131153527647257,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.003293012734502554,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.0032039720099419355,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.0029419162310659885,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.0028355459216982126,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.002708707470446825,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.003080179216340184,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.0032639107666909695,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.002100197831168771,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.003051477950066328,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.0031374983955174685,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.0020004580728709698,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.0028410328086465597,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.0034088031388819218,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.0024824112188071012,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.0026284761261194944,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.003218731377273798,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.0033209240064024925,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.0027168572414666414,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.002348660957068205,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.0037221251986920834,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.0026589548215270042,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.003047024132683873,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.0028798487037420273,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.002831550780683756,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.0030880512204021215,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 2048,
+      "K": 4096,
+      "mode": "normal",
+      "error": 0.0032352430280297995,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 2048,
+      "K": 4096,
+      "mode": "outlier",
+      "error": 0.002668998669832945,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 2048,
+      "K": 4096,
+      "mode": "skew",
+      "error": 0.0029591235797852278,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 2048,
+      "K": 4096,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.0020312105771154165,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.0032025205437093973,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.0021865402814000845,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.0018977273721247911,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.0021046483889222145,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.002919919090345502,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.002722417935729027,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.0030774150509387255,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.00328647973947227,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.003182444255799055,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.0024490945506840944,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.002499539637938142,
+      "bitwise_equal": true
+    },
+    {
+      "M": 37,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.0026463898830115795,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.0022333215456455946,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.0027114988770335913,
+      "bitwise_equal": true
+    },
+    {
+      "M": 64,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.00301907816901803,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.0030586998909711838,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.0026054363697767258,
+      "bitwise_equal": true
+    },
+    {
+      "M": 100,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.002709165448322892,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.0022423930931836367,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.0027929674834012985,
+      "bitwise_equal": true
+    },
+    {
+      "M": 128,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.002675688825547695,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.003541113343089819,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.0027123447507619858,
+      "bitwise_equal": true
+    },
+    {
+      "M": 200,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.002947418484836817,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.0028383443132042885,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.002714477712288499,
+      "bitwise_equal": true
+    },
+    {
+      "M": 256,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.0027100839652121067,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.0034847662318497896,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.0024062790907919407,
+      "bitwise_equal": true
+    },
+    {
+      "M": 333,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.0030196162406355143,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.002752577420324087,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.002528364770114422,
+      "bitwise_equal": true
+    },
+    {
+      "M": 512,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.002745965262874961,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.003418026491999626,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.0023740774486213923,
+      "bitwise_equal": true
+    },
+    {
+      "M": 777,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.0026915420312434435,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.0025655932258814573,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.0022325848694890738,
+      "bitwise_equal": true
+    },
+    {
+      "M": 1000,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.0025586469564586878,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.0025649492163211107,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.0025423334445804358,
+      "bitwise_equal": true
+    },
+    {
+      "M": 2048,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.0028217053040862083,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.002834438579156995,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.0025608630385249853,
+      "bitwise_equal": true
+    },
+    {
+      "M": 3000,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.002759244292974472,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.002432354260236025,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.0023501182440668344,
+      "bitwise_equal": true
+    },
+    {
+      "M": 4096,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.0026982200797647238,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.002906619803979993,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.002277783351019025,
+      "bitwise_equal": true
+    },
+    {
+      "M": 5000,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.002436785027384758,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.0027592512778937817,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.0023054492194205523,
+      "bitwise_equal": true
+    },
+    {
+      "M": 8192,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.0026937618386000395,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.0023458439391106367,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.0023538011591881514,
+      "bitwise_equal": true
+    },
+    {
+      "M": 12000,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 2048,
+      "K": 512,
+      "mode": "normal",
+      "error": 0.002613838529214263,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 2048,
+      "K": 512,
+      "mode": "outlier",
+      "error": 0.0024842836428433657,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 2048,
+      "K": 512,
+      "mode": "skew",
+      "error": 0.0023501229006797075,
+      "bitwise_equal": true
+    },
+    {
+      "M": 16384,
+      "N": 2048,
+      "K": 512,
+      "mode": "zero",
+      "error": 0.0,
+      "bitwise_equal": true
+    }
+  ],
+  "timing": [
+    {
+      "M": 1,
+      "N": 12288,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          7.630957349496625,
+          7.81072450340341,
+          7.802133403197238,
+          7.823435848851814,
+          7.844653966134055
+        ],
+        "original": [
+          7.703269146106861,
+          7.654717309134346,
+          7.6510055449233585,
+          7.6711034098415505,
+          7.665492536322388
+        ]
+      },
+      "median_us": {
+        "unified": 7.81072450340341,
+        "original": 7.665492536322388
+      }
+    },
+    {
+      "M": 37,
+      "N": 12288,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          16.829341973740455,
+          16.825824499595004,
+          16.767273552116308,
+          16.64621979718047,
+          16.696026115541738
+        ],
+        "original": [
+          16.871339757703314,
+          16.85674560839801,
+          16.65950074253312,
+          16.67118344057122,
+          16.760908821482715
+        ]
+      },
+      "median_us": {
+        "unified": 16.767273552116308,
+        "original": 16.760908821482715
+      }
+    },
+    {
+      "M": 64,
+      "N": 12288,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          15.03942657470703,
+          14.968493541824484,
+          14.9727271511811,
+          14.946404438720275,
+          14.96825522564827
+        ],
+        "original": [
+          14.980158742689929,
+          14.986129669606074,
+          14.964117529420387,
+          14.960289628882157,
+          14.971382945191626
+        ]
+      },
+      "median_us": {
+        "unified": 14.968493541824484,
+        "original": 14.971382945191626
+      }
+    },
+    {
+      "M": 128,
+      "N": 12288,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          28.41909164772894,
+          28.34914045130953,
+          28.321358731962366,
+          28.355396629398705,
+          28.404966107121222
+        ],
+        "original": [
+          28.491158675254088,
+          28.37402958515262,
+          28.29119420984886,
+          28.311839045547856,
+          28.310888652860932
+        ]
+      },
+      "median_us": {
+        "unified": 28.355396629398705,
+        "original": 28.311839045547856
+      }
+    },
+    {
+      "M": 200,
+      "N": 12288,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          60.8965280506578,
+          60.8853876209137,
+          60.85071488922718,
+          60.958495937849214,
+          60.811290141171625
+        ],
+        "original": [
+          60.96468126967792,
+          60.94251140858392,
+          60.967136817642405,
+          60.91626407748744,
+          60.862932072577976
+        ]
+      },
+      "median_us": {
+        "unified": 60.8853876209137,
+        "original": 60.94251140858392
+      }
+    },
+    {
+      "M": 512,
+      "N": 12288,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          101.37519229848478,
+          101.2997048438629,
+          101.3379767820409,
+          101.30201242371183,
+          101.39016960606432
+        ],
+        "original": [
+          101.37480075542743,
+          101.36769490598945,
+          101.37507832648672,
+          101.29928236957845,
+          101.37024567506025
+        ]
+      },
+      "median_us": {
+        "unified": 101.3379767820409,
+        "original": 101.37024567506025
+      }
+    },
+    {
+      "M": 8192,
+      "N": 12288,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          1482.8538131713867,
+          1504.681435609475,
+          1485.7283878326416,
+          1496.0100222856572,
+          1493.9896608010317
+        ],
+        "original": [
+          1495.6647300720215,
+          1482.4583395933494,
+          1498.8404494065503,
+          1490.0228060208835,
+          1496.18166410006
+        ]
+      },
+      "median_us": {
+        "unified": 1493.9896608010317,
+        "original": 1495.6647300720215
+      }
+    },
+    {
+      "M": 1,
+      "N": 9216,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          6.237957403429597,
+          6.251404323476427,
+          6.236071237094739,
+          6.228679601196459,
+          6.217017217918679
+        ],
+        "original": [
+          6.205643257415821,
+          6.208093728476424,
+          6.258439235999936,
+          6.251591690655412,
+          6.15851464664637
+        ]
+      },
+      "median_us": {
+        "unified": 6.236071237094739,
+        "original": 6.208093728476424
+      }
+    },
+    {
+      "M": 37,
+      "N": 9216,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          12.694532181183375,
+          12.71942929857096,
+          12.69747172054743,
+          12.76285966237386,
+          12.785857425977106
+        ],
+        "original": [
+          12.706688838669017,
+          12.6628207296043,
+          12.750399855316662,
+          12.707090747448825,
+          12.773740558197703
+        ]
+      },
+      "median_us": {
+        "unified": 12.71942929857096,
+        "original": 12.707090747448825
+      }
+    },
+    {
+      "M": 64,
+      "N": 9216,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          11.735770492478247,
+          11.706402525690194,
+          11.731987363586748,
+          11.67968344618361,
+          11.695625519152998
+        ],
+        "original": [
+          11.620049203028445,
+          11.599944835992028,
+          11.696423252140638,
+          11.697142641135404,
+          11.699220417404987
+        ]
+      },
+      "median_us": {
+        "unified": 11.706402525690194,
+        "original": 11.696423252140638
+      }
+    },
+    {
+      "M": 128,
+      "N": 9216,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          21.448737948385425,
+          21.544878853228212,
+          21.49294665736011,
+          21.487123485647302,
+          21.48291021337525
+        ],
+        "original": [
+          21.396810000704736,
+          21.51223516744177,
+          21.488654722290836,
+          21.47188062992436,
+          21.454301358585305
+        ]
+      },
+      "median_us": {
+        "unified": 21.487123485647302,
+        "original": 21.47188062992436
+      }
+    },
+    {
+      "M": 200,
+      "N": 9216,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          42.243914889849826,
+          42.079197044755304,
+          42.0352053523262,
+          42.02865745129656,
+          42.0862659486402
+        ],
+        "original": [
+          42.09912942917966,
+          42.08493224346784,
+          42.07408803810132,
+          41.99685782440438,
+          42.058291004408744
+        ]
+      },
+      "median_us": {
+        "unified": 42.079197044755304,
+        "original": 42.07408803810132
+      }
+    },
+    {
+      "M": 512,
+      "N": 9216,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          78.85998003980013,
+          78.73815480810012,
+          78.8957080414291,
+          78.85459391276042,
+          78.9413392310049
+        ],
+        "original": [
+          78.89663789655779,
+          79.02946757378979,
+          79.07475714987896,
+          78.98180276527336,
+          78.5528536375404
+        ]
+      },
+      "median_us": {
+        "unified": 78.85998003980013,
+        "original": 78.98180276527336
+      }
+    },
+    {
+      "M": 8192,
+      "N": 9216,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          1120.9658064932194,
+          1112.2199364428252,
+          1112.0888260175595,
+          1112.5916463024212,
+          1112.816663058299
+        ],
+        "original": [
+          1113.5661790955742,
+          1113.0096435546875,
+          1112.0493834873414,
+          1112.6987385299972,
+          1112.0137052715947
+        ]
+      },
+      "median_us": {
+        "unified": 1112.5916463024212,
+        "original": 1112.6987385299972
+      }
+    },
+    {
+      "M": 1,
+      "N": 1024,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          3.9963507243140066,
+          3.949153168001128,
+          3.9327704356266904,
+          4.004446884681438,
+          3.990258136993559
+        ],
+        "original": [
+          3.9880657349615665,
+          3.985945995037372,
+          3.9877951145172124,
+          3.991634750928022,
+          3.9595197986912085
+        ]
+      },
+      "median_us": {
+        "unified": 3.990258136993559,
+        "original": 3.9877951145172124
+      }
+    },
+    {
+      "M": 37,
+      "N": 1024,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          5.423970405872051,
+          5.369306202266116,
+          5.365216168197425,
+          5.423347904997051,
+          5.357222489907708
+        ],
+        "original": [
+          5.468508292888773,
+          5.5420848456296055,
+          5.485226185578877,
+          5.400337567664747,
+          5.457655496833738
+        ]
+      },
+      "median_us": {
+        "unified": 5.369306202266116,
+        "original": 5.468508292888773
+      }
+    },
+    {
+      "M": 64,
+      "N": 1024,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          5.134911769969697,
+          5.060413981240893,
+          5.141378801765171,
+          5.142502808893049,
+          5.144969154806698
+        ],
+        "original": [
+          5.1296256220759675,
+          5.149486470729747,
+          5.086110121961953,
+          5.145057581238827,
+          5.051447261463512
+        ]
+      },
+      "median_us": {
+        "unified": 5.141378801765171,
+        "original": 5.1296256220759675
+      }
+    },
+    {
+      "M": 128,
+      "N": 1024,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          6.13578083408866,
+          6.097085868748327,
+          6.145081125401162,
+          6.138326174823951,
+          6.133346687572807
+        ],
+        "original": [
+          6.132084121883758,
+          6.128063706532577,
+          6.1129016285998805,
+          6.115753369821342,
+          6.033661866388401
+        ]
+      },
+      "median_us": {
+        "unified": 6.13578083408866,
+        "original": 6.115753369821342
+      }
+    },
+    {
+      "M": 200,
+      "N": 1024,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          7.132384400225955,
+          7.128539034929225,
+          7.0983613770583585,
+          7.095760794072136,
+          7.000487755964147
+        ],
+        "original": [
+          7.128822725241763,
+          7.103896667273219,
+          7.089630506747289,
+          7.039710950171324,
+          7.102488263353328
+        ]
+      },
+      "median_us": {
+        "unified": 7.0983613770583585,
+        "original": 7.102488263353328
+      }
+    },
+    {
+      "M": 512,
+      "N": 1024,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          11.633559379788393,
+          11.593833722566304,
+          11.638506908459227,
+          11.637597355817883,
+          11.644868988068506
+        ],
+        "original": [
+          11.646244002551567,
+          11.647592137453586,
+          11.616375307627331,
+          11.632748156024807,
+          11.5821301041541
+        ]
+      },
+      "median_us": {
+        "unified": 11.637597355817883,
+        "original": 11.632748156024807
+      }
+    },
+    {
+      "M": 8192,
+      "N": 1024,
+      "K": 2048,
+      "samples_us": {
+        "unified": [
+          135.4860310818715,
+          135.55606136501396,
+          134.9561630361496,
+          134.48954552905215,
+          134.50723530333718
+        ],
+        "original": [
+          135.39549900214269,
+          135.36545902631858,
+          134.5122730562472,
+          134.55326152297687,
+          134.46531048943015
+        ]
+      },
+      "median_us": {
+        "unified": 134.9561630361496,
+        "original": 134.55326152297687
+      }
+    },
+    {
+      "M": 1,
+      "N": 2048,
+      "K": 4096,
+      "samples_us": {
+        "unified": [
+          5.561300383673774,
+          5.558902194384541,
+          5.551598731344535,
+          5.549944776068511,
+          5.470996642663534
+        ],
+        "original": [
+          5.558896257341967,
+          5.541310863322522,
+          5.5515241389181105,
+          5.48554489112375,
+          5.54612930555989
+        ]
+      },
+      "median_us": {
+        "unified": 5.551598731344535,
+        "original": 5.54612930555989
+      }
+    },
+    {
+      "M": 37,
+      "N": 2048,
+      "K": 4096,
+      "samples_us": {
+        "unified": [
+          9.251363349683357,
+          9.356061068448154,
+          9.309072106691033,
+          9.352230068831938,
+          9.385016643338732
+        ],
+        "original": [
+          9.257132434225701,
+          9.241552867983055,
+          9.321844816642162,
+          9.32996703214966,
+          9.338579755840879
+        ]
+      },
+      "median_us": {
+        "unified": 9.352230068831938,
+        "original": 9.321844816642162
+      }
+    },
+    {
+      "M": 64,
+      "N": 2048,
+      "K": 4096,
+      "samples_us": {
+        "unified": [
+          9.588477290978952,
+          9.522270020984468,
+          9.531848533605023,
+          9.536199921216719,
+          9.540470935511248
+        ],
+        "original": [
+          9.461028544933765,
+          9.519157911601818,
+          9.477311211663324,
+          9.437457384299655,
+          9.47492677972924
+        ]
+      },
+      "median_us": {
+        "unified": 9.536199921216719,
+        "original": 9.47492677972924
+      }
+    },
+    {
+      "M": 128,
+      "N": 2048,
+      "K": 4096,
+      "samples_us": {
+        "unified": [
+          13.34773987531662,
+          13.351814446329069,
+          13.352846182309664,
+          13.35233108253236,
+          13.265162060974511
+        ],
+        "original": [
+          13.354564499069046,
+          13.342514007222691,
+          13.362256978687487,
+          13.352712681186953,
+          13.35411678930247
+        ]
+      },
+      "median_us": {
+        "unified": 13.351814446329069,
+        "original": 13.35411678930247
+      }
+    },
+    {
+      "M": 200,
+      "N": 2048,
+      "K": 4096,
+      "samples_us": {
+        "unified": [
+          26.535312610744775,
+          26.605577705320247,
+          26.55999495251344,
+          26.648323303119902,
+          26.635017047078655
+        ],
+        "original": [
+          26.58203013168484,
+          26.491121840632818,
+          26.63133405420902,
+          26.613382630000842,
+          26.534395090361055
+        ]
+      },
+      "median_us": {
+        "unified": 26.605577705320247,
+        "original": 26.58203013168484
+      }
+    },
+    {
+      "M": 512,
+      "N": 2048,
+      "K": 4096,
+      "samples_us": {
+        "unified": [
+          35.96384499881313,
+          35.89884812104786,
+          35.91100842985388,
+          35.95106863935183,
+          35.96823948572217
+        ],
+        "original": [
+          35.98017368501829,
+          35.90442919692119,
+          35.99932722270195,
+          35.937035723430355,
+          35.85846652292182
+        ]
+      },
+      "median_us": {
+        "unified": 35.95106863935183,
+        "original": 35.937035723430355
+      }
+    },
+    {
+      "M": 8192,
+      "N": 2048,
+      "K": 4096,
+      "samples_us": {
+        "unified": [
+          505.95487174341235,
+          501.8061726033187,
+          502.4102411350282,
+          502.1048986611246,
+          501.96624884084497
+        ],
+        "original": [
+          503.37336911993515,
+          502.0583817938796,
+          501.7886598231429,
+          502.2506325931873,
+          502.075753091764
+        ]
+      },
+      "median_us": {
+        "unified": 502.1048986611246,
+        "original": 502.075753091764
+      }
+    },
+    {
+      "M": 1,
+      "N": 2048,
+      "K": 512,
+      "samples_us": {
+        "unified": [
+          2.57313448792966,
+          2.5522897332955337,
+          2.508059947304368,
+          2.5461826882610428,
+          2.5259123908148875
+        ],
+        "original": [
+          2.558954617728485,
+          2.550764551645593,
+          2.5447121957190952,
+          2.5441860983557736,
+          2.5191695284633693
+        ]
+      },
+      "median_us": {
+        "unified": 2.5461826882610428,
+        "original": 2.5447121957190952
+      }
+    },
+    {
+      "M": 37,
+      "N": 2048,
+      "K": 512,
+      "samples_us": {
+        "unified": [
+          2.9591453636181013,
+          2.9496858784016347,
+          2.915422147955776,
+          2.937599997850334,
+          2.944093085644896
+        ],
+        "original": [
+          2.950907663169156,
+          2.9357870760905382,
+          2.917388124603712,
+          2.9469969949693477,
+          2.9506977763098488
+        ]
+      },
+      "median_us": {
+        "unified": 2.944093085644896,
+        "original": 2.9469969949693477
+      }
+    },
+    {
+      "M": 64,
+      "N": 2048,
+      "K": 512,
+      "samples_us": {
+        "unified": [
+          2.979835191167387,
+          2.97593884407335,
+          2.9724196662237827,
+          2.9825246036981126,
+          2.9777285787794328
+        ],
+        "original": [
+          2.9586015051521914,
+          2.986176279243927,
+          2.9210519717738532,
+          2.984946948793817,
+          2.9990914678653477
+        ]
+      },
+      "median_us": {
+        "unified": 2.9777285787794328,
+        "original": 2.984946948793817
+      }
+    },
+    {
+      "M": 128,
+      "N": 2048,
+      "K": 512,
+      "samples_us": {
+        "unified": [
+          3.65998279757616,
+          3.680698882770985,
+          3.683151148133359,
+          3.6822141755011772,
+          3.6496300250291824
+        ],
+        "original": [
+          3.653441556093243,
+          3.6607715505114675,
+          3.682186241149902,
+          3.6346740620110625,
+          3.6656852052503246
+        ]
+      },
+      "median_us": {
+        "unified": 3.680698882770985,
+        "original": 3.6607715505114675
+      }
+    },
+    {
+      "M": 200,
+      "N": 2048,
+      "K": 512,
+      "samples_us": {
+        "unified": [
+          4.733471395004363,
+          4.7334723751315195,
+          4.641354027338527,
+          4.707225570678711,
+          4.713165455352003
+        ],
+        "original": [
+          4.73475907595103,
+          4.688366278108344,
+          4.706357157066076,
+          4.709330152868347,
+          4.70267915942781
+        ]
+      },
+      "median_us": {
+        "unified": 4.713165455352003,
+        "original": 4.706357157066076
+      }
+    },
+    {
+      "M": 512,
+      "N": 2048,
+      "K": 512,
+      "samples_us": {
+        "unified": [
+          7.639294179679835,
+          7.596138931497578,
+          7.587538460686466,
+          7.601706940552283,
+          7.614322985565313
+        ],
+        "original": [
+          7.609323316946962,
+          7.595248079478517,
+          7.564428070528695,
+          7.580110723004223,
+          7.654935839776888
+        ]
+      },
+      "median_us": {
+        "unified": 7.601706940552283,
+        "original": 7.595248079478517
+      }
+    },
+    {
+      "M": 8192,
+      "N": 2048,
+      "K": 512,
+      "samples_us": {
+        "unified": [
+          76.69077019242874,
+          76.1057069717353,
+          76.0908727596631,
+          76.13569675432358,
+          76.08090832984159
+        ],
+        "original": [
+          76.50971649850416,
+          76.1295396987706,
+          76.10867840082427,
+          76.14279985427856,
+          76.12734684327832
+        ]
+      },
+      "median_us": {
+        "unified": 76.1057069717353,
+        "original": 76.1295396987706
+      }
+    }
+  ],
+  "graphs": [
+    {
+      "M": 1,
+      "N": 12288,
+      "K": 2048,
+      "errors": [
+        0.0032899740617722273,
+        0.002535330830141902
+      ]
+    },
+    {
+      "M": 100,
+      "N": 12288,
+      "K": 2048,
+      "errors": [
+        0.0029382361099123955,
+        0.002954779891297221
+      ]
+    },
+    {
+      "M": 200,
+      "N": 12288,
+      "K": 2048,
+      "errors": [
+        0.002756166970357299,
+        0.002718344796448946
+      ]
+    },
+    {
+      "M": 256,
+      "N": 12288,
+      "K": 2048,
+      "errors": [
+        0.002727121114730835,
+        0.0027159813325852156
+      ]
+    },
+    {
+      "M": 333,
+      "N": 12288,
+      "K": 2048,
+      "errors": [
+        0.002839810447767377,
+        0.0028050318360328674
+      ]
+    },
+    {
+      "M": 1,
+      "N": 1024,
+      "K": 2048,
+      "errors": [
+        0.0019142674282193184,
+        0.002120285527780652
+      ]
+    },
+    {
+      "M": 1,
+      "N": 2048,
+      "K": 4096,
+      "errors": [
+        0.0023123023565858603,
+        0.0024602070916444063
+      ]
+    },
+    {
+      "M": 64,
+      "N": 2048,
+      "K": 4096,
+      "errors": [
+        0.0021789022721350193,
+        0.002255133120343089
+      ]
+    },
+    {
+      "M": 100,
+      "N": 2048,
+      "K": 4096,
+      "errors": [
+        0.0021474480163306,
+        0.0020727780647575855
+      ]
+    },
+    {
+      "M": 256,
+      "N": 2048,
+      "K": 4096,
+      "errors": [
+        0.002197663066908717,
+        0.0021203607320785522
+      ]
+    },
+    {
+      "M": 777,
+      "N": 2048,
+      "K": 4096,
+      "errors": [
+        0.0020904159173369408,
+        0.0021118305157870054
+      ]
+    },
+    {
+      "M": 1,
+      "N": 2048,
+      "K": 512,
+      "errors": [
+        0.0018044193275272846,
+        0.003024071455001831
+      ]
+    },
+    {
+      "M": 256,
+      "N": 2048,
+      "K": 512,
+      "errors": [
+        0.0029447460547089577,
+        0.0027561618480831385
+      ]
+    }
+  ],
+  "strided_scales": [
+    {
+      "M": 1,
+      "N": 12288,
+      "K": 2048,
+      "error": 0.0036459211260080338
+    },
+    {
+      "M": 100,
+      "N": 12288,
+      "K": 2048,
+      "error": 0.002984752180054784
+    },
+    {
+      "M": 200,
+      "N": 12288,
+      "K": 2048,
+      "error": 0.002730288775637746
+    },
+    {
+      "M": 256,
+      "N": 12288,
+      "K": 2048,
+      "error": 0.002791648730635643
+    },
+    {
+      "M": 333,
+      "N": 12288,
+      "K": 2048,
+      "error": 0.0025783481542021036
+    },
+    {
+      "M": 1,
+      "N": 1024,
+      "K": 2048,
+      "error": 0.0037011890672147274
+    },
+    {
+      "M": 1,
+      "N": 2048,
+      "K": 4096,
+      "error": 0.0026178976986557245
+    },
+    {
+      "M": 64,
+      "N": 2048,
+      "K": 4096,
+      "error": 0.0022004549391567707
+    },
+    {
+      "M": 100,
+      "N": 2048,
+      "K": 4096,
+      "error": 0.0021680588833987713
+    },
+    {
+      "M": 256,
+      "N": 2048,
+      "K": 4096,
+      "error": 0.001877193688414991
+    },
+    {
+      "M": 777,
+      "N": 2048,
+      "K": 4096,
+      "error": 0.002063050167635083
+    },
+    {
+      "M": 1,
+      "N": 2048,
+      "K": 512,
+      "error": 0.0032876364421099424
+    },
+    {
+      "M": 256,
+      "N": 2048,
+      "K": 512,
+      "error": 0.0029229100327938795
+    }
+  ],
+  "status": "passed",
+  "worst_error": 0.00379650155082345
+}
