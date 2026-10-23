@@ -1,0 +1,19 @@
+{
+  "upstream_commit": "80a3f43a0d6f64ea00bebb9105a46f91baff5d2c",
+  "release": "20261023_kernel_v2",
+  "source_sha256": {
+    "kernel_shortk.py": "258e50059107409acb1b196a2607b3adace85df26105e97f2fcdf247dcf2caaa",
+    "dispatch.py": "995c3e488a29f76fd7c26a5e36d36411f2386751f95495e4c6cc196fbdbb2548",
+    "__init__.py": "b06d644db7593ee35fce0d644378d6b28c4a86ac8a4d6fda030be2cccb1832f7",
+    "baseline_triton.py": "fb3c1a183de244659d938ef449d7d7772a03875ca69f3a54b31137661205b95e",
+    "baseline_gluon.py": "8418ffe2ae510188b2f0d5203180ccb2044a24a1dc12d8dcbe8d834d4bfe7dff",
+    "kernel_ws.py": "cdf1cfbd98fda9325abf772f735a8779aaef4443764395f49a0669155582a4f8",
+    "engine.py": "5eb3501d39551f7e8266bc583438c7033dcb486cb495a39c4650b84d74dd416e",
+    "kernel_v2.py": "c5cc5f4d7101c7b2bee047b29835814447ed160414ae508e0c9e0956e673ddca",
+    "kernel_scale_tma.py": "50384e3fc893c3c8b567bc0a039be7c553bcb7670527d10e402d626c24ae8e14"
+  },
+  "source_configs_sha256": {
+    "optimized.json": "61a97fd3fd2dde65c3ecd65a6dbe905be6af284f73f2240ed94af6215334321c",
+    "dispatch_table.json": "b53870af83d0ffb5796df12f429928d786fd5057c1d425adca8127428655976e"
+  }
+}

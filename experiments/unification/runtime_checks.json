@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "non_current_device_error": 0.0030963863246142864,
+  "rejected_inputs": [
+    "dtype",
+    "scale_shape",
+    "scale_dtype",
+    "mixed_device",
+    "noncontiguous",
+    "unsupported_shape"
+  ]
+}

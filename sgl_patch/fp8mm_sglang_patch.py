@@ -2,7 +2,8 @@
 # Enabled only when FP8MM_ENABLE=1; loaded via sitecustomize from PYTHONPATH (no SGLang source edits).
 #   FP8MM_ENABLE=1            replace dispatch_w8a8_block_fp8_linear() result with fp8mm_w8a8_block_fp8_linear
 #   FP8MM_DISABLE_DG_PRECOMPILE=1   also skip DeepGEMM's all-M JIT precompile (it is unused once patched)
-#   FP8MM_HOME=/root/fp8mm    where dispatch.py / runs/dispatch.json live
+#   FP8MM_HOME=/path/to/repo  where the fp8_gemm_h20 package lives
+#   FP8MM_PROFILE=35b_tp1     or 122b_tp4; selects the measured shape/config profile
 # Shapes our table does not cover (or non-bf16 / unaligned) fall through to the original DeepGEMM function.
 import os
 import sys
@@ -20,10 +21,12 @@ if os.environ.get("FP8MM_ENABLE") == "1":
 
     def _install(mod):
         import torch
-        import dispatch as fp8mm_dispatch
+        import fp8_gemm_h20 as fp8mm_dispatch
+        from fp8_gemm_h20.config import get_profile
 
         orig_dispatch = mod.dispatch_w8a8_block_fp8_linear
-        table = fp8mm_dispatch._TABLE
+        profile = os.environ.get("FP8MM_PROFILE", "35b_tp1")
+        table = get_profile(profile)["entries"]
         quant = mod.sglang_per_token_group_quant_fp8
         stats = {"ours": 0, "fallback": 0}
 
@@ -35,7 +38,11 @@ if os.environ.get("FP8MM_ENABLE") == "1":
                     and input.dtype == torch.bfloat16
                     and weight_scale.dtype == torch.float32
                     and list(block_size) == [128, 128]
-                    and f"{N},{K}" in table
+                    and not getattr(mod, "DEEPGEMM_SCALE_UE8M0", False)
+                    and input.is_contiguous()
+                    and weight.is_contiguous()
+                    and weight.dtype == torch.float8_e4m3fn
+                    and fp8mm_dispatch.supports(profile, input.numel() // K, N, K)
                 )
                 if not ok:
                     stats["fallback"] += 1
@@ -44,7 +51,7 @@ if os.environ.get("FP8MM_ENABLE") == "1":
                 x2 = input.view(-1, K)
                 # row-major [M, K/128] fp32 scales (our kernels' layout), not DeepGEMM's MN-major TMA layout
                 q, s = quant(x2, block_size[1], column_major_scales=False, scale_tma_aligned=False)
-                out = fp8mm_dispatch.matmul(q, weight, s, weight_scale)
+                out = fp8mm_dispatch.matmul(q, weight, s, weight_scale, profile=profile)
                 if bias is not None:
                     out = out + bias
                 return out.view(*input.shape[:-1], N)
@@ -60,7 +67,7 @@ if os.environ.get("FP8MM_ENABLE") == "1":
 
         mod.dispatch_w8a8_block_fp8_linear = patched_dispatch
         print(f"[fp8mm] patched {_TARGET}.dispatch_w8a8_block_fp8_linear "
-              f"(table NK={sorted(table)}, dg_precompile={os.environ.get('SGLANG_JIT_DEEPGEMM_PRECOMPILE', '1')})",
+              f"(profile={profile}, table NK={sorted(table)}, dg_precompile={os.environ.get('SGLANG_JIT_DEEPGEMM_PRECOMPILE', '1')})",
               file=sys.stderr, flush=True)
 
     class _Loader(importlib.abc.Loader):

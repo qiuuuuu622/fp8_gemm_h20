@@ -1,30 +1,52 @@
-# Unified entry: per-(N,K,M) table picks c3 (opt2, Triton tl.dot), c9 (gl2) or c11 (gl5, Gluon pairwise wgmma).
-# Table: runs/dispatch.json  {"N,K": {"M": {"impl": "c3"|"c9"|"c11", "cfg": {...}}}}; lookup = log-nearest M.
-import json, math, os
-import opt2, gl2, gl5
+"""Legacy 35B research API. New applications should import fp8_gemm_h20.
 
-IMPLS = {"c3": opt2.matmul, "c9": gl2.matmul, "c11": gl5.matmul}
-_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "runs", "dispatch.json")
-_TABLE = json.load(open(_FILE)) if os.path.exists(_FILE) else {}
-_LOOKUP = os.environ.get("DISPATCH_LOOKUP", "nearest")  # nearest (log) | ceil
+FP8MM_PROFILE switches profiles. DISPATCH_LOOKUP=ceil is retained only for
+historical 35B experiments; the public package uses the frozen profile policy.
+"""
+import os
+from fp8_gemm_h20 import matmul as _matmul, select, supports
+from fp8_gemm_h20.config import get_profile
+from fp8_gemm_h20.engine import kernel
 
+_PROFILE = os.environ.get("FP8MM_PROFILE", "35b_tp1")
+_ALIASES = {"triton": "c3", "gluon": "c11"}
+_TABLE = {nk: {m: {"impl": _ALIASES.get(e["impl"], e["impl"]), "cfg": e["config"]}
+               for m, e in rows.items()}
+          for nk, rows in get_profile(_PROFILE)["entries"].items()}
+_LOOKUP = os.environ.get("DISPATCH_LOOKUP", "nearest")
 
 def pick(M, N, K):
-    t = _TABLE.get(f"{N},{K}")
-    if not t:
-        return "c3", None  # untuned shape: c3 with its own fallback config
-    if _LOOKUP == "ceil":
-        # smallest tuned M >= actual M: its tile counts cover M without under-provisioning the grid
-        ge = [int(m) for m in t if int(m) >= M]
-        key = str(min(ge)) if ge else max(t, key=int)
-    else:
-        lm = math.log(max(M, 1))
-        key = min(t, key=lambda m: abs(math.log(int(m)) - lm))
-    e = t[key]
-    return e["impl"], e["cfg"]
-
+    if not supports(_PROFILE, M, N, K):
+        if _PROFILE != "35b_tp1":
+            raise ValueError("Unsupported shape for 122b_tp4")
+        return "c3", None
+    if _LOOKUP == "ceil" and _PROFILE == "35b_tp1":
+        table = _TABLE[f"{N},{K}"]
+        ge = [int(m) for m in table if int(m) >= M]
+        anchor = str(min(ge)) if ge else max(table, key=int)
+        return table[anchor]["impl"], table[anchor]["cfg"]
+    entry, _ = select(_PROFILE, M, N, K)
+    return _ALIASES.get(entry["impl"], entry["impl"]), entry["config"]
 
 def matmul(A, B, As, Bs):
-    """A[M,K] fp8, B[N,K] fp8, As[M,K/128] f32, Bs[N/128,K/128] f32 -> C[M,N] bf16."""
+    if supports(_PROFILE, A.shape[0], B.shape[0], A.shape[1]) and _LOOKUP != "ceil":
+        return _matmul(A, B, As, Bs, profile=_PROFILE)
     impl, cfg = pick(A.shape[0], B.shape[0], A.shape[1])
-    return IMPLS[impl](A, B, As, Bs, cfg)
+    if impl == "c3":
+        import opt2
+        return opt2.matmul(A, B, As, Bs, cfg)
+    return kernel({"c11": "gluon"}.get(impl, impl))(A, B, As, Bs, cfg)
+
+# Historical startup_cost.py calls this registry directly.
+def _legacy_kernel(name):
+    def invoke(A, B, As, Bs, cfg=None):
+        return kernel(name)(A, B, As, Bs, cfg)
+    return invoke
+
+IMPLS = {"c3": _legacy_kernel("triton"), "c11": _legacy_kernel("gluon")}
+
+def _legacy_c9(A, B, As, Bs, cfg=None):
+    from gl2 import matmul as c9
+    return c9(A, B, As, Bs, cfg)
+
+IMPLS["c9"] = _legacy_c9

@@ -1,0 +1,2692 @@
+{
+  "schema_version": 1,
+  "profile": "122b_tp4",
+  "hardware": "NVIDIA H20 (SM90, 78 SMs)",
+  "block_size": [
+    128,
+    128
+  ],
+  "m_range": [
+    1,
+    16384
+  ],
+  "policy": {
+    "kind": "nearby_equal_tiles",
+    "max_distance": 8,
+    "exact_only": [
+      "shortk"
+    ]
+  },
+  "shapes": [
+    {
+      "name": "gdn.in_proj_qkvz",
+      "N": 5120,
+      "K": 3072,
+      "count": 36
+    },
+    {
+      "name": "gdn.out_proj + attn.o_proj",
+      "N": 3072,
+      "K": 2048,
+      "count": 48
+    },
+    {
+      "name": "attn.qkv_proj",
+      "N": 4608,
+      "K": 3072,
+      "count": 12
+    },
+    {
+      "name": "shared.gate_up",
+      "N": 512,
+      "K": 3072,
+      "count": 48
+    },
+    {
+      "name": "shared.down",
+      "N": 3072,
+      "K": 256,
+      "count": 48
+    }
+  ],
+  "entries": {
+    "512,3072": {
+      "1": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 4.233582728849481
+      },
+      "7": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 4.190062627461656
+      },
+      "16": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 4.270412784152561
+      },
+      "32": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        },
+        "anchor_us": 4.4074877137278285
+      },
+      "37": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 5.16099770444469
+      },
+      "64": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 5.200466166832815
+      },
+      "100": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 16,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "MODE": 1,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 5.529408363832368
+      },
+      "128": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 16,
+          "NUM_STAGES": 8,
+          "MODE": 3,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 5.609731883793087
+      },
+      "192": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 6.718711686446677
+      },
+      "200": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 6.730737660076798
+      },
+      "256": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 6.836962613349817
+      },
+      "333": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 7.959610139661987
+      },
+      "384": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 8.028520909390707
+      },
+      "512": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 9.763431719523439
+      },
+      "768": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 16,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "MODE": 1,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 12.603103890414738
+      },
+      "777": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 32,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "MODE": 1,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 13.30869103199142
+      },
+      "1024": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 32,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "MODE": 1,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 15.957223285328258
+      },
+      "2048": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 27.917510933346218
+      },
+      "4096": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 53.270624639389666
+      },
+      "4097": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 53.5329728415518
+      },
+      "8192": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 103.58291282473017
+      },
+      "16384": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 196.1640481209423
+      }
+    },
+    "3072,256": {
+      "1": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 8,
+          "BLOCK_W": 128,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "MODE": 1,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 1.9590370903187748
+      },
+      "7": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 1.904345177482611
+      },
+      "16": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 1.9810303748429392
+      },
+      "32": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 2.2870646418460816
+      },
+      "37": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 2.3954612642710753
+      },
+      "64": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 2.567373566694886
+      },
+      "100": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 2.991043606214416
+      },
+      "128": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 3.0794707562834795
+      },
+      "192": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 3.5901507529816166
+      },
+      "200": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 4.358773730841001
+      },
+      "256": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 3,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 4.426970875274022
+      },
+      "333": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 5.082097755846127
+      },
+      "384": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 5.192929866596496
+      },
+      "512": {
+        "impl": "shortk",
+        "config": {
+          "BM": 32,
+          "BN": 128,
+          "SWAP": true,
+          "GROUP": 8,
+          "num_warps": 8,
+          "num_stages": 1
+        },
+        "anchor_us": 6.488443915746802
+      },
+      "768": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 8.594633418856873
+      },
+      "777": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 8.736197935220838
+      },
+      "1024": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 10.652129396281895
+      },
+      "2048": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 18.47426035582676
+      },
+      "4096": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 34.31061480907684
+      },
+      "4097": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 34.3787571546569
+      },
+      "8192": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 32,
+          "num_warps": 4,
+          "num_stages": 3,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 67.41114074657288
+      },
+      "16384": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 134.74777042428127
+      }
+    },
+    "3072,2048": {
+      "1": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 3.9300105482800856
+      },
+      "7": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 4.076906177104933
+      },
+      "16": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 4.320667853577082
+      },
+      "32": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 5.347362673022845
+      },
+      "37": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 5.3730505679516085
+      },
+      "64": {
+        "impl": "scale_tma",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 6.710601310485971
+      },
+      "100": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 32,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "MODE": 1,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 9.750513273716885
+      },
+      "128": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 32,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "MODE": 1,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 9.511954072004771
+      },
+      "192": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 12.430520650593078
+      },
+      "200": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 128,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 12.935553161526023
+      },
+      "256": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 14.956632431815652
+      },
+      "333": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 128,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 3,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 21.45844747388144
+      },
+      "384": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 128,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 3,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 21.692714342131683
+      },
+      "512": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 128,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 2,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 27.67048929878675
+      },
+      "768": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 41.45877170385151
+      },
+      "777": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 128,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 3,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 41.778453408855285
+      },
+      "1024": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 52.555062430245535
+      },
+      "2048": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 100.73435653439846
+      },
+      "4096": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 196.46365150572763
+      },
+      "4097": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 199.2577342663781
+      },
+      "8192": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 383.2231228168194
+      },
+      "16384": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 749.879368868741
+      }
+    },
+    "4608,3072": {
+      "1": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 5.235622941161231
+      },
+      "7": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 5.401478779998645
+      },
+      "16": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 5.615717979884104
+      },
+      "32": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 6.888806170526646
+      },
+      "37": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 8.370877421179483
+      },
+      "64": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 10.118173120057055
+      },
+      "100": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 128,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 16.444569566514758
+      },
+      "128": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 16.79348894709794
+      },
+      "192": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 24.342455486259837
+      },
+      "200": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 128,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "MODE": 1,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 27.44772310487952
+      },
+      "256": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 128,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 4,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 30.700771673969257
+      },
+      "333": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 42.14931170841275
+      },
+      "384": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 46.14388777184362
+      },
+      "512": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 58.47655740359488
+      },
+      "768": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 87.1651925510229
+      },
+      "777": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1,
+          "PREFETCH": false,
+          "UNROLL": false
+        },
+        "anchor_us": 88.79904363573212
+      },
+      "1024": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        },
+        "anchor_us": 113.8687111513458
+      },
+      "2048": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 220.48088921440973
+      },
+      "4096": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1,
+          "PREFETCH": false,
+          "UNROLL": false
+        },
+        "anchor_us": 424.61563175560065
+      },
+      "4097": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1,
+          "PREFETCH": false,
+          "UNROLL": false
+        },
+        "anchor_us": 429.7744354644379
+      },
+      "8192": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 839.2728212500821
+      },
+      "16384": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 1658.5595703125
+      }
+    },
+    "5120,3072": {
+      "1": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 8,
+          "BLOCK_W": 128,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "MODE": 1,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 5.848943259043448
+      },
+      "7": {
+        "impl": "scale_tma",
+        "config": {
+          "BLOCK_T": 8,
+          "BLOCK_W": 128,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "MODE": 1,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 6.232823437726648
+      },
+      "16": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 7.249006369175055
+      },
+      "32": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 8.433535591557868
+      },
+      "37": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 9.97157258737677
+      },
+      "64": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 11.847799142049348
+      },
+      "100": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 128,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 17.629235332937235
+      },
+      "128": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 4,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 18.918352378042123
+      },
+      "192": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 4,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 2,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 26.059114357376437
+      },
+      "200": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 128,
+          "SWAP_AB": true,
+          "SPLIT": 2,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": false,
+          "UNROLL": false
+        },
+        "anchor_us": 31.209564401840655
+      },
+      "256": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 36.57770414610167
+      },
+      "333": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": true
+        },
+        "anchor_us": 46.54673958746131
+      },
+      "384": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 32,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        },
+        "anchor_us": 50.787303268268545
+      },
+      "512": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 65.88166297286719
+      },
+      "768": {
+        "impl": "scale_tma",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 95.81687125050247
+      },
+      "777": {
+        "impl": "v2",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1,
+          "PREFETCH": true,
+          "UNROLL": false
+        },
+        "anchor_us": 99.82738921436639
+      },
+      "1024": {
+        "impl": "scale_tma",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 126.87028175176576
+      },
+      "2048": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        },
+        "anchor_us": 243.50317398916764
+      },
+      "4096": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        },
+        "anchor_us": 475.070717755486
+      },
+      "4097": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        },
+        "anchor_us": 482.7735186797645
+      },
+      "8192": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        },
+        "anchor_us": 932.2012387789213
+      },
+      "16384": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        },
+        "anchor_us": 1849.0638732910156
+      }
+    }
+  },
+  "fallback_entries": {
+    "512,3072": {
+      "16": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "64": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "128": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 128,
+          "SWAP_AB": true,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "256": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "384": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "768": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "2048": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "8192": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "32": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        }
+      },
+      "100": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "192": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "333": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "512": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "1024": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        }
+      },
+      "4096": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "16384": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      }
+    },
+    "3072,2048": {
+      "16": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "64": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "128": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        }
+      },
+      "256": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "384": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 128,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 3,
+          "SPLIT_K": 1
+        }
+      },
+      "768": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "2048": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "8192": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "32": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "100": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        }
+      },
+      "192": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "333": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 128,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 3,
+          "SPLIT_K": 1
+        }
+      },
+      "512": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 128,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 2
+        }
+      },
+      "1024": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "4096": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "16384": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      }
+    },
+    "5120,3072": {
+      "16": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "64": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "128": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 4,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "256": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "384": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 32,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        }
+      },
+      "768": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "2048": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "8192": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        }
+      },
+      "32": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "100": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 128,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "192": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 4,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 2
+        }
+      },
+      "333": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 128,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        }
+      },
+      "512": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "1024": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "4096": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        }
+      },
+      "16384": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        }
+      }
+    },
+    "3072,256": {
+      "32": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "100": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 32,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        }
+      },
+      "192": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        }
+      },
+      "333": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        }
+      },
+      "512": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 1,
+          "SPLIT_K": 1
+        }
+      },
+      "1024": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        }
+      },
+      "4096": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        }
+      },
+      "16384": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        }
+      },
+      "16": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        }
+      },
+      "64": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 3,
+          "SPLIT_K": 1
+        }
+      },
+      "128": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 32,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        }
+      },
+      "256": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 8,
+          "num_warps": 4,
+          "num_stages": 3,
+          "SPLIT_K": 1
+        }
+      },
+      "384": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        }
+      },
+      "768": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        }
+      },
+      "2048": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 2,
+          "SPLIT_K": 1
+        }
+      },
+      "8192": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 64,
+          "GROUP_SIZE_M": 32,
+          "num_warps": 4,
+          "num_stages": 3,
+          "SPLIT_K": 1
+        }
+      }
+    },
+    "4608,3072": {
+      "32": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "100": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 128,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "192": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        }
+      },
+      "333": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 4,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "512": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "1024": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        }
+      },
+      "4096": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "16384": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "16": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 16,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "64": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        }
+      },
+      "128": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 1,
+          "MODE": 1
+        }
+      },
+      "256": {
+        "impl": "triton",
+        "config": {
+          "BLOCK_SIZE_M": 64,
+          "BLOCK_SIZE_N": 128,
+          "GROUP_SIZE_M": 1,
+          "num_warps": 4,
+          "num_stages": 4,
+          "SPLIT_K": 1
+        }
+      },
+      "384": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "768": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 32,
+          "BLOCK_W": 64,
+          "SWAP_AB": true,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "2048": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 2,
+          "NUM_STAGES": 4,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      },
+      "8192": {
+        "impl": "gluon",
+        "config": {
+          "BLOCK_T": 64,
+          "BLOCK_W": 64,
+          "SWAP_AB": false,
+          "SPLIT": 1,
+          "NUM_STAGES": 3,
+          "num_warps": 4,
+          "GROUP_SIZE_M": 8,
+          "MODE": 1
+        }
+      }
+    }
+  }
+}

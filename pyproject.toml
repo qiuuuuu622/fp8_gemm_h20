@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fp8-gemm-h20"
+version = "0.1.0"
+description = "Shared block-FP8 GEMM kernels and measured 35B/122B H20 profiles"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+gpu = ["torch>=2.13", "triton>=3.7"]
+
+[tool.setuptools.packages.find]
+include = ["fp8_gemm_h20*"]
+
+[tool.setuptools.package-data]
+fp8_gemm_h20 = ["configs/*.json"]
